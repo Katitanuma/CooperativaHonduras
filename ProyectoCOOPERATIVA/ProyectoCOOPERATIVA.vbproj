@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B6881B9-36A1-4681-ABB9-BD2F8FC3A842}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProyectoCOOPERATIVA.My.MyApplication</StartupObject>
+    <RootNamespace>ProyectoCOOPERATIVA</RootNamespace>
+    <AssemblyName>ProyectoCOOPERATIVA</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProyectoCOOPERATIVA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProyectoCOOPERATIVA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FORMULARIOS\CUENTA.Designer.vb">
+      <DependentUpon>CUENTA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CUENTA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\CARGO.Designer.vb">
+      <DependentUpon>CARGO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CARGO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\PROFESION.Designer.vb">
+      <DependentUpon>PROFESION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\PROFESION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OFICIAL.Designer.vb">
+      <DependentUpon>OFICIAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OFICIAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\AVAL.Designer.vb">
+      <DependentUpon>AVAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\AVAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\CIUDAD.Designer.vb">
+      <DependentUpon>CIUDAD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CIUDAD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\DEPARTAMENTO.Designer.vb">
+      <DependentUpon>DEPARTAMENTO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\DEPARTAMENTO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\NACIONALIDAD.Designer.vb">
+      <DependentUpon>NACIONALIDAD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\NACIONALIDAD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\PAIS.Designer.vb">
+      <DependentUpon>PAIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\PAIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\PRESTAMO.Designer.vb">
+      <DependentUpon>PRESTAMO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\PRESTAMO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\SOCIO.Designer.vb">
+      <DependentUpon>SOCIO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\SOCIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\TipodeCuenta.Designer.vb">
+      <DependentUpon>TipodeCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\TipodeCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\TipoPrestamo.Designer.vb">
+      <DependentUpon>TipoPrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\TipoPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FORMULARIOS\PantallaPrincipal.Designer.vb">
+      <DependentUpon>PantallaPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\PantallaPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FORMULARIOS\CUENTA.resx">
+      <DependentUpon>CUENTA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\CARGO.resx">
+      <DependentUpon>CARGO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\PROFESION.resx">
+      <DependentUpon>PROFESION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OFICIAL.resx">
+      <DependentUpon>OFICIAL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\AVAL.resx">
+      <DependentUpon>AVAL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\CIUDAD.resx">
+      <DependentUpon>CIUDAD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\DEPARTAMENTO.resx">
+      <DependentUpon>DEPARTAMENTO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\NACIONALIDAD.resx">
+      <DependentUpon>NACIONALIDAD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\PAIS.resx">
+      <DependentUpon>PAIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\PRESTAMO.resx">
+      <DependentUpon>PRESTAMO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\SOCIO.resx">
+      <DependentUpon>SOCIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\TipodeCuenta.resx">
+      <DependentUpon>TipodeCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\TipoPrestamo.resx">
+      <DependentUpon>TipoPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\socio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oficial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cargos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COOPERATIVA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prestamo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prestamo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipocuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipoprestamo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubicacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nacionalidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\departamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ciudad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVER3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BARRA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVER31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FONDO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapturaQ.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapturaQ1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_37127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barra3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FONDO1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapturaQ2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CapturaQ3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button-png-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton CAncelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonGuardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonCancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonCancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botoncancelar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botoncancelar21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturas.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lapiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginCooperativa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginCooperativa1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
