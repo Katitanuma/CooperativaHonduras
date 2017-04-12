@@ -125,7 +125,7 @@ Partial Class FrmTipodeCuenta
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(668, 290)
+        Me.BtnCancelar.Location = New System.Drawing.Point(656, 306)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
         Me.BtnCancelar.TabIndex = 104
@@ -145,7 +145,7 @@ Partial Class FrmTipodeCuenta
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnGuardar.Location = New System.Drawing.Point(495, 290)
+        Me.BtnGuardar.Location = New System.Drawing.Point(483, 306)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(73, 53)
         Me.BtnGuardar.TabIndex = 103
@@ -165,7 +165,7 @@ Partial Class FrmTipodeCuenta
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(408, 290)
+        Me.BtnNuevo.Location = New System.Drawing.Point(396, 306)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
         Me.BtnNuevo.TabIndex = 102
@@ -176,7 +176,7 @@ Partial Class FrmTipodeCuenta
         Me.LblCancelar.AutoSize = True
         Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
         Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(665, 348)
+        Me.LblCancelar.Location = New System.Drawing.Point(653, 364)
         Me.LblCancelar.Name = "LblCancelar"
         Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
         Me.LblCancelar.TabIndex = 101
@@ -188,7 +188,7 @@ Partial Class FrmTipodeCuenta
         Me.LblModificar.AutoSize = True
         Me.LblModificar.BackColor = System.Drawing.Color.Transparent
         Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificar.Location = New System.Drawing.Point(577, 348)
+        Me.LblModificar.Location = New System.Drawing.Point(565, 364)
         Me.LblModificar.Name = "LblModificar"
         Me.LblModificar.Size = New System.Drawing.Size(75, 13)
         Me.LblModificar.TabIndex = 100
@@ -200,7 +200,7 @@ Partial Class FrmTipodeCuenta
         Me.LblGuardar.AutoSize = True
         Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
         Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(496, 348)
+        Me.LblGuardar.Location = New System.Drawing.Point(484, 364)
         Me.LblGuardar.Name = "LblGuardar"
         Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
         Me.LblGuardar.TabIndex = 99
@@ -212,7 +212,7 @@ Partial Class FrmTipodeCuenta
         Me.LblNuevo.AutoSize = True
         Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
         Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(419, 348)
+        Me.LblNuevo.Location = New System.Drawing.Point(407, 364)
         Me.LblNuevo.Name = "LblNuevo"
         Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
         Me.LblNuevo.TabIndex = 98
@@ -231,7 +231,7 @@ Partial Class FrmTipodeCuenta
         Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnModificar.Location = New System.Drawing.Point(581, 290)
+        Me.BtnModificar.Location = New System.Drawing.Point(569, 306)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(73, 53)
         Me.BtnModificar.TabIndex = 97
@@ -244,7 +244,7 @@ Partial Class FrmTipodeCuenta
         Me.PbIcono.BackColor = System.Drawing.Color.Transparent
         Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.tipocuenta
         Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbIcono.Location = New System.Drawing.Point(151, 82)
+        Me.PbIcono.Location = New System.Drawing.Point(154, 107)
         Me.PbIcono.Name = "PbIcono"
         Me.PbIcono.Size = New System.Drawing.Size(184, 193)
         Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -255,7 +255,7 @@ Partial Class FrmTipodeCuenta
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(435, 175)
+        Me.Label4.Location = New System.Drawing.Point(404, 211)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(81, 16)
         Me.Label4.TabIndex = 43
@@ -266,7 +266,7 @@ Partial Class FrmTipodeCuenta
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(393, 134)
+        Me.Label5.Location = New System.Drawing.Point(357, 170)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(128, 16)
         Me.Label5.TabIndex = 42
@@ -274,18 +274,20 @@ Partial Class FrmTipodeCuenta
         '
         'TxtCodigoTipoCuenta
         '
+        Me.TxtCodigoTipoCuenta.BackColor = System.Drawing.Color.White
         Me.TxtCodigoTipoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCodigoTipoCuenta.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoTipoCuenta.Location = New System.Drawing.Point(541, 132)
+        Me.TxtCodigoTipoCuenta.Location = New System.Drawing.Point(495, 168)
         Me.TxtCodigoTipoCuenta.Name = "TxtCodigoTipoCuenta"
-        Me.TxtCodigoTipoCuenta.Size = New System.Drawing.Size(193, 18)
+        Me.TxtCodigoTipoCuenta.ReadOnly = True
+        Me.TxtCodigoTipoCuenta.Size = New System.Drawing.Size(192, 18)
         Me.TxtCodigoTipoCuenta.TabIndex = 34
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Location = New System.Drawing.Point(537, 127)
+        Me.Panel4.Location = New System.Drawing.Point(491, 163)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(200, 29)
         Me.Panel4.TabIndex = 35
@@ -294,25 +296,25 @@ Partial Class FrmTipodeCuenta
         '
         Me.TxtTipoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtTipoCuenta.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTipoCuenta.Location = New System.Drawing.Point(541, 174)
+        Me.TxtTipoCuenta.Location = New System.Drawing.Point(495, 210)
         Me.TxtTipoCuenta.Name = "TxtTipoCuenta"
-        Me.TxtTipoCuenta.Size = New System.Drawing.Size(193, 18)
+        Me.TxtTipoCuenta.Size = New System.Drawing.Size(261, 18)
         Me.TxtTipoCuenta.TabIndex = 32
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(537, 169)
+        Me.Panel2.Location = New System.Drawing.Point(491, 205)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.Size = New System.Drawing.Size(269, 29)
         Me.Panel2.TabIndex = 33
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(287, 132)
+        Me.Label2.Location = New System.Drawing.Point(283, 168)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(0, 16)
         Me.Label2.TabIndex = 3
@@ -322,7 +324,7 @@ Partial Class FrmTipodeCuenta
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(231, 92)
+        Me.Label1.Location = New System.Drawing.Point(227, 128)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(0, 16)
         Me.Label1.TabIndex = 0
@@ -347,7 +349,7 @@ Partial Class FrmTipodeCuenta
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Monotype Corsiva", 27.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(277, 17)
+        Me.Label12.Location = New System.Drawing.Point(299, 17)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(101, 45)
         Me.Label12.TabIndex = 98
@@ -355,7 +357,7 @@ Partial Class FrmTipodeCuenta
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(317, 79)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(349, 79)
         Me.TxtBusqueda.Name = "TxtBusqueda"
         Me.TxtBusqueda.Size = New System.Drawing.Size(332, 26)
         Me.TxtBusqueda.TabIndex = 95
@@ -363,9 +365,9 @@ Partial Class FrmTipodeCuenta
         'CboBusqueda
         '
         Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(84, 79)
+        Me.CboBusqueda.Location = New System.Drawing.Point(44, 79)
         Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(161, 27)
+        Me.CboBusqueda.Size = New System.Drawing.Size(235, 27)
         Me.CboBusqueda.TabIndex = 94
         '
         'PbLupa
@@ -373,7 +375,7 @@ Partial Class FrmTipodeCuenta
         Me.PbLupa.BackColor = System.Drawing.Color.Transparent
         Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
         Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(56, 79)
+        Me.PbLupa.Location = New System.Drawing.Point(16, 79)
         Me.PbLupa.Name = "PbLupa"
         Me.PbLupa.Size = New System.Drawing.Size(22, 27)
         Me.PbLupa.TabIndex = 96
@@ -384,7 +386,7 @@ Partial Class FrmTipodeCuenta
         Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
         Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
         Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(285, 79)
+        Me.PbLapiz.Location = New System.Drawing.Point(317, 79)
         Me.PbLapiz.Name = "PbLapiz"
         Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
         Me.PbLapiz.TabIndex = 97
@@ -396,7 +398,7 @@ Partial Class FrmTipodeCuenta
         Me.DgvTipoCuenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvTipoCuenta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DgvTipoCuenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvTipoCuenta.Location = New System.Drawing.Point(16, 137)
+        Me.DgvTipoCuenta.Location = New System.Drawing.Point(16, 132)
         Me.DgvTipoCuenta.Name = "DgvTipoCuenta"
         Me.DgvTipoCuenta.Size = New System.Drawing.Size(665, 355)
         Me.DgvTipoCuenta.TabIndex = 33
@@ -406,11 +408,11 @@ Partial Class FrmTipodeCuenta
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(239, 18)
+        Me.Label14.Location = New System.Drawing.Point(218, 12)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(240, 43)
+        Me.Label14.Size = New System.Drawing.Size(298, 43)
         Me.Label14.TabIndex = 48
-        Me.Label14.Text = "TIPO CUENTA"
+        Me.Label14.Text = "TIPO DE CUENTA"
         '
         'PbSalir
         '

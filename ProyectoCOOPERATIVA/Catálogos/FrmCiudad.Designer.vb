@@ -123,7 +123,7 @@ Partial Class FrmCiudad
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(611, 299)
+        Me.BtnCancelar.Location = New System.Drawing.Point(636, 289)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
         Me.BtnCancelar.TabIndex = 104
@@ -143,7 +143,7 @@ Partial Class FrmCiudad
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnGuardar.Location = New System.Drawing.Point(438, 299)
+        Me.BtnGuardar.Location = New System.Drawing.Point(463, 289)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(73, 53)
         Me.BtnGuardar.TabIndex = 103
@@ -163,7 +163,7 @@ Partial Class FrmCiudad
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(351, 299)
+        Me.BtnNuevo.Location = New System.Drawing.Point(376, 289)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
         Me.BtnNuevo.TabIndex = 102
@@ -174,7 +174,7 @@ Partial Class FrmCiudad
         Me.LblCancelar.AutoSize = True
         Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
         Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(608, 357)
+        Me.LblCancelar.Location = New System.Drawing.Point(637, 347)
         Me.LblCancelar.Name = "LblCancelar"
         Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
         Me.LblCancelar.TabIndex = 101
@@ -186,7 +186,7 @@ Partial Class FrmCiudad
         Me.LblModificar.AutoSize = True
         Me.LblModificar.BackColor = System.Drawing.Color.Transparent
         Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificar.Location = New System.Drawing.Point(520, 357)
+        Me.LblModificar.Location = New System.Drawing.Point(545, 347)
         Me.LblModificar.Name = "LblModificar"
         Me.LblModificar.Size = New System.Drawing.Size(75, 13)
         Me.LblModificar.TabIndex = 100
@@ -198,7 +198,7 @@ Partial Class FrmCiudad
         Me.LblGuardar.AutoSize = True
         Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
         Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(439, 357)
+        Me.LblGuardar.Location = New System.Drawing.Point(464, 347)
         Me.LblGuardar.Name = "LblGuardar"
         Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
         Me.LblGuardar.TabIndex = 99
@@ -210,7 +210,7 @@ Partial Class FrmCiudad
         Me.LblNuevo.AutoSize = True
         Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
         Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(362, 357)
+        Me.LblNuevo.Location = New System.Drawing.Point(387, 347)
         Me.LblNuevo.Name = "LblNuevo"
         Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
         Me.LblNuevo.TabIndex = 98
@@ -229,7 +229,7 @@ Partial Class FrmCiudad
         Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnModificar.Location = New System.Drawing.Point(524, 299)
+        Me.BtnModificar.Location = New System.Drawing.Point(549, 289)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(73, 53)
         Me.BtnModificar.TabIndex = 97
@@ -242,7 +242,7 @@ Partial Class FrmCiudad
         Me.PbIcono.BackColor = System.Drawing.Color.Transparent
         Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ciudad
         Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbIcono.Location = New System.Drawing.Point(113, 59)
+        Me.PbIcono.Location = New System.Drawing.Point(143, 85)
         Me.PbIcono.Name = "PbIcono"
         Me.PbIcono.Size = New System.Drawing.Size(184, 193)
         Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -253,34 +253,35 @@ Partial Class FrmCiudad
         '
         Me.TxtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCiudad.Location = New System.Drawing.Point(461, 179)
+        Me.TxtCiudad.Location = New System.Drawing.Point(463, 177)
         Me.TxtCiudad.Name = "TxtCiudad"
-        Me.TxtCiudad.Size = New System.Drawing.Size(193, 18)
+        Me.TxtCiudad.Size = New System.Drawing.Size(265, 18)
         Me.TxtCiudad.TabIndex = 29
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(457, 174)
+        Me.Panel3.Location = New System.Drawing.Point(459, 172)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(200, 29)
+        Me.Panel3.Size = New System.Drawing.Size(273, 29)
         Me.Panel3.TabIndex = 30
         '
         'CboDepartamento
         '
+        Me.CboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboDepartamento.FormattingEnabled = True
-        Me.CboDepartamento.Location = New System.Drawing.Point(457, 214)
+        Me.CboDepartamento.Location = New System.Drawing.Point(459, 216)
         Me.CboDepartamento.Name = "CboDepartamento"
-        Me.CboDepartamento.Size = New System.Drawing.Size(200, 24)
+        Me.CboDepartamento.Size = New System.Drawing.Size(273, 24)
         Me.CboDepartamento.TabIndex = 10
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(346, 217)
+        Me.Label6.Location = New System.Drawing.Point(360, 220)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(94, 16)
         Me.Label6.TabIndex = 9
@@ -290,7 +291,7 @@ Partial Class FrmCiudad
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(386, 181)
+        Me.Label2.Location = New System.Drawing.Point(400, 180)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(51, 16)
         Me.Label2.TabIndex = 3
@@ -299,10 +300,12 @@ Partial Class FrmCiudad
         '
         'TxtCodigoCiudad
         '
+        Me.TxtCodigoCiudad.BackColor = System.Drawing.Color.White
         Me.TxtCodigoCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCodigoCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoCiudad.Location = New System.Drawing.Point(461, 144)
+        Me.TxtCodigoCiudad.Location = New System.Drawing.Point(463, 142)
         Me.TxtCodigoCiudad.Name = "TxtCodigoCiudad"
+        Me.TxtCodigoCiudad.ReadOnly = True
         Me.TxtCodigoCiudad.Size = New System.Drawing.Size(193, 18)
         Me.TxtCodigoCiudad.TabIndex = 1
         '
@@ -310,7 +313,7 @@ Partial Class FrmCiudad
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(457, 139)
+        Me.Panel2.Location = New System.Drawing.Point(459, 137)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
@@ -319,7 +322,7 @@ Partial Class FrmCiudad
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(334, 142)
+        Me.Label1.Location = New System.Drawing.Point(355, 141)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(98, 16)
         Me.Label1.TabIndex = 0

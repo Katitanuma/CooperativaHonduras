@@ -123,7 +123,7 @@ Partial Class FrmNacionalidad
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(646, 287)
+        Me.BtnCancelar.Location = New System.Drawing.Point(657, 307)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
         Me.BtnCancelar.TabIndex = 104
@@ -143,7 +143,7 @@ Partial Class FrmNacionalidad
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnGuardar.Location = New System.Drawing.Point(473, 287)
+        Me.BtnGuardar.Location = New System.Drawing.Point(484, 307)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(73, 53)
         Me.BtnGuardar.TabIndex = 103
@@ -163,7 +163,7 @@ Partial Class FrmNacionalidad
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(386, 287)
+        Me.BtnNuevo.Location = New System.Drawing.Point(397, 307)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
         Me.BtnNuevo.TabIndex = 102
@@ -174,7 +174,7 @@ Partial Class FrmNacionalidad
         Me.LblCancelar.AutoSize = True
         Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
         Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(643, 345)
+        Me.LblCancelar.Location = New System.Drawing.Point(654, 365)
         Me.LblCancelar.Name = "LblCancelar"
         Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
         Me.LblCancelar.TabIndex = 101
@@ -186,7 +186,7 @@ Partial Class FrmNacionalidad
         Me.LblModificar.AutoSize = True
         Me.LblModificar.BackColor = System.Drawing.Color.Transparent
         Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificar.Location = New System.Drawing.Point(555, 345)
+        Me.LblModificar.Location = New System.Drawing.Point(566, 365)
         Me.LblModificar.Name = "LblModificar"
         Me.LblModificar.Size = New System.Drawing.Size(75, 13)
         Me.LblModificar.TabIndex = 100
@@ -198,7 +198,7 @@ Partial Class FrmNacionalidad
         Me.LblGuardar.AutoSize = True
         Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
         Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(474, 345)
+        Me.LblGuardar.Location = New System.Drawing.Point(485, 365)
         Me.LblGuardar.Name = "LblGuardar"
         Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
         Me.LblGuardar.TabIndex = 99
@@ -210,7 +210,7 @@ Partial Class FrmNacionalidad
         Me.LblNuevo.AutoSize = True
         Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
         Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(397, 345)
+        Me.LblNuevo.Location = New System.Drawing.Point(408, 365)
         Me.LblNuevo.Name = "LblNuevo"
         Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
         Me.LblNuevo.TabIndex = 98
@@ -229,7 +229,7 @@ Partial Class FrmNacionalidad
         Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnModificar.Location = New System.Drawing.Point(559, 287)
+        Me.BtnModificar.Location = New System.Drawing.Point(570, 307)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(73, 53)
         Me.BtnModificar.TabIndex = 97
@@ -242,7 +242,7 @@ Partial Class FrmNacionalidad
         Me.PbIcono.BackColor = System.Drawing.Color.Transparent
         Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Nacionalidad
         Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbIcono.Location = New System.Drawing.Point(122, 55)
+        Me.PbIcono.Location = New System.Drawing.Point(153, 102)
         Me.PbIcono.Name = "PbIcono"
         Me.PbIcono.Size = New System.Drawing.Size(184, 193)
         Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -254,9 +254,9 @@ Partial Class FrmNacionalidad
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.TxtNacionalidad)
-        Me.Panel3.Location = New System.Drawing.Point(494, 153)
+        Me.Panel3.Location = New System.Drawing.Point(491, 190)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(200, 29)
+        Me.Panel3.Size = New System.Drawing.Size(274, 29)
         Me.Panel3.TabIndex = 30
         '
         'TxtNacionalidad
@@ -265,23 +265,24 @@ Partial Class FrmNacionalidad
         Me.TxtNacionalidad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNacionalidad.Location = New System.Drawing.Point(3, 5)
         Me.TxtNacionalidad.Name = "TxtNacionalidad"
-        Me.TxtNacionalidad.Size = New System.Drawing.Size(193, 18)
+        Me.TxtNacionalidad.Size = New System.Drawing.Size(266, 18)
         Me.TxtNacionalidad.TabIndex = 48
         '
         'CboPais
         '
+        Me.CboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboPais.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboPais.FormattingEnabled = True
-        Me.CboPais.Location = New System.Drawing.Point(494, 192)
+        Me.CboPais.Location = New System.Drawing.Point(491, 229)
         Me.CboPais.Name = "CboPais"
-        Me.CboPais.Size = New System.Drawing.Size(200, 24)
+        Me.CboPais.Size = New System.Drawing.Size(274, 24)
         Me.CboPais.TabIndex = 10
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(439, 195)
+        Me.Label6.Location = New System.Drawing.Point(448, 232)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(35, 16)
         Me.Label6.TabIndex = 9
@@ -291,7 +292,7 @@ Partial Class FrmNacionalidad
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(386, 161)
+        Me.Label2.Location = New System.Drawing.Point(393, 198)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(89, 16)
         Me.Label2.TabIndex = 3
@@ -300,27 +301,29 @@ Partial Class FrmNacionalidad
         '
         'TxtCodigoNacionalidad
         '
+        Me.TxtCodigoNacionalidad.BackColor = System.Drawing.Color.White
         Me.TxtCodigoNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCodigoNacionalidad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoNacionalidad.Location = New System.Drawing.Point(498, 123)
+        Me.TxtCodigoNacionalidad.Location = New System.Drawing.Point(495, 160)
         Me.TxtCodigoNacionalidad.Name = "TxtCodigoNacionalidad"
-        Me.TxtCodigoNacionalidad.Size = New System.Drawing.Size(193, 18)
+        Me.TxtCodigoNacionalidad.ReadOnly = True
+        Me.TxtCodigoNacionalidad.Size = New System.Drawing.Size(164, 18)
         Me.TxtCodigoNacionalidad.TabIndex = 1
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(494, 118)
+        Me.Panel2.Location = New System.Drawing.Point(491, 155)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.Size = New System.Drawing.Size(172, 29)
         Me.Panel2.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(339, 121)
+        Me.Label1.Location = New System.Drawing.Point(347, 161)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(136, 16)
         Me.Label1.TabIndex = 0
@@ -354,7 +357,7 @@ Partial Class FrmNacionalidad
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(325, 76)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(349, 77)
         Me.TxtBusqueda.Name = "TxtBusqueda"
         Me.TxtBusqueda.Size = New System.Drawing.Size(332, 26)
         Me.TxtBusqueda.TabIndex = 80
@@ -362,9 +365,9 @@ Partial Class FrmNacionalidad
         'CboBusqueda
         '
         Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(92, 76)
+        Me.CboBusqueda.Location = New System.Drawing.Point(44, 76)
         Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(161, 27)
+        Me.CboBusqueda.Size = New System.Drawing.Size(243, 27)
         Me.CboBusqueda.TabIndex = 79
         '
         'PbLapiz
@@ -372,7 +375,7 @@ Partial Class FrmNacionalidad
         Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
         Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
         Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(293, 76)
+        Me.PbLapiz.Location = New System.Drawing.Point(317, 77)
         Me.PbLapiz.Name = "PbLapiz"
         Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
         Me.PbLapiz.TabIndex = 82
@@ -383,7 +386,7 @@ Partial Class FrmNacionalidad
         Me.PbLupa.BackColor = System.Drawing.Color.Transparent
         Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
         Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(64, 76)
+        Me.PbLupa.Location = New System.Drawing.Point(16, 76)
         Me.PbLupa.Name = "PbLupa"
         Me.PbLupa.Size = New System.Drawing.Size(22, 27)
         Me.PbLupa.TabIndex = 81
