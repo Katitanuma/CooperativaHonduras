@@ -50,7 +50,9 @@ Partial Class PantallaPrincipal
         Me.PnlNacionalidad = New System.Windows.Forms.Panel()
         Me.LblNacionalidad = New System.Windows.Forms.Label()
         Me.PnEmpleados2 = New System.Windows.Forms.Panel()
+        Me.LblUsuario = New System.Windows.Forms.Label()
         Me.LblCargo = New System.Windows.Forms.Label()
+        Me.PnlUsuario = New System.Windows.Forms.Panel()
         Me.LblProfesion = New System.Windows.Forms.Label()
         Me.Pnlcargo = New System.Windows.Forms.Panel()
         Me.PnlProfesion = New System.Windows.Forms.Panel()
@@ -149,11 +151,11 @@ Partial Class PantallaPrincipal
         '
         Me.LblCooperativa.AutoSize = True
         Me.LblCooperativa.BackColor = System.Drawing.Color.Transparent
-        Me.LblCooperativa.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCooperativa.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCooperativa.ForeColor = System.Drawing.Color.Black
         Me.LblCooperativa.Location = New System.Drawing.Point(4, 481)
         Me.LblCooperativa.Name = "LblCooperativa"
-        Me.LblCooperativa.Size = New System.Drawing.Size(100, 14)
+        Me.LblCooperativa.Size = New System.Drawing.Size(94, 13)
         Me.LblCooperativa.TabIndex = 8
         Me.LblCooperativa.Text = "COOPERATIVA"
         Me.LblCooperativa.Visible = False
@@ -173,11 +175,11 @@ Partial Class PantallaPrincipal
         '
         Me.LblSOCIOS.AutoSize = True
         Me.LblSOCIOS.BackColor = System.Drawing.Color.Transparent
-        Me.LblSOCIOS.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSOCIOS.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSOCIOS.ForeColor = System.Drawing.Color.Black
         Me.LblSOCIOS.Location = New System.Drawing.Point(18, 294)
         Me.LblSOCIOS.Name = "LblSOCIOS"
-        Me.LblSOCIOS.Size = New System.Drawing.Size(56, 14)
+        Me.LblSOCIOS.Size = New System.Drawing.Size(53, 13)
         Me.LblSOCIOS.TabIndex = 6
         Me.LblSOCIOS.Text = "SOCIOS"
         Me.LblSOCIOS.Visible = False
@@ -186,11 +188,11 @@ Partial Class PantallaPrincipal
         '
         Me.LblEmpleado.AutoSize = True
         Me.LblEmpleado.BackColor = System.Drawing.Color.Transparent
-        Me.LblEmpleado.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmpleado.ForeColor = System.Drawing.Color.Black
         Me.LblEmpleado.Location = New System.Drawing.Point(9, 387)
         Me.LblEmpleado.Name = "LblEmpleado"
-        Me.LblEmpleado.Size = New System.Drawing.Size(88, 14)
+        Me.LblEmpleado.Size = New System.Drawing.Size(82, 13)
         Me.LblEmpleado.TabIndex = 4
         Me.LblEmpleado.Text = "EMPLEADOS"
         Me.LblEmpleado.Visible = False
@@ -210,11 +212,11 @@ Partial Class PantallaPrincipal
         '
         Me.LblUbicacion.AutoSize = True
         Me.LblUbicacion.BackColor = System.Drawing.Color.Transparent
-        Me.LblUbicacion.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUbicacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblUbicacion.ForeColor = System.Drawing.Color.Black
         Me.LblUbicacion.Location = New System.Drawing.Point(12, 575)
         Me.LblUbicacion.Name = "LblUbicacion"
-        Me.LblUbicacion.Size = New System.Drawing.Size(80, 14)
+        Me.LblUbicacion.Size = New System.Drawing.Size(74, 13)
         Me.LblUbicacion.TabIndex = 2
         Me.LblUbicacion.Text = "UBICACIÓN"
         Me.LblUbicacion.Visible = False
@@ -289,10 +291,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblCiudad.AutoSize = True
         Me.LblCiudad.BackColor = System.Drawing.Color.Transparent
-        Me.LblCiudad.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCiudad.Location = New System.Drawing.Point(311, 2)
         Me.LblCiudad.Name = "LblCiudad"
-        Me.LblCiudad.Size = New System.Drawing.Size(58, 14)
+        Me.LblCiudad.Size = New System.Drawing.Size(54, 13)
         Me.LblCiudad.TabIndex = 16
         Me.LblCiudad.Text = "CIUDAD"
         Me.LblCiudad.Visible = False
@@ -301,10 +303,10 @@ Partial Class PantallaPrincipal
         '
         Me.Lbldepto.AutoSize = True
         Me.Lbldepto.BackColor = System.Drawing.Color.Transparent
-        Me.Lbldepto.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbldepto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbldepto.Location = New System.Drawing.Point(191, 2)
         Me.Lbldepto.Name = "Lbldepto"
-        Me.Lbldepto.Size = New System.Drawing.Size(116, 14)
+        Me.Lbldepto.Size = New System.Drawing.Size(109, 13)
         Me.Lbldepto.TabIndex = 15
         Me.Lbldepto.Text = "DEPARTAMENTO"
         Me.Lbldepto.Visible = False
@@ -313,10 +315,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblPais.AutoSize = True
         Me.LblPais.BackColor = System.Drawing.Color.Transparent
-        Me.LblPais.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPais.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPais.Location = New System.Drawing.Point(128, 2)
         Me.LblPais.Name = "LblPais"
-        Me.LblPais.Size = New System.Drawing.Size(37, 14)
+        Me.LblPais.Size = New System.Drawing.Size(35, 13)
         Me.LblPais.TabIndex = 14
         Me.LblPais.Text = "PAIS"
         Me.LblPais.Visible = False
@@ -361,10 +363,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblNacionalidad.AutoSize = True
         Me.LblNacionalidad.BackColor = System.Drawing.Color.Transparent
-        Me.LblNacionalidad.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNacionalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNacionalidad.Location = New System.Drawing.Point(0, 4)
         Me.LblNacionalidad.Name = "LblNacionalidad"
-        Me.LblNacionalidad.Size = New System.Drawing.Size(108, 14)
+        Me.LblNacionalidad.Size = New System.Drawing.Size(99, 13)
         Me.LblNacionalidad.TabIndex = 12
         Me.LblNacionalidad.Text = "NACIONALIDAD"
         Me.LblNacionalidad.Visible = False
@@ -375,7 +377,9 @@ Partial Class PantallaPrincipal
         Me.PnEmpleados2.BackgroundImage = CType(resources.GetObject("PnEmpleados2.BackgroundImage"), System.Drawing.Image)
         Me.PnEmpleados2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PnEmpleados2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PnEmpleados2.Controls.Add(Me.LblUsuario)
         Me.PnEmpleados2.Controls.Add(Me.LblCargo)
+        Me.PnEmpleados2.Controls.Add(Me.PnlUsuario)
         Me.PnEmpleados2.Controls.Add(Me.LblProfesion)
         Me.PnEmpleados2.Controls.Add(Me.Pnlcargo)
         Me.PnEmpleados2.Controls.Add(Me.PnlProfesion)
@@ -383,30 +387,54 @@ Partial Class PantallaPrincipal
         Me.PnEmpleados2.Controls.Add(Me.LblOficial)
         Me.PnEmpleados2.Location = New System.Drawing.Point(108, 390)
         Me.PnEmpleados2.Name = "PnEmpleados2"
-        Me.PnEmpleados2.Size = New System.Drawing.Size(282, 85)
+        Me.PnEmpleados2.Size = New System.Drawing.Size(367, 85)
         Me.PnEmpleados2.TabIndex = 17
         Me.PnEmpleados2.Visible = False
+        '
+        'LblUsuario
+        '
+        Me.LblUsuario.AutoSize = True
+        Me.LblUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.LblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsuario.Location = New System.Drawing.Point(284, 4)
+        Me.LblUsuario.Name = "LblUsuario"
+        Me.LblUsuario.Size = New System.Drawing.Size(63, 13)
+        Me.LblUsuario.TabIndex = 17
+        Me.LblUsuario.Text = "USUARIO"
+        Me.LblUsuario.Visible = False
         '
         'LblCargo
         '
         Me.LblCargo.AutoSize = True
         Me.LblCargo.BackColor = System.Drawing.Color.Transparent
-        Me.LblCargo.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCargo.Location = New System.Drawing.Point(197, 4)
         Me.LblCargo.Name = "LblCargo"
-        Me.LblCargo.Size = New System.Drawing.Size(53, 14)
+        Me.LblCargo.Size = New System.Drawing.Size(50, 13)
         Me.LblCargo.TabIndex = 15
         Me.LblCargo.Text = "CARGO"
         Me.LblCargo.Visible = False
+        '
+        'PnlUsuario
+        '
+        Me.PnlUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.PnlUsuario.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.usuario
+        Me.PnlUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PnlUsuario.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PnlUsuario.Location = New System.Drawing.Point(273, 15)
+        Me.PnlUsuario.Name = "PnlUsuario"
+        Me.PnlUsuario.Size = New System.Drawing.Size(65, 65)
+        Me.PnlUsuario.TabIndex = 16
+        Me.PnlUsuario.Visible = False
         '
         'LblProfesion
         '
         Me.LblProfesion.AutoSize = True
         Me.LblProfesion.BackColor = System.Drawing.Color.Transparent
-        Me.LblProfesion.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblProfesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblProfesion.Location = New System.Drawing.Point(97, 4)
         Me.LblProfesion.Name = "LblProfesion"
-        Me.LblProfesion.Size = New System.Drawing.Size(83, 14)
+        Me.LblProfesion.Size = New System.Drawing.Size(78, 13)
         Me.LblProfesion.TabIndex = 14
         Me.LblProfesion.Text = "PROFESION"
         Me.LblProfesion.Visible = False
@@ -451,10 +479,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblOficial.AutoSize = True
         Me.LblOficial.BackColor = System.Drawing.Color.Transparent
-        Me.LblOficial.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblOficial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOficial.Location = New System.Drawing.Point(19, 4)
         Me.LblOficial.Name = "LblOficial"
-        Me.LblOficial.Size = New System.Drawing.Size(58, 14)
+        Me.LblOficial.Size = New System.Drawing.Size(54, 13)
         Me.LblOficial.TabIndex = 12
         Me.LblOficial.Text = "OFICIAL"
         Me.LblOficial.Visible = False
@@ -479,10 +507,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblCuenta.AutoSize = True
         Me.LblCuenta.BackColor = System.Drawing.Color.Transparent
-        Me.LblCuenta.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCuenta.Location = New System.Drawing.Point(107, 4)
         Me.LblCuenta.Name = "LblCuenta"
-        Me.LblCuenta.Size = New System.Drawing.Size(59, 14)
+        Me.LblCuenta.Size = New System.Drawing.Size(57, 13)
         Me.LblCuenta.TabIndex = 14
         Me.LblCuenta.Text = "CUENTA"
         Me.LblCuenta.Visible = False
@@ -515,10 +543,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblSocio.AutoSize = True
         Me.LblSocio.BackColor = System.Drawing.Color.Transparent
-        Me.LblSocio.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSocio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSocio.Location = New System.Drawing.Point(19, 4)
         Me.LblSocio.Name = "LblSocio"
-        Me.LblSocio.Size = New System.Drawing.Size(48, 14)
+        Me.LblSocio.Size = New System.Drawing.Size(45, 13)
         Me.LblSocio.TabIndex = 12
         Me.LblSocio.Text = "SOCIO"
         Me.LblSocio.Visible = False
@@ -547,10 +575,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblTipoPrestamo.AutoSize = True
         Me.LblTipoPrestamo.BackColor = System.Drawing.Color.Transparent
-        Me.LblTipoPrestamo.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTipoPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTipoPrestamo.Location = New System.Drawing.Point(256, 4)
         Me.LblTipoPrestamo.Name = "LblTipoPrestamo"
-        Me.LblTipoPrestamo.Size = New System.Drawing.Size(136, 14)
+        Me.LblTipoPrestamo.Size = New System.Drawing.Size(129, 13)
         Me.LblTipoPrestamo.TabIndex = 17
         Me.LblTipoPrestamo.Text = "TIPO DE PRESTAMO"
         Me.LblTipoPrestamo.Visible = False
@@ -571,10 +599,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblTipoCuenta.AutoSize = True
         Me.LblTipoCuenta.BackColor = System.Drawing.Color.Transparent
-        Me.LblTipoCuenta.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTipoCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTipoCuenta.Location = New System.Drawing.Point(170, 4)
         Me.LblTipoCuenta.Name = "LblTipoCuenta"
-        Me.LblTipoCuenta.Size = New System.Drawing.Size(116, 14)
+        Me.LblTipoCuenta.Size = New System.Drawing.Size(111, 13)
         Me.LblTipoCuenta.TabIndex = 15
         Me.LblTipoCuenta.Text = "TIPO DE CUENTA"
         Me.LblTipoCuenta.Visible = False
@@ -583,10 +611,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblPrestamo.AutoSize = True
         Me.LblPrestamo.BackColor = System.Drawing.Color.Transparent
-        Me.LblPrestamo.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPrestamo.Location = New System.Drawing.Point(97, 4)
         Me.LblPrestamo.Name = "LblPrestamo"
-        Me.LblPrestamo.Size = New System.Drawing.Size(79, 14)
+        Me.LblPrestamo.Size = New System.Drawing.Size(75, 13)
         Me.LblPrestamo.TabIndex = 14
         Me.LblPrestamo.Text = "PRESTAMO"
         Me.LblPrestamo.Visible = False
@@ -631,10 +659,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblAval.AutoSize = True
         Me.LblAval.BackColor = System.Drawing.Color.Transparent
-        Me.LblAval.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAval.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAval.Location = New System.Drawing.Point(29, 4)
         Me.LblAval.Name = "LblAval"
-        Me.LblAval.Size = New System.Drawing.Size(41, 14)
+        Me.LblAval.Size = New System.Drawing.Size(38, 13)
         Me.LblAval.TabIndex = 12
         Me.LblAval.Text = "AVAL"
         Me.LblAval.Visible = False
@@ -722,10 +750,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblSalir.AutoSize = True
         Me.LblSalir.BackColor = System.Drawing.Color.Transparent
-        Me.LblSalir.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSalir.Location = New System.Drawing.Point(1211, 5)
         Me.LblSalir.Name = "LblSalir"
-        Me.LblSalir.Size = New System.Drawing.Size(58, 19)
+        Me.LblSalir.Size = New System.Drawing.Size(54, 18)
         Me.LblSalir.TabIndex = 30
         Me.LblSalir.Text = "SALIR"
         Me.LblSalir.Visible = False
@@ -734,10 +762,10 @@ Partial Class PantallaPrincipal
         '
         Me.LblCambio.AutoSize = True
         Me.LblCambio.BackColor = System.Drawing.Color.Transparent
-        Me.LblCambio.Font = New System.Drawing.Font("Montserrat", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCambio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCambio.Location = New System.Drawing.Point(1104, 5)
         Me.LblCambio.Name = "LblCambio"
-        Me.LblCambio.Size = New System.Drawing.Size(180, 19)
+        Me.LblCambio.Size = New System.Drawing.Size(167, 18)
         Me.LblCambio.TabIndex = 31
         Me.LblCambio.Text = "CAMBIO DE SESIÓN"
         Me.LblCambio.Visible = False
@@ -849,4 +877,6 @@ Partial Class PantallaPrincipal
     Friend WithEvents Panel3 As Panel
     Friend WithEvents LblSalir As Label
     Friend WithEvents LblCambio As Label
+    Friend WithEvents LblUsuario As Label
+    Friend WithEvents PnlUsuario As Panel
 End Class

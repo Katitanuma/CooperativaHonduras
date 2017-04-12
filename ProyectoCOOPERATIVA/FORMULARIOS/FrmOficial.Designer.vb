@@ -26,15 +26,10 @@ Partial Class FrmOficial
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.LblCancelar = New System.Windows.Forms.Label()
         Me.LblModificar = New System.Windows.Forms.Label()
         Me.LblGuardar = New System.Windows.Forms.Label()
         Me.LblNuevo = New System.Windows.Forms.Label()
-        Me.BtnModificar = New System.Windows.Forms.Button()
-        Me.PbIcono = New System.Windows.Forms.PictureBox()
         Me.CboProfesion = New System.Windows.Forms.ComboBox()
         Me.CboCargo = New System.Windows.Forms.ComboBox()
         Me.CboEstadoCIvil = New System.Windows.Forms.ComboBox()
@@ -58,19 +53,24 @@ Partial Class FrmOficial
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.CboBusqueda = New System.Windows.Forms.ComboBox()
-        Me.PbLapiz = New System.Windows.Forms.PictureBox()
-        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvOficial = New System.Windows.Forms.DataGridView()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.PbIcono = New System.Windows.Forms.PictureBox()
+        Me.PbLapiz = New System.Windows.Forms.PictureBox()
+        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvOficial, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label14
@@ -144,64 +144,6 @@ Partial Class FrmOficial
         Me.Panel1.Size = New System.Drawing.Size(949, 504)
         Me.Panel1.TabIndex = 5
         '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba52
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnCancelar.FlatAppearance.BorderSize = 0
-        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(605, 361)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
-        Me.BtnCancelar.TabIndex = 96
-        Me.BtnCancelar.Text = " "
-        Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnCancelar.UseVisualStyleBackColor = False
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba11
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue
-        Me.BtnGuardar.FlatAppearance.BorderSize = 0
-        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnGuardar.Location = New System.Drawing.Point(432, 361)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(73, 53)
-        Me.BtnGuardar.TabIndex = 95
-        Me.BtnGuardar.Text = " "
-        Me.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnGuardar.UseVisualStyleBackColor = False
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba21
-        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnNuevo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnNuevo.FlatAppearance.BorderSize = 0
-        Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(345, 361)
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
-        Me.BtnNuevo.TabIndex = 94
-        Me.BtnNuevo.UseVisualStyleBackColor = False
-        '
         'LblCancelar
         '
         Me.LblCancelar.AutoSize = True
@@ -249,38 +191,6 @@ Partial Class FrmOficial
         Me.LblNuevo.TabIndex = 90
         Me.LblNuevo.Text = "NUEVO"
         Me.LblNuevo.Visible = False
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba31
-        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnModificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnModificar.FlatAppearance.BorderSize = 0
-        Me.BtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnModificar.Location = New System.Drawing.Point(518, 361)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(73, 53)
-        Me.BtnModificar.TabIndex = 89
-        Me.BtnModificar.Text = " "
-        Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnModificar.UseVisualStyleBackColor = False
-        '
-        'PbIcono
-        '
-        Me.PbIcono.BackColor = System.Drawing.Color.Transparent
-        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.oficial
-        Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbIcono.Location = New System.Drawing.Point(98, 92)
-        Me.PbIcono.Name = "PbIcono"
-        Me.PbIcono.Size = New System.Drawing.Size(184, 193)
-        Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PbIcono.TabIndex = 0
-        Me.PbIcono.TabStop = False
         '
         'CboProfesion
         '
@@ -474,9 +384,9 @@ Partial Class FrmOficial
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.TxtBusqueda)
         Me.TabPage2.Controls.Add(Me.CboBusqueda)
+        Me.TabPage2.Controls.Add(Me.DgvOficial)
         Me.TabPage2.Controls.Add(Me.PbLapiz)
         Me.TabPage2.Controls.Add(Me.PbLupa)
-        Me.TabPage2.Controls.Add(Me.DgvOficial)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -509,6 +419,117 @@ Partial Class FrmOficial
         Me.CboBusqueda.Size = New System.Drawing.Size(243, 27)
         Me.CboBusqueda.TabIndex = 79
         '
+        'DgvOficial
+        '
+        Me.DgvOficial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvOficial.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DgvOficial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvOficial.GridColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgvOficial.Location = New System.Drawing.Point(16, 125)
+        Me.DgvOficial.Name = "DgvOficial"
+        Me.DgvOficial.Size = New System.Drawing.Size(665, 355)
+        Me.DgvOficial.TabIndex = 6
+        '
+        'PbSalir
+        '
+        Me.PbSalir.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.close_button_png_26
+        Me.PbSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbSalir.Location = New System.Drawing.Point(675, 12)
+        Me.PbSalir.Name = "PbSalir"
+        Me.PbSalir.Size = New System.Drawing.Size(33, 32)
+        Me.PbSalir.TabIndex = 19
+        Me.PbSalir.TabStop = False
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba52
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnCancelar.Location = New System.Drawing.Point(605, 361)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
+        Me.BtnCancelar.TabIndex = 96
+        Me.BtnCancelar.Text = " "
+        Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba11
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnGuardar.Location = New System.Drawing.Point(432, 361)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(73, 53)
+        Me.BtnGuardar.TabIndex = 95
+        Me.BtnGuardar.Text = " "
+        Me.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba21
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnNuevo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnNuevo.FlatAppearance.BorderSize = 0
+        Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnNuevo.Location = New System.Drawing.Point(345, 361)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
+        Me.BtnNuevo.TabIndex = 94
+        Me.BtnNuevo.UseVisualStyleBackColor = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba31
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnModificar.Location = New System.Drawing.Point(518, 361)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(73, 53)
+        Me.BtnModificar.TabIndex = 89
+        Me.BtnModificar.Text = " "
+        Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnModificar.UseVisualStyleBackColor = False
+        '
+        'PbIcono
+        '
+        Me.PbIcono.BackColor = System.Drawing.Color.Transparent
+        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.oficial
+        Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbIcono.Location = New System.Drawing.Point(98, 92)
+        Me.PbIcono.Name = "PbIcono"
+        Me.PbIcono.Size = New System.Drawing.Size(184, 193)
+        Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PbIcono.TabIndex = 0
+        Me.PbIcono.TabStop = False
+        '
         'PbLapiz
         '
         Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
@@ -531,27 +552,6 @@ Partial Class FrmOficial
         Me.PbLupa.TabIndex = 81
         Me.PbLupa.TabStop = False
         '
-        'DgvOficial
-        '
-        Me.DgvOficial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvOficial.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DgvOficial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvOficial.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgvOficial.Location = New System.Drawing.Point(16, 125)
-        Me.DgvOficial.Name = "DgvOficial"
-        Me.DgvOficial.Size = New System.Drawing.Size(665, 355)
-        Me.DgvOficial.TabIndex = 6
-        '
-        'PbSalir
-        '
-        Me.PbSalir.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.close_button_png_26
-        Me.PbSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbSalir.Location = New System.Drawing.Point(675, 12)
-        Me.PbSalir.Name = "PbSalir"
-        Me.PbSalir.Size = New System.Drawing.Size(33, 32)
-        Me.PbSalir.TabIndex = 19
-        Me.PbSalir.TabStop = False
-        '
         'FrmOficial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -570,13 +570,13 @@ Partial Class FrmOficial
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvOficial, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

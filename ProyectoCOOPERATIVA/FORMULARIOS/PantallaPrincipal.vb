@@ -135,18 +135,29 @@ Public Class PantallaPrincipal
         LblCargo.Visible = False
     End Sub
 
+    Private Sub PnlUsuario_MouseHover(sender As Object, e As EventArgs) Handles PnlUsuario.MouseHover
+        LblUsuario.Visible = True
+    End Sub
+
+    Private Sub PnlUsuario_MouseLeave(sender As Object, e As EventArgs) Handles PnlUsuario.MouseLeave
+        LblUsuario.Visible = False
+    End Sub
+
     Private Sub PnEmpleados_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlEmpleados.MouseClick
         If PnEmpleados2.Visible = True Then
             PnEmpleados2.Visible = False
             PnlProfesion.Visible = False
             Pnlcargo.Visible = False
             PnlOficial.Visible = False
+            PnlUsuario.Visible = False
         Else
             LblEmpleado.Visible = True
+            PnEmpleados2.BringToFront()
             PnEmpleados2.Visible = True
             PnlProfesion.Visible = True
             Pnlcargo.Visible = True
             PnlOficial.Visible = True
+            PnlUsuario.Visible = True
         End If
     End Sub
 
@@ -323,6 +334,19 @@ Public Class PantallaPrincipal
         PnlLogo1.Visible = True
     End Sub
 
+    Private Sub PnlUsuario_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlUsuario.MouseClick
+        Dim MiUsuario As New FrmUsuario
+        MiUsuario.MdiParent = Me
+        MiUsuario.Show()
+        MiUsuario.Location = New Point(550, 60)
+        MiUsuario.BringToFront()
+        PnlLogo.SendToBack()
+        PnEmpleados2.Visible = False
+        PnSocios2.Visible = False
+        PnCooperativa2.Visible = False
+        PnUbicacion2.Visible = False
+        PnlLogo1.Visible = True
+    End Sub
     Private Sub PnAval_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlAval.MouseClick
         Dim MiAval As New FrmAval
         MiAval.MdiParent = Me
@@ -454,4 +478,6 @@ Public Class PantallaPrincipal
         PnUbicacion2.Visible = False
         PnlLogo1.Visible = True
     End Sub
+
+
 End Class

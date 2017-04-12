@@ -1,6 +1,6 @@
 ﻿Imports System.ComponentModel
 
-Public Class FrmOficial
+Public Class FrmUsuario
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
         Me.Close()
     End Sub
@@ -41,6 +41,5 @@ Public Class FrmOficial
     Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) Handles BtnCancelar.MouseLeave
         LblCancelar.Visible = False
     End Sub
-
 
 End Class
