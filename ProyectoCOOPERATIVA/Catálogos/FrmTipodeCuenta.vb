@@ -1,11 +1,12 @@
 ﻿Imports System.ComponentModel
 
-Public Class DEPARTAMENTO
+Public Class FrmTipodeCuenta
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
         Me.Close()
+
     End Sub
 
-    Private Sub DEPARTAMENTO_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub TipodeCuenta_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         PantallaPrincipal.PnlLogo.BringToFront()
         PantallaPrincipal.PnlLogo1.Visible = False
     End Sub

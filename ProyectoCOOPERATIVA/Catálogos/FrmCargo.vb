@@ -1,6 +1,6 @@
 ﻿Imports System.ComponentModel
 
-Public Class CARGO
+Public Class FrmCargo
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
         Me.Close()
     End Sub

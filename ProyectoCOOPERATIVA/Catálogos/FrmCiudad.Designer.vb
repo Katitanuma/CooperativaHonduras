@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmProfesion
+Partial Class FrmCiudad
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -34,10 +34,12 @@ Partial Class FrmProfesion
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtCiudad = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.CboDepartamento = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtCodigoCiudad = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -46,7 +48,7 @@ Partial Class FrmProfesion
         Me.CboBusqueda = New System.Windows.Forms.ComboBox()
         Me.PbLapiz = New System.Windows.Forms.PictureBox()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
-        Me.DgvProfesion = New System.Windows.Forms.DataGridView()
+        Me.DgvCiudad = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
@@ -56,7 +58,7 @@ Partial Class FrmProfesion
         Me.TabPage2.SuspendLayout()
         CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DgvProfesion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvCiudad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,11 +67,11 @@ Partial Class FrmProfesion
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(7, 44)
+        Me.TabControl1.Location = New System.Drawing.Point(8, 45)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(709, 542)
-        Me.TabControl1.TabIndex = 27
+        Me.TabControl1.TabIndex = 21
         '
         'TabPage1
         '
@@ -95,17 +97,19 @@ Partial Class FrmProfesion
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.PbIcono)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.TxtCiudad)
         Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.CboDepartamento)
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.TxtCodigoCiudad)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(-56, 3)
+        Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Location = New System.Drawing.Point(-96, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(758, 501)
-        Me.Panel1.TabIndex = 23
+        Me.Panel1.Size = New System.Drawing.Size(797, 500)
+        Me.Panel1.TabIndex = 17
         '
         'BtnCancelar
         '
@@ -119,7 +123,7 @@ Partial Class FrmProfesion
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(598, 275)
+        Me.BtnCancelar.Location = New System.Drawing.Point(611, 299)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
         Me.BtnCancelar.TabIndex = 104
@@ -139,7 +143,7 @@ Partial Class FrmProfesion
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnGuardar.Location = New System.Drawing.Point(425, 275)
+        Me.BtnGuardar.Location = New System.Drawing.Point(438, 299)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(73, 53)
         Me.BtnGuardar.TabIndex = 103
@@ -159,7 +163,7 @@ Partial Class FrmProfesion
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(338, 275)
+        Me.BtnNuevo.Location = New System.Drawing.Point(351, 299)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
         Me.BtnNuevo.TabIndex = 102
@@ -169,10 +173,10 @@ Partial Class FrmProfesion
         '
         Me.LblCancelar.AutoSize = True
         Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.LblCancelar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(595, 333)
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(608, 357)
         Me.LblCancelar.Name = "LblCancelar"
-        Me.LblCancelar.Size = New System.Drawing.Size(77, 14)
+        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
         Me.LblCancelar.TabIndex = 101
         Me.LblCancelar.Text = "CANCELAR"
         Me.LblCancelar.Visible = False
@@ -181,10 +185,10 @@ Partial Class FrmProfesion
         '
         Me.LblModificar.AutoSize = True
         Me.LblModificar.BackColor = System.Drawing.Color.Transparent
-        Me.LblModificar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificar.Location = New System.Drawing.Point(507, 333)
+        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblModificar.Location = New System.Drawing.Point(520, 357)
         Me.LblModificar.Name = "LblModificar"
-        Me.LblModificar.Size = New System.Drawing.Size(82, 14)
+        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
         Me.LblModificar.TabIndex = 100
         Me.LblModificar.Text = "MODIFICAR"
         Me.LblModificar.Visible = False
@@ -193,10 +197,10 @@ Partial Class FrmProfesion
         '
         Me.LblGuardar.AutoSize = True
         Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.LblGuardar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(426, 333)
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(439, 357)
         Me.LblGuardar.Name = "LblGuardar"
-        Me.LblGuardar.Size = New System.Drawing.Size(71, 14)
+        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
         Me.LblGuardar.TabIndex = 99
         Me.LblGuardar.Text = "GUARDAR"
         Me.LblGuardar.Visible = False
@@ -205,10 +209,10 @@ Partial Class FrmProfesion
         '
         Me.LblNuevo.AutoSize = True
         Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.LblNuevo.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(349, 333)
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(362, 357)
         Me.LblNuevo.Name = "LblNuevo"
-        Me.LblNuevo.Size = New System.Drawing.Size(53, 14)
+        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
         Me.LblNuevo.TabIndex = 98
         Me.LblNuevo.Text = "NUEVO"
         Me.LblNuevo.Visible = False
@@ -225,7 +229,7 @@ Partial Class FrmProfesion
         Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnModificar.Location = New System.Drawing.Point(511, 275)
+        Me.BtnModificar.Location = New System.Drawing.Point(524, 299)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(73, 53)
         Me.BtnModificar.TabIndex = 97
@@ -236,58 +240,77 @@ Partial Class FrmProfesion
         'PbIcono
         '
         Me.PbIcono.BackColor = System.Drawing.Color.Transparent
-        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.profesion
+        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ciudad
         Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbIcono.Location = New System.Drawing.Point(96, 71)
+        Me.PbIcono.Location = New System.Drawing.Point(113, 59)
         Me.PbIcono.Name = "PbIcono"
         Me.PbIcono.Size = New System.Drawing.Size(184, 193)
         Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PbIcono.TabIndex = 0
         Me.PbIcono.TabStop = False
         '
-        'TextBox2
+        'TxtCiudad
         '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(429, 164)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(193, 18)
-        Me.TextBox2.TabIndex = 29
+        Me.TxtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCiudad.Location = New System.Drawing.Point(461, 179)
+        Me.TxtCiudad.Name = "TxtCiudad"
+        Me.TxtCiudad.Size = New System.Drawing.Size(193, 18)
+        Me.TxtCiudad.TabIndex = 29
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(425, 159)
+        Me.Panel3.Location = New System.Drawing.Point(457, 174)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(200, 29)
         Me.Panel3.TabIndex = 30
+        '
+        'CboDepartamento
+        '
+        Me.CboDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboDepartamento.FormattingEnabled = True
+        Me.CboDepartamento.Location = New System.Drawing.Point(457, 214)
+        Me.CboDepartamento.Name = "CboDepartamento"
+        Me.CboDepartamento.Size = New System.Drawing.Size(200, 24)
+        Me.CboDepartamento.TabIndex = 10
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(346, 217)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(94, 16)
+        Me.Label6.TabIndex = 9
+        Me.Label6.Text = "Departamento"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(338, 166)
+        Me.Label2.Location = New System.Drawing.Point(386, 181)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 16)
+        Me.Label2.Size = New System.Drawing.Size(51, 16)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Profesión"
+        Me.Label2.Text = "Ciudad"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TextBox1
+        'TxtCodigoCiudad
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(429, 129)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(193, 18)
-        Me.TextBox1.TabIndex = 1
+        Me.TxtCodigoCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoCiudad.Location = New System.Drawing.Point(461, 144)
+        Me.TxtCodigoCiudad.Name = "TxtCodigoCiudad"
+        Me.TxtCodigoCiudad.Size = New System.Drawing.Size(193, 18)
+        Me.TxtCodigoCiudad.TabIndex = 1
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(425, 124)
+        Me.Panel2.Location = New System.Drawing.Point(457, 139)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
@@ -296,11 +319,11 @@ Partial Class FrmProfesion
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(286, 131)
+        Me.Label1.Location = New System.Drawing.Point(334, 142)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 16)
+        Me.Label1.Size = New System.Drawing.Size(98, 16)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Código Profesión"
+        Me.Label1.Text = "Código Ciudad"
         '
         'TabPage2
         '
@@ -310,7 +333,7 @@ Partial Class FrmProfesion
         Me.TabPage2.Controls.Add(Me.CboBusqueda)
         Me.TabPage2.Controls.Add(Me.PbLapiz)
         Me.TabPage2.Controls.Add(Me.PbLupa)
-        Me.TabPage2.Controls.Add(Me.DgvProfesion)
+        Me.TabPage2.Controls.Add(Me.DgvCiudad)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -322,36 +345,36 @@ Partial Class FrmProfesion
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Monotype Corsiva", 27.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(249, 18)
+        Me.Label4.Location = New System.Drawing.Point(285, 14)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 45)
-        Me.Label4.TabIndex = 88
+        Me.Label4.TabIndex = 83
         Me.Label4.Text = "Datos"
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(289, 80)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(325, 76)
         Me.TxtBusqueda.Name = "TxtBusqueda"
         Me.TxtBusqueda.Size = New System.Drawing.Size(332, 26)
-        Me.TxtBusqueda.TabIndex = 85
+        Me.TxtBusqueda.TabIndex = 80
         '
         'CboBusqueda
         '
         Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(56, 80)
+        Me.CboBusqueda.Location = New System.Drawing.Point(92, 76)
         Me.CboBusqueda.Name = "CboBusqueda"
         Me.CboBusqueda.Size = New System.Drawing.Size(161, 27)
-        Me.CboBusqueda.TabIndex = 84
+        Me.CboBusqueda.TabIndex = 79
         '
         'PbLapiz
         '
         Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
         Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
         Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(257, 80)
+        Me.PbLapiz.Location = New System.Drawing.Point(293, 76)
         Me.PbLapiz.Name = "PbLapiz"
         Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
-        Me.PbLapiz.TabIndex = 87
+        Me.PbLapiz.TabIndex = 82
         Me.PbLapiz.TabStop = False
         '
         'PbLupa
@@ -359,45 +382,45 @@ Partial Class FrmProfesion
         Me.PbLupa.BackColor = System.Drawing.Color.Transparent
         Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
         Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(28, 80)
+        Me.PbLupa.Location = New System.Drawing.Point(64, 76)
         Me.PbLupa.Name = "PbLupa"
         Me.PbLupa.Size = New System.Drawing.Size(22, 27)
-        Me.PbLupa.TabIndex = 86
+        Me.PbLupa.TabIndex = 81
         Me.PbLupa.TabStop = False
         '
-        'DgvProfesion
+        'DgvCiudad
         '
-        Me.DgvProfesion.AllowUserToDeleteRows = False
-        Me.DgvProfesion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvProfesion.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgvProfesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvProfesion.Location = New System.Drawing.Point(16, 137)
-        Me.DgvProfesion.Name = "DgvProfesion"
-        Me.DgvProfesion.Size = New System.Drawing.Size(665, 355)
-        Me.DgvProfesion.TabIndex = 24
+        Me.DgvCiudad.AllowUserToDeleteRows = False
+        Me.DgvCiudad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvCiudad.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DgvCiudad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCiudad.Location = New System.Drawing.Point(16, 137)
+        Me.DgvCiudad.Name = "DgvCiudad"
+        Me.DgvCiudad.Size = New System.Drawing.Size(665, 355)
+        Me.DgvCiudad.TabIndex = 18
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(260, 12)
+        Me.Label14.Location = New System.Drawing.Point(331, 19)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(206, 43)
-        Me.Label14.TabIndex = 28
-        Me.Label14.Text = "PROFESIÓN"
+        Me.Label14.Size = New System.Drawing.Size(154, 43)
+        Me.Label14.TabIndex = 32
+        Me.Label14.Text = "CIUDAD"
         '
         'PbSalir
         '
         Me.PbSalir.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.close_button_png_26
         Me.PbSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbSalir.Location = New System.Drawing.Point(679, 12)
+        Me.PbSalir.Location = New System.Drawing.Point(679, 7)
         Me.PbSalir.Name = "PbSalir"
         Me.PbSalir.Size = New System.Drawing.Size(33, 32)
-        Me.PbSalir.TabIndex = 29
+        Me.PbSalir.TabIndex = 33
         Me.PbSalir.TabStop = False
         '
-        'FrmProfesion
+        'FrmCiudad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -409,8 +432,8 @@ Partial Class FrmProfesion
         Me.Controls.Add(Me.TabControl1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmProfesion"
-        Me.Text = "Profesion"
+        Me.Name = "FrmCiudad"
+        Me.Text = "Gestión de Ciudad"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
@@ -420,7 +443,7 @@ Partial Class FrmProfesion
         Me.TabPage2.PerformLayout()
         CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DgvProfesion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvCiudad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -429,16 +452,18 @@ Partial Class FrmProfesion
 
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents PbIcono As PictureBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TxtCiudad As TextBox
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents CboDepartamento As ComboBox
+    Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtCodigoCiudad As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DgvProfesion As DataGridView
+    Friend WithEvents DgvCiudad As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label

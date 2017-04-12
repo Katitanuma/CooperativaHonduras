@@ -1,11 +1,12 @@
 ﻿Imports System.ComponentModel
 
-Public Class PRESTAMO
+Public Class FrmCiudad
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
         Me.Close()
+
     End Sub
 
-    Private Sub PRESTAMO_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub CIUDAD_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         PantallaPrincipal.PnlLogo.BringToFront()
         PantallaPrincipal.PnlLogo1.Visible = False
     End Sub

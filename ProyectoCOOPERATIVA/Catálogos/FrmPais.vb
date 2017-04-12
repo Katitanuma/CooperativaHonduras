@@ -1,12 +1,11 @@
 ﻿Imports System.ComponentModel
 
-Public Class CIUDAD
+Public Class FrmPais
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
         Me.Close()
 
     End Sub
-
-    Private Sub CIUDAD_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub PAIS_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         PantallaPrincipal.PnlLogo.BringToFront()
         PantallaPrincipal.PnlLogo1.Visible = False
     End Sub

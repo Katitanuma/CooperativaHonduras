@@ -310,7 +310,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub Pncargo_MouseClick(sender As Object, e As MouseEventArgs) Handles Pnlcargo.MouseClick
-        Dim MiCargo As New CARGO
+        Dim MiCargo As New FrmCargo
         MiCargo.MdiParent = Me
         MiCargo.Show()
         MiCargo.Location = New Point(550, 60)
@@ -324,7 +324,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PnAval_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlAval.MouseClick
-        Dim MiAval As New AVAL
+        Dim MiAval As New FrmAval
         MiAval.MdiParent = Me
         MiAval.Show()
         MiAval.Location = New Point(550, 60)
@@ -338,7 +338,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PnPrestamo_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlPrestamo.MouseClick
-        Dim MiPrestamo As New PRESTAMO
+        Dim MiPrestamo As New FrmPrestamo
         MiPrestamo.MdiParent = Me
         MiPrestamo.Show()
         MiPrestamo.Location = New Point(550, 60)
@@ -352,7 +352,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PnTipoCuenta_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlTipoCuenta.MouseClick
-        Dim MiTipoCuenta As New TipodeCuenta
+        Dim MiTipoCuenta As New FrmTipodeCuenta
         MiTipoCuenta.MdiParent = Me
         MiTipoCuenta.Show()
         MiTipoCuenta.Location = New Point(550, 60)
@@ -366,7 +366,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PnTipoPrestamo_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlTipoPrestamo.MouseClick
-        Dim MiTipoPrestamo As New TipoPrestamo
+        Dim MiTipoPrestamo As New FrmTipoPrestamo
         MiTipoPrestamo.MdiParent = Me
         MiTipoPrestamo.Show()
         MiTipoPrestamo.Location = New Point(550, 60)
@@ -380,7 +380,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PnNacionalidad_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlNacionalidad.MouseClick
-        Dim MiNacionalidad As New NACIONALIDAD
+        Dim MiNacionalidad As New FrmNacionalidad
         MiNacionalidad.MdiParent = Me
         MiNacionalidad.Show()
         MiNacionalidad.Location = New Point(550, 60)
@@ -394,7 +394,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PnPais_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlPais.MouseClick
-        Dim MiPais As New PAIS
+        Dim MiPais As New FrmPais
         MiPais.MdiParent = Me
         MiPais.Show()
         MiPais.Location = New Point(550, 60)
@@ -408,7 +408,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PnDepartamento_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlDepartamento.MouseClick
-        Dim MiDepto As New DEPARTAMENTO
+        Dim MiDepto As New frmDepartamento
         MiDepto.MdiParent = Me
         MiDepto.Show()
         MiDepto.Location = New Point(550, 60)
@@ -442,7 +442,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PnlCiudad_MouseClick(sender As Object, e As MouseEventArgs) Handles PnlCiudad.MouseClick
-        Dim MiCiudad As New CIUDAD
+        Dim MiCiudad As New FrmCiudad
         MiCiudad.MdiParent = Me
         MiCiudad.Show()
         MiCiudad.Location = New Point(550, 60)

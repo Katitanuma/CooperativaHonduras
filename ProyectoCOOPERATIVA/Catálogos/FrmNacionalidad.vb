@@ -1,14 +1,16 @@
 ﻿Imports System.ComponentModel
 
-Public Class TipoPrestamo
+Public Class FrmNacionalidad
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
         Me.Close()
+
     End Sub
 
-    Private Sub TipoPrestamo_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub NACIONALIDAD_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         PantallaPrincipal.PnlLogo.BringToFront()
         PantallaPrincipal.PnlLogo1.Visible = False
     End Sub
+
     Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) Handles BtnNuevo.MouseHover
         LblNuevo.Visible = True
     End Sub

@@ -72,16 +72,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FORMULARIOS\CUENTA.Designer.vb">
-      <DependentUpon>CUENTA.vb</DependentUpon>
+    <Compile Include="FORMULARIOS\FrmCuenta.Designer.vb">
+      <DependentUpon>FrmCuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\CUENTA.vb">
+    <Compile Include="FORMULARIOS\FrmCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\CARGO.Designer.vb">
-      <DependentUpon>CARGO.vb</DependentUpon>
+    <Compile Include="Catálogos\FrmCargo.Designer.vb">
+      <DependentUpon>FrmCargo.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\CARGO.vb">
+    <Compile Include="Catálogos\FrmCargo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\FrmLogin.Designer.vb">
@@ -90,70 +90,70 @@
     <Compile Include="FORMULARIOS\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\PROFESION.Designer.vb">
-      <DependentUpon>PROFESION.vb</DependentUpon>
+    <Compile Include="Catálogos\FrmProfesion.Designer.vb">
+      <DependentUpon>FrmProfesion.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\PROFESION.vb">
+    <Compile Include="Catálogos\FrmProfesion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\OFICIAL.Designer.vb">
-      <DependentUpon>OFICIAL.vb</DependentUpon>
+    <Compile Include="FORMULARIOS\FrmOficial.Designer.vb">
+      <DependentUpon>FrmOficial.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\OFICIAL.vb">
+    <Compile Include="FORMULARIOS\FrmOficial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\AVAL.Designer.vb">
-      <DependentUpon>AVAL.vb</DependentUpon>
+    <Compile Include="FORMULARIOS\FrmAval.Designer.vb">
+      <DependentUpon>FrmAval.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\AVAL.vb">
+    <Compile Include="FORMULARIOS\FrmAval.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\CIUDAD.Designer.vb">
-      <DependentUpon>CIUDAD.vb</DependentUpon>
+    <Compile Include="Catálogos\FrmCiudad.Designer.vb">
+      <DependentUpon>FrmCiudad.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\CIUDAD.vb">
+    <Compile Include="Catálogos\FrmCiudad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\DEPARTAMENTO.Designer.vb">
-      <DependentUpon>DEPARTAMENTO.vb</DependentUpon>
+    <Compile Include="Catálogos\FrmDepartamento.Designer.vb">
+      <DependentUpon>FrmDepartamento.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\DEPARTAMENTO.vb">
+    <Compile Include="Catálogos\FrmDepartamento.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\NACIONALIDAD.Designer.vb">
-      <DependentUpon>NACIONALIDAD.vb</DependentUpon>
+    <Compile Include="Catálogos\FrmNacionalidad.Designer.vb">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\NACIONALIDAD.vb">
+    <Compile Include="Catálogos\FrmNacionalidad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\PAIS.Designer.vb">
-      <DependentUpon>PAIS.vb</DependentUpon>
+    <Compile Include="Catálogos\FrmPais.Designer.vb">
+      <DependentUpon>FrmPais.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\PAIS.vb">
+    <Compile Include="Catálogos\FrmPais.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\PRESTAMO.Designer.vb">
-      <DependentUpon>PRESTAMO.vb</DependentUpon>
+    <Compile Include="FORMULARIOS\FrmPrestamo.Designer.vb">
+      <DependentUpon>FrmPrestamo.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\PRESTAMO.vb">
+    <Compile Include="FORMULARIOS\FrmPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\SOCIO.Designer.vb">
-      <DependentUpon>SOCIO.vb</DependentUpon>
+    <Compile Include="FORMULARIOS\FrmSocio.Designer.vb">
+      <DependentUpon>FrmSocio.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\SOCIO.vb">
+    <Compile Include="FORMULARIOS\FrmSocio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\TipodeCuenta.Designer.vb">
-      <DependentUpon>TipodeCuenta.vb</DependentUpon>
+    <Compile Include="Catálogos\FrmTipodeCuenta.Designer.vb">
+      <DependentUpon>FrmTipodeCuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\TipodeCuenta.vb">
+    <Compile Include="Catálogos\FrmTipodeCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\TipoPrestamo.Designer.vb">
-      <DependentUpon>TipoPrestamo.vb</DependentUpon>
+    <Compile Include="Catálogos\FrmTipoPrestamo.Designer.vb">
+      <DependentUpon>FrmTipoPrestamo.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\TipoPrestamo.vb">
+    <Compile Include="Catálogos\FrmTipoPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -179,47 +179,47 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FORMULARIOS\CUENTA.resx">
-      <DependentUpon>CUENTA.vb</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\FrmCuenta.resx">
+      <DependentUpon>FrmCuenta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\CARGO.resx">
-      <DependentUpon>CARGO.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\FrmCargo.resx">
+      <DependentUpon>FrmCargo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\PROFESION.resx">
-      <DependentUpon>PROFESION.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\FrmProfesion.resx">
+      <DependentUpon>FrmProfesion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\OFICIAL.resx">
-      <DependentUpon>OFICIAL.vb</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\FrmOficial.resx">
+      <DependentUpon>FrmOficial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\AVAL.resx">
-      <DependentUpon>AVAL.vb</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\FrmAval.resx">
+      <DependentUpon>FrmAval.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\CIUDAD.resx">
-      <DependentUpon>CIUDAD.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\FrmCiudad.resx">
+      <DependentUpon>FrmCiudad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\DEPARTAMENTO.resx">
-      <DependentUpon>DEPARTAMENTO.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\FrmDepartamento.resx">
+      <DependentUpon>FrmDepartamento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\NACIONALIDAD.resx">
-      <DependentUpon>NACIONALIDAD.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\FrmNacionalidad.resx">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\PAIS.resx">
-      <DependentUpon>PAIS.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\FrmPais.resx">
+      <DependentUpon>FrmPais.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\PRESTAMO.resx">
-      <DependentUpon>PRESTAMO.vb</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\FrmPrestamo.resx">
+      <DependentUpon>FrmPrestamo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\SOCIO.resx">
-      <DependentUpon>SOCIO.vb</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\FrmSocio.resx">
+      <DependentUpon>FrmSocio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\TipodeCuenta.resx">
-      <DependentUpon>TipodeCuenta.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\FrmTipodeCuenta.resx">
+      <DependentUpon>FrmTipodeCuenta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\TipoPrestamo.resx">
-      <DependentUpon>TipoPrestamo.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\FrmTipoPrestamo.resx">
+      <DependentUpon>FrmTipoPrestamo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

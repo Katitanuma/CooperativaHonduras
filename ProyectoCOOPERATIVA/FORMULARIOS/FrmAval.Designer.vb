@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AVAL
+Partial Class FrmAval
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -171,10 +171,10 @@ Partial Class AVAL
         '
         Me.LblCancelar.AutoSize = True
         Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.LblCancelar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCancelar.Location = New System.Drawing.Point(537, 351)
         Me.LblCancelar.Name = "LblCancelar"
-        Me.LblCancelar.Size = New System.Drawing.Size(77, 14)
+        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
         Me.LblCancelar.TabIndex = 101
         Me.LblCancelar.Text = "CANCELAR"
         Me.LblCancelar.Visible = False
@@ -183,10 +183,10 @@ Partial Class AVAL
         '
         Me.LblModificar.AutoSize = True
         Me.LblModificar.BackColor = System.Drawing.Color.Transparent
-        Me.LblModificar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblModificar.Location = New System.Drawing.Point(449, 351)
         Me.LblModificar.Name = "LblModificar"
-        Me.LblModificar.Size = New System.Drawing.Size(82, 14)
+        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
         Me.LblModificar.TabIndex = 100
         Me.LblModificar.Text = "MODIFICAR"
         Me.LblModificar.Visible = False
@@ -195,10 +195,10 @@ Partial Class AVAL
         '
         Me.LblGuardar.AutoSize = True
         Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.LblGuardar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblGuardar.Location = New System.Drawing.Point(368, 351)
         Me.LblGuardar.Name = "LblGuardar"
-        Me.LblGuardar.Size = New System.Drawing.Size(71, 14)
+        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
         Me.LblGuardar.TabIndex = 99
         Me.LblGuardar.Text = "GUARDAR"
         Me.LblGuardar.Visible = False
@@ -207,10 +207,10 @@ Partial Class AVAL
         '
         Me.LblNuevo.AutoSize = True
         Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.LblNuevo.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNuevo.Location = New System.Drawing.Point(291, 351)
         Me.LblNuevo.Name = "LblNuevo"
-        Me.LblNuevo.Size = New System.Drawing.Size(53, 14)
+        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
         Me.LblNuevo.TabIndex = 98
         Me.LblNuevo.Text = "NUEVO"
         Me.LblNuevo.Visible = False
@@ -251,11 +251,11 @@ Partial Class AVAL
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(245, 146)
+        Me.Label3.Location = New System.Drawing.Point(245, 141)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(113, 16)
         Me.Label3.TabIndex = 50
-        Me.Label3.Text = "Código Prestamo"
+        Me.Label3.Text = "Código Préstamo"
         '
         'TxtCodigoCargo
         '
@@ -295,7 +295,7 @@ Partial Class AVAL
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(323, 213)
+        Me.Label2.Location = New System.Drawing.Point(319, 208)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(35, 16)
         Me.Label2.TabIndex = 3
@@ -306,11 +306,11 @@ Partial Class AVAL
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(240, 178)
+        Me.Label1.Location = New System.Drawing.Point(245, 173)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(113, 16)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Código Prestamo"
+        Me.Label1.Text = "Código Préstamo"
         '
         'TabPage2
         '
@@ -408,7 +408,7 @@ Partial Class AVAL
         Me.PbSalir.TabIndex = 32
         Me.PbSalir.TabStop = False
         '
-        'AVAL
+        'FrmAval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -420,8 +420,8 @@ Partial Class AVAL
         Me.Controls.Add(Me.TabControl1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "AVAL"
-        Me.Text = "V"
+        Me.Name = "FrmAval"
+        Me.Text = "Aval"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

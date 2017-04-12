@@ -217,10 +217,10 @@ Partial Class FrmSocio
         '
         Me.LblCancelar.AutoSize = True
         Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.LblCancelar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCancelar.Location = New System.Drawing.Point(530, 470)
         Me.LblCancelar.Name = "LblCancelar"
-        Me.LblCancelar.Size = New System.Drawing.Size(77, 14)
+        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
         Me.LblCancelar.TabIndex = 109
         Me.LblCancelar.Text = "CANCELAR"
         Me.LblCancelar.Visible = False
@@ -229,10 +229,10 @@ Partial Class FrmSocio
         '
         Me.LblModificar.AutoSize = True
         Me.LblModificar.BackColor = System.Drawing.Color.Transparent
-        Me.LblModificar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblModificar.Location = New System.Drawing.Point(442, 470)
         Me.LblModificar.Name = "LblModificar"
-        Me.LblModificar.Size = New System.Drawing.Size(82, 14)
+        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
         Me.LblModificar.TabIndex = 108
         Me.LblModificar.Text = "MODIFICAR"
         Me.LblModificar.Visible = False
@@ -241,10 +241,10 @@ Partial Class FrmSocio
         '
         Me.LblGuardar.AutoSize = True
         Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.LblGuardar.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblGuardar.Location = New System.Drawing.Point(361, 470)
         Me.LblGuardar.Name = "LblGuardar"
-        Me.LblGuardar.Size = New System.Drawing.Size(71, 14)
+        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
         Me.LblGuardar.TabIndex = 107
         Me.LblGuardar.Text = "GUARDAR"
         Me.LblGuardar.Visible = False
@@ -253,10 +253,10 @@ Partial Class FrmSocio
         '
         Me.LblNuevo.AutoSize = True
         Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.LblNuevo.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNuevo.Location = New System.Drawing.Point(284, 470)
         Me.LblNuevo.Name = "LblNuevo"
-        Me.LblNuevo.Size = New System.Drawing.Size(53, 14)
+        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
         Me.LblNuevo.TabIndex = 106
         Me.LblNuevo.Text = "NUEVO"
         Me.LblNuevo.Visible = False
@@ -679,7 +679,7 @@ Partial Class FrmSocio
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmSocio"
-        Me.Text = "SOCIO"
+        Me.Text = "Socio"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

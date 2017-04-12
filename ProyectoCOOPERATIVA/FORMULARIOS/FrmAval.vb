@@ -1,11 +1,11 @@
 ﻿Imports System.ComponentModel
 
-Public Class PAIS
+Public Class FrmAval
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
         Me.Close()
-
     End Sub
-    Private Sub PAIS_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
+    Private Sub AVAL_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         PantallaPrincipal.PnlLogo.BringToFront()
         PantallaPrincipal.PnlLogo1.Visible = False
     End Sub
@@ -41,4 +41,6 @@ Public Class PAIS
     Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) Handles BtnCancelar.MouseLeave
         LblCancelar.Visible = False
     End Sub
+
+
 End Class
