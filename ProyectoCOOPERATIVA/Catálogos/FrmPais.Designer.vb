@@ -41,23 +41,22 @@ Partial Class FrmPais
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.CboBusqueda = New System.Windows.Forms.ComboBox()
-        Me.PbLapiz = New System.Windows.Forms.PictureBox()
-        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvPais = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
+        Me.PlPais = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvPais, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PlPais.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -87,6 +86,7 @@ Partial Class FrmPais
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.PlPais)
         Me.Panel1.Controls.Add(Me.BtnCancelar)
         Me.Panel1.Controls.Add(Me.BtnGuardar)
         Me.Panel1.Controls.Add(Me.BtnNuevo)
@@ -96,11 +96,7 @@ Partial Class FrmPais
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.PbIcono)
-        Me.Panel1.Controls.Add(Me.TxtPais)
-        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TxtCodigoPais)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlText
@@ -251,7 +247,7 @@ Partial Class FrmPais
         '
         Me.TxtPais.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtPais.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPais.Location = New System.Drawing.Point(407, 202)
+        Me.TxtPais.Location = New System.Drawing.Point(5, 60)
         Me.TxtPais.Name = "TxtPais"
         Me.TxtPais.Size = New System.Drawing.Size(277, 18)
         Me.TxtPais.TabIndex = 29
@@ -260,7 +256,7 @@ Partial Class FrmPais
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(403, 197)
+        Me.Panel3.Location = New System.Drawing.Point(1, 55)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(285, 29)
         Me.Panel3.TabIndex = 30
@@ -281,7 +277,7 @@ Partial Class FrmPais
         Me.TxtCodigoPais.BackColor = System.Drawing.Color.White
         Me.TxtCodigoPais.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCodigoPais.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoPais.Location = New System.Drawing.Point(407, 167)
+        Me.TxtCodigoPais.Location = New System.Drawing.Point(5, 25)
         Me.TxtCodigoPais.Name = "TxtCodigoPais"
         Me.TxtCodigoPais.ReadOnly = True
         Me.TxtCodigoPais.Size = New System.Drawing.Size(193, 18)
@@ -291,7 +287,7 @@ Partial Class FrmPais
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(403, 162)
+        Me.Panel2.Location = New System.Drawing.Point(1, 20)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
@@ -309,11 +305,9 @@ Partial Class FrmPais
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
+        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.CboBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLapiz)
-        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.DgvPais)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
@@ -321,6 +315,17 @@ Partial Class FrmPais
         Me.TabPage2.Size = New System.Drawing.Size(701, 510)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Ver Datos"
+        '
+        'PbLupa
+        '
+        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
+        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
+        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbLupa.Location = New System.Drawing.Point(16, 92)
+        Me.PbLupa.Name = "PbLupa"
+        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
+        Me.PbLupa.TabIndex = 87
+        Me.PbLupa.TabStop = False
         '
         'Label4
         '
@@ -334,40 +339,10 @@ Partial Class FrmPais
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(349, 79)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 92)
         Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(332, 26)
+        Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
         Me.TxtBusqueda.TabIndex = 80
-        '
-        'CboBusqueda
-        '
-        Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(44, 78)
-        Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(241, 27)
-        Me.CboBusqueda.TabIndex = 79
-        '
-        'PbLapiz
-        '
-        Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
-        Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
-        Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(317, 79)
-        Me.PbLapiz.Name = "PbLapiz"
-        Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
-        Me.PbLapiz.TabIndex = 82
-        Me.PbLapiz.TabStop = False
-        '
-        'PbLupa
-        '
-        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
-        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
-        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(16, 78)
-        Me.PbLupa.Name = "PbLupa"
-        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
-        Me.PbLupa.TabIndex = 81
-        Me.PbLupa.TabStop = False
         '
         'DgvPais
         '
@@ -401,6 +376,17 @@ Partial Class FrmPais
         Me.PbSalir.TabIndex = 23
         Me.PbSalir.TabStop = False
         '
+        'PlPais
+        '
+        Me.PlPais.Controls.Add(Me.TxtPais)
+        Me.PlPais.Controls.Add(Me.Panel3)
+        Me.PlPais.Controls.Add(Me.TxtCodigoPais)
+        Me.PlPais.Controls.Add(Me.Panel2)
+        Me.PlPais.Location = New System.Drawing.Point(402, 142)
+        Me.PlPais.Name = "PlPais"
+        Me.PlPais.Size = New System.Drawing.Size(306, 121)
+        Me.PlPais.TabIndex = 105
+        '
         'FrmPais
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -422,10 +408,11 @@ Partial Class FrmPais
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvPais, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PlPais.ResumeLayout(False)
+        Me.PlPais.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -447,9 +434,6 @@ Partial Class FrmPais
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents CboBusqueda As ComboBox
-    Friend WithEvents PbLapiz As PictureBox
-    Friend WithEvents PbLupa As PictureBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
@@ -458,4 +442,6 @@ Partial Class FrmPais
     Friend WithEvents LblGuardar As Label
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
+    Friend WithEvents PbLupa As PictureBox
+    Friend WithEvents PlPais As Panel
 End Class

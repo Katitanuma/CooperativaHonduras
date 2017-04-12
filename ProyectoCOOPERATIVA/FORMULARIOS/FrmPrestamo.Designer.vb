@@ -40,32 +40,31 @@ Partial Class FrmPrestamo
         Me.CboOficial = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TxtTaza = New System.Windows.Forms.TextBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.TxtFinalidad = New System.Windows.Forms.TextBox()
+        Me.TxtTaza = New System.Windows.Forms.TextBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.TxtFinalidad = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TxtPlazo = New System.Windows.Forms.TextBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.TxtPlazo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtCapital = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.TxtCapital = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtCodigoPrestamo = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TxtCodigoPrestamo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.CboBusqueda = New System.Windows.Forms.ComboBox()
-        Me.PbLapiz = New System.Windows.Forms.PictureBox()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvPrestatamo = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
+        Me.PlPrestamo = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -76,10 +75,10 @@ Partial Class FrmPrestamo
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvPrestatamo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PlPrestamo.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -108,6 +107,7 @@ Partial Class FrmPrestamo
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.PlPrestamo)
         Me.Panel1.Controls.Add(Me.BtnCancelar)
         Me.Panel1.Controls.Add(Me.BtnGuardar)
         Me.Panel1.Controls.Add(Me.BtnNuevo)
@@ -117,23 +117,14 @@ Partial Class FrmPrestamo
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.PbIcono)
-        Me.Panel1.Controls.Add(Me.DtpFecha)
-        Me.Panel1.Controls.Add(Me.CboTipoPrestamo)
-        Me.Panel1.Controls.Add(Me.CboSocio)
-        Me.Panel1.Controls.Add(Me.CboOficial)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.Panel8)
-        Me.Panel1.Controls.Add(Me.Panel10)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(-23, 1)
@@ -283,7 +274,7 @@ Partial Class FrmPrestamo
         '
         Me.DtpFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFecha.Location = New System.Drawing.Point(388, 100)
+        Me.DtpFecha.Location = New System.Drawing.Point(9, 82)
         Me.DtpFecha.Name = "DtpFecha"
         Me.DtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.DtpFecha.Size = New System.Drawing.Size(92, 22)
@@ -294,7 +285,7 @@ Partial Class FrmPrestamo
         Me.CboTipoPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboTipoPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboTipoPrestamo.FormattingEnabled = True
-        Me.CboTipoPrestamo.Location = New System.Drawing.Point(387, 64)
+        Me.CboTipoPrestamo.Location = New System.Drawing.Point(8, 46)
         Me.CboTipoPrestamo.Name = "CboTipoPrestamo"
         Me.CboTipoPrestamo.Size = New System.Drawing.Size(251, 24)
         Me.CboTipoPrestamo.TabIndex = 34
@@ -304,7 +295,7 @@ Partial Class FrmPrestamo
         Me.CboSocio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboSocio.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboSocio.FormattingEnabled = True
-        Me.CboSocio.Location = New System.Drawing.Point(388, 133)
+        Me.CboSocio.Location = New System.Drawing.Point(9, 115)
         Me.CboSocio.Name = "CboSocio"
         Me.CboSocio.Size = New System.Drawing.Size(278, 24)
         Me.CboSocio.TabIndex = 10
@@ -314,7 +305,7 @@ Partial Class FrmPrestamo
         Me.CboOficial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboOficial.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboOficial.FormattingEnabled = True
-        Me.CboOficial.Location = New System.Drawing.Point(387, 375)
+        Me.CboOficial.Location = New System.Drawing.Point(8, 357)
         Me.CboOficial.Name = "CboOficial"
         Me.CboOficial.Size = New System.Drawing.Size(278, 24)
         Me.CboOficial.TabIndex = 9
@@ -339,6 +330,16 @@ Partial Class FrmPrestamo
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "Tasa de Interés"
         '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel8.Controls.Add(Me.TxtTaza)
+        Me.Panel8.Location = New System.Drawing.Point(8, 228)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(200, 29)
+        Me.Panel8.TabIndex = 26
+        '
         'TxtTaza
         '
         Me.TxtTaza.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -348,15 +349,15 @@ Partial Class FrmPrestamo
         Me.TxtTaza.Size = New System.Drawing.Size(193, 18)
         Me.TxtTaza.TabIndex = 7
         '
-        'Panel8
+        'Panel10
         '
-        Me.Panel8.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel8.Controls.Add(Me.TxtTaza)
-        Me.Panel8.Location = New System.Drawing.Point(387, 246)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(200, 29)
-        Me.Panel8.TabIndex = 26
+        Me.Panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel10.Controls.Add(Me.TxtFinalidad)
+        Me.Panel10.Location = New System.Drawing.Point(8, 269)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(322, 78)
+        Me.Panel10.TabIndex = 20
         '
         'TxtFinalidad
         '
@@ -368,16 +369,6 @@ Partial Class FrmPrestamo
         Me.TxtFinalidad.Size = New System.Drawing.Size(312, 65)
         Me.TxtFinalidad.TabIndex = 8
         '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel10.Controls.Add(Me.TxtFinalidad)
-        Me.Panel10.Location = New System.Drawing.Point(387, 287)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(322, 78)
-        Me.Panel10.TabIndex = 20
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -388,6 +379,16 @@ Partial Class FrmPrestamo
         Me.Label9.TabIndex = 18
         Me.Label9.Text = "Finalidad del Préstamo"
         '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Controls.Add(Me.TxtPlazo)
+        Me.Panel5.Location = New System.Drawing.Point(9, 189)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(200, 29)
+        Me.Panel5.TabIndex = 17
+        '
         'TxtPlazo
         '
         Me.TxtPlazo.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -396,16 +397,6 @@ Partial Class FrmPrestamo
         Me.TxtPlazo.Name = "TxtPlazo"
         Me.TxtPlazo.Size = New System.Drawing.Size(191, 18)
         Me.TxtPlazo.TabIndex = 6
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.TxtPlazo)
-        Me.Panel5.Location = New System.Drawing.Point(388, 207)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(200, 29)
-        Me.Panel5.TabIndex = 17
         '
         'Label4
         '
@@ -417,6 +408,16 @@ Partial Class FrmPrestamo
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Plazo"
         '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel6.Controls.Add(Me.TxtCapital)
+        Me.Panel6.Location = New System.Drawing.Point(9, 150)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(200, 29)
+        Me.Panel6.TabIndex = 14
+        '
         'TxtCapital
         '
         Me.TxtCapital.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -425,16 +426,6 @@ Partial Class FrmPrestamo
         Me.TxtCapital.Name = "TxtCapital"
         Me.TxtCapital.Size = New System.Drawing.Size(193, 18)
         Me.TxtCapital.TabIndex = 5
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel6.Controls.Add(Me.TxtCapital)
-        Me.Panel6.Location = New System.Drawing.Point(388, 168)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(200, 29)
-        Me.Panel6.TabIndex = 14
         '
         'Label5
         '
@@ -476,6 +467,16 @@ Partial Class FrmPrestamo
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Tipo de Préstamo"
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TxtCodigoPrestamo)
+        Me.Panel2.Location = New System.Drawing.Point(8, 5)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.TabIndex = 2
+        '
         'TxtCodigoPrestamo
         '
         Me.TxtCodigoPrestamo.BackColor = System.Drawing.Color.White
@@ -486,16 +487,6 @@ Partial Class FrmPrestamo
         Me.TxtCodigoPrestamo.ReadOnly = True
         Me.TxtCodigoPrestamo.Size = New System.Drawing.Size(193, 18)
         Me.TxtCodigoPrestamo.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.TxtCodigoPrestamo)
-        Me.Panel2.Location = New System.Drawing.Point(387, 23)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
-        Me.Panel2.TabIndex = 2
         '
         'Label1
         '
@@ -512,8 +503,6 @@ Partial Class FrmPrestamo
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
         Me.TabPage2.Controls.Add(Me.Label8)
         Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.CboBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLapiz)
         Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.DgvPrestatamo)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
@@ -535,36 +524,17 @@ Partial Class FrmPrestamo
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(349, 76)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 85)
         Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(332, 26)
+        Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
         Me.TxtBusqueda.TabIndex = 85
-        '
-        'CboBusqueda
-        '
-        Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(44, 76)
-        Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(251, 27)
-        Me.CboBusqueda.TabIndex = 84
-        '
-        'PbLapiz
-        '
-        Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
-        Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
-        Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(317, 76)
-        Me.PbLapiz.Name = "PbLapiz"
-        Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
-        Me.PbLapiz.TabIndex = 87
-        Me.PbLapiz.TabStop = False
         '
         'PbLupa
         '
         Me.PbLupa.BackColor = System.Drawing.Color.Transparent
         Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
         Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(16, 76)
+        Me.PbLupa.Location = New System.Drawing.Point(16, 85)
         Me.PbLupa.Name = "PbLupa"
         Me.PbLupa.Size = New System.Drawing.Size(22, 27)
         Me.PbLupa.TabIndex = 86
@@ -601,6 +571,22 @@ Partial Class FrmPrestamo
         Me.PbSalir.TabIndex = 33
         Me.PbSalir.TabStop = False
         '
+        'PlPrestamo
+        '
+        Me.PlPrestamo.Controls.Add(Me.DtpFecha)
+        Me.PlPrestamo.Controls.Add(Me.CboTipoPrestamo)
+        Me.PlPrestamo.Controls.Add(Me.CboSocio)
+        Me.PlPrestamo.Controls.Add(Me.CboOficial)
+        Me.PlPrestamo.Controls.Add(Me.Panel8)
+        Me.PlPrestamo.Controls.Add(Me.Panel10)
+        Me.PlPrestamo.Controls.Add(Me.Panel5)
+        Me.PlPrestamo.Controls.Add(Me.Panel6)
+        Me.PlPrestamo.Controls.Add(Me.Panel2)
+        Me.PlPrestamo.Location = New System.Drawing.Point(379, 18)
+        Me.PlPrestamo.Name = "PlPrestamo"
+        Me.PlPrestamo.Size = New System.Drawing.Size(343, 394)
+        Me.PlPrestamo.TabIndex = 105
+        '
         'FrmPrestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -632,10 +618,10 @@ Partial Class FrmPrestamo
         Me.Panel2.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvPrestatamo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PlPrestamo.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -674,8 +660,6 @@ Partial Class FrmPrestamo
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents CboBusqueda As ComboBox
-    Friend WithEvents PbLapiz As PictureBox
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
@@ -685,4 +669,5 @@ Partial Class FrmPrestamo
     Friend WithEvents LblGuardar As Label
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
+    Friend WithEvents PlPrestamo As Panel
 End Class

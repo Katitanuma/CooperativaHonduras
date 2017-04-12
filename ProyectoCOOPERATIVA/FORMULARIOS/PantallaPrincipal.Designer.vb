@@ -26,7 +26,6 @@ Partial Class PantallaPrincipal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PantallaPrincipal))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
@@ -81,7 +80,6 @@ Partial Class PantallaPrincipal
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.LblSalir = New System.Windows.Forms.Label()
         Me.LblCambio = New System.Windows.Forms.Label()
-        Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PnUbicacion2.SuspendLayout()
@@ -99,19 +97,11 @@ Partial Class PantallaPrincipal
         'MenuStrip
         '
         Me.MenuStrip.BackColor = System.Drawing.Color.Blue
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Size = New System.Drawing.Size(1345, 24)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
-        '
-        'FileMenu
-        '
-        Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
-        Me.FileMenu.Name = "FileMenu"
-        Me.FileMenu.Size = New System.Drawing.Size(37, 20)
-        Me.FileMenu.Text = "&File"
         '
         'StatusStrip
         '
@@ -387,7 +377,7 @@ Partial Class PantallaPrincipal
         Me.PnEmpleados2.Controls.Add(Me.LblOficial)
         Me.PnEmpleados2.Location = New System.Drawing.Point(108, 390)
         Me.PnEmpleados2.Name = "PnEmpleados2"
-        Me.PnEmpleados2.Size = New System.Drawing.Size(367, 85)
+        Me.PnEmpleados2.Size = New System.Drawing.Size(352, 85)
         Me.PnEmpleados2.TabIndex = 17
         Me.PnEmpleados2.Visible = False
         '
@@ -799,8 +789,6 @@ Partial Class PantallaPrincipal
         Me.Name = "PantallaPrincipal"
         Me.Text = "PantallaPrincipal"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.MenuStrip.ResumeLayout(False)
-        Me.MenuStrip.PerformLayout()
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -826,7 +814,6 @@ Partial Class PantallaPrincipal
     Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
     Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
-    Friend WithEvents FileMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label

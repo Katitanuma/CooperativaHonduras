@@ -47,21 +47,20 @@ Partial Class FrmCuenta
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.CboBusqueda = New System.Windows.Forms.ComboBox()
-        Me.PbLapiz = New System.Windows.Forms.PictureBox()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvCuenta = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
+        Me.PlCuenta = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvCuenta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PlCuenta.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -90,6 +89,7 @@ Partial Class FrmCuenta
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.PlCuenta)
         Me.Panel1.Controls.Add(Me.BtnCancelar)
         Me.Panel1.Controls.Add(Me.BtnGuardar)
         Me.Panel1.Controls.Add(Me.BtnNuevo)
@@ -99,15 +99,9 @@ Partial Class FrmCuenta
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.PbIcono)
-        Me.Panel1.Controls.Add(Me.CboSocio)
-        Me.Panel1.Controls.Add(Me.CboTipoCuenta)
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.TxtSaldoActual)
-        Me.Panel1.Controls.Add(Me.Panel10)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TxtCodigoCuenta)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(-42, -7)
@@ -258,7 +252,7 @@ Partial Class FrmCuenta
         Me.CboSocio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboSocio.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboSocio.FormattingEnabled = True
-        Me.CboSocio.Location = New System.Drawing.Point(400, 170)
+        Me.CboSocio.Location = New System.Drawing.Point(6, 59)
         Me.CboSocio.Name = "CboSocio"
         Me.CboSocio.Size = New System.Drawing.Size(283, 24)
         Me.CboSocio.TabIndex = 40
@@ -268,7 +262,7 @@ Partial Class FrmCuenta
         Me.CboTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboTipoCuenta.FormattingEnabled = True
-        Me.CboTipoCuenta.Location = New System.Drawing.Point(400, 206)
+        Me.CboTipoCuenta.Location = New System.Drawing.Point(6, 95)
         Me.CboTipoCuenta.Name = "CboTipoCuenta"
         Me.CboTipoCuenta.Size = New System.Drawing.Size(283, 24)
         Me.CboTipoCuenta.TabIndex = 10
@@ -287,7 +281,7 @@ Partial Class FrmCuenta
         '
         Me.TxtSaldoActual.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtSaldoActual.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSaldoActual.Location = New System.Drawing.Point(404, 247)
+        Me.TxtSaldoActual.Location = New System.Drawing.Point(10, 136)
         Me.TxtSaldoActual.Name = "TxtSaldoActual"
         Me.TxtSaldoActual.Size = New System.Drawing.Size(242, 18)
         Me.TxtSaldoActual.TabIndex = 8
@@ -296,7 +290,7 @@ Partial Class FrmCuenta
         '
         Me.Panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel10.Location = New System.Drawing.Point(400, 242)
+        Me.Panel10.Location = New System.Drawing.Point(6, 131)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(250, 29)
         Me.Panel10.TabIndex = 20
@@ -327,7 +321,7 @@ Partial Class FrmCuenta
         Me.TxtCodigoCuenta.BackColor = System.Drawing.Color.White
         Me.TxtCodigoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCodigoCuenta.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoCuenta.Location = New System.Drawing.Point(404, 135)
+        Me.TxtCodigoCuenta.Location = New System.Drawing.Point(10, 24)
         Me.TxtCodigoCuenta.Name = "TxtCodigoCuenta"
         Me.TxtCodigoCuenta.ReadOnly = True
         Me.TxtCodigoCuenta.Size = New System.Drawing.Size(193, 18)
@@ -337,7 +331,7 @@ Partial Class FrmCuenta
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(400, 130)
+        Me.Panel2.Location = New System.Drawing.Point(6, 19)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
@@ -357,8 +351,6 @@ Partial Class FrmCuenta
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.CboBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLapiz)
         Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.DgvCuenta)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
@@ -380,36 +372,17 @@ Partial Class FrmCuenta
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(375, 76)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 84)
         Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(306, 26)
+        Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
         Me.TxtBusqueda.TabIndex = 85
-        '
-        'CboBusqueda
-        '
-        Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(44, 76)
-        Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(258, 27)
-        Me.CboBusqueda.TabIndex = 84
-        '
-        'PbLapiz
-        '
-        Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
-        Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
-        Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(342, 76)
-        Me.PbLapiz.Name = "PbLapiz"
-        Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
-        Me.PbLapiz.TabIndex = 87
-        Me.PbLapiz.TabStop = False
         '
         'PbLupa
         '
         Me.PbLupa.BackColor = System.Drawing.Color.Transparent
         Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
         Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(16, 76)
+        Me.PbLupa.Location = New System.Drawing.Point(16, 84)
         Me.PbLupa.Name = "PbLupa"
         Me.PbLupa.Size = New System.Drawing.Size(22, 27)
         Me.PbLupa.TabIndex = 86
@@ -447,6 +420,19 @@ Partial Class FrmCuenta
         Me.PbSalir.TabIndex = 17
         Me.PbSalir.TabStop = False
         '
+        'PlCuenta
+        '
+        Me.PlCuenta.Controls.Add(Me.CboSocio)
+        Me.PlCuenta.Controls.Add(Me.CboTipoCuenta)
+        Me.PlCuenta.Controls.Add(Me.TxtSaldoActual)
+        Me.PlCuenta.Controls.Add(Me.Panel10)
+        Me.PlCuenta.Controls.Add(Me.TxtCodigoCuenta)
+        Me.PlCuenta.Controls.Add(Me.Panel2)
+        Me.PlCuenta.Location = New System.Drawing.Point(394, 111)
+        Me.PlCuenta.Name = "PlCuenta"
+        Me.PlCuenta.Size = New System.Drawing.Size(307, 182)
+        Me.PlCuenta.TabIndex = 89
+        '
         'FrmCuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -468,10 +454,11 @@ Partial Class FrmCuenta
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvCuenta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PlCuenta.ResumeLayout(False)
+        Me.PlCuenta.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -497,8 +484,6 @@ Partial Class FrmCuenta
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents CboBusqueda As ComboBox
-    Friend WithEvents PbLapiz As PictureBox
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
@@ -508,4 +493,5 @@ Partial Class FrmCuenta
     Friend WithEvents LblGuardar As Label
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
+    Friend WithEvents PlCuenta As Panel
 End Class

@@ -22,28 +22,20 @@ Partial Class FrmUsuario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.components = New System.ComponentModel.Container()
+        Me.TbcUsuario = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtContraseña = New System.Windows.Forms.TextBox()
+        Me.PlUsuario = New System.Windows.Forms.Panel()
+        Me.ChkEstado = New System.Windows.Forms.CheckBox()
+        Me.txtContrasena = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.CboTipoAcceso = New System.Windows.Forms.ComboBox()
         Me.CboOficial = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TxtEstado = New System.Windows.Forms.TextBox()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtCodigoUsuario = New System.Windows.Forms.TextBox()
+        Me.TxtIdUsuario = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PbIcono = New System.Windows.Forms.PictureBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -52,33 +44,45 @@ Partial Class FrmUsuario
         Me.LblGuardar = New System.Windows.Forms.Label()
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.PbIcono = New System.Windows.Forms.PictureBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.CboBusqueda = New System.Windows.Forms.ComboBox()
-        Me.PbLapiz = New System.Windows.Forms.PictureBox()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
+        Me.DgvUsuario = New System.Windows.Forms.DataGridView()
+        Me.CmsUsuario = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.TabControl1.SuspendLayout()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TbcUsuario.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PlUsuario.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsUsuario.SuspendLayout()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TbcUsuario
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(7, 46)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(709, 542)
-        Me.TabControl1.TabIndex = 12
+        Me.TbcUsuario.Controls.Add(Me.TabPage1)
+        Me.TbcUsuario.Controls.Add(Me.TabPage2)
+        Me.TbcUsuario.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbcUsuario.Location = New System.Drawing.Point(7, 46)
+        Me.TbcUsuario.Name = "TbcUsuario"
+        Me.TbcUsuario.SelectedIndex = 0
+        Me.TbcUsuario.Size = New System.Drawing.Size(709, 542)
+        Me.TbcUsuario.TabIndex = 12
         '
         'TabPage1
         '
@@ -95,6 +99,7 @@ Partial Class FrmUsuario
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.PlUsuario)
         Me.Panel1.Controls.Add(Me.BtnCancelar)
         Me.Panel1.Controls.Add(Me.BtnGuardar)
         Me.Panel1.Controls.Add(Me.BtnNuevo)
@@ -104,216 +109,119 @@ Partial Class FrmUsuario
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.PbIcono)
-        Me.Panel1.Controls.Add(Me.txtContraseña)
-        Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.TxtUsuario)
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.CboTipoAcceso)
-        Me.Panel1.Controls.Add(Me.CboOficial)
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.TxtEstado)
-        Me.Panel1.Controls.Add(Me.Panel10)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TxtCodigoUsuario)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Font = New System.Drawing.Font("News701 BT", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(-118, -2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(950, 510)
         Me.Panel1.TabIndex = 8
         '
-        'txtContraseña
+        'PlUsuario
         '
-        Me.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtContraseña.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContraseña.Location = New System.Drawing.Point(485, 131)
-        Me.txtContraseña.Name = "txtContraseña"
-        Me.txtContraseña.Size = New System.Drawing.Size(193, 18)
-        Me.txtContraseña.TabIndex = 38
+        Me.PlUsuario.Controls.Add(Me.ChkEstado)
+        Me.PlUsuario.Controls.Add(Me.txtContrasena)
+        Me.PlUsuario.Controls.Add(Me.Panel4)
+        Me.PlUsuario.Controls.Add(Me.TxtUsuario)
+        Me.PlUsuario.Controls.Add(Me.Panel3)
+        Me.PlUsuario.Controls.Add(Me.CboTipoAcceso)
+        Me.PlUsuario.Controls.Add(Me.CboOficial)
+        Me.PlUsuario.Controls.Add(Me.TxtIdUsuario)
+        Me.PlUsuario.Controls.Add(Me.Panel2)
+        Me.PlUsuario.Location = New System.Drawing.Point(472, 41)
+        Me.PlUsuario.Name = "PlUsuario"
+        Me.PlUsuario.Size = New System.Drawing.Size(323, 249)
+        Me.PlUsuario.TabIndex = 106
+        '
+        'ChkEstado
+        '
+        Me.ChkEstado.AutoSize = True
+        Me.ChkEstado.Location = New System.Drawing.Point(12, 204)
+        Me.ChkEstado.Name = "ChkEstado"
+        Me.ChkEstado.Size = New System.Drawing.Size(73, 20)
+        Me.ChkEstado.TabIndex = 105
+        Me.ChkEstado.Text = "Inactivo"
+        Me.ChkEstado.UseVisualStyleBackColor = True
+        '
+        'txtContrasena
+        '
+        Me.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtContrasena.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContrasena.Location = New System.Drawing.Point(13, 90)
+        Me.txtContrasena.Name = "txtContrasena"
+        Me.txtContrasena.Size = New System.Drawing.Size(239, 18)
+        Me.txtContrasena.TabIndex = 38
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Location = New System.Drawing.Point(481, 126)
+        Me.Panel4.Location = New System.Drawing.Point(9, 85)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(200, 29)
+        Me.Panel4.Size = New System.Drawing.Size(246, 29)
         Me.Panel4.TabIndex = 39
         '
         'TxtUsuario
         '
         Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtUsuario.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUsuario.Location = New System.Drawing.Point(485, 96)
+        Me.TxtUsuario.Location = New System.Drawing.Point(13, 55)
         Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(193, 18)
+        Me.TxtUsuario.Size = New System.Drawing.Size(247, 18)
         Me.TxtUsuario.TabIndex = 36
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(481, 91)
+        Me.Panel3.Location = New System.Drawing.Point(9, 50)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(200, 29)
+        Me.Panel3.Size = New System.Drawing.Size(254, 29)
         Me.Panel3.TabIndex = 37
         '
         'CboTipoAcceso
         '
+        Me.CboTipoAcceso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboTipoAcceso.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboTipoAcceso.FormattingEnabled = True
-        Me.CboTipoAcceso.Location = New System.Drawing.Point(481, 169)
+        Me.CboTipoAcceso.Location = New System.Drawing.Point(9, 128)
         Me.CboTipoAcceso.Name = "CboTipoAcceso"
-        Me.CboTipoAcceso.Size = New System.Drawing.Size(200, 24)
+        Me.CboTipoAcceso.Size = New System.Drawing.Size(197, 24)
         Me.CboTipoAcceso.TabIndex = 10
         '
         'CboOficial
         '
+        Me.CboOficial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboOficial.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboOficial.FormattingEnabled = True
-        Me.CboOficial.Location = New System.Drawing.Point(482, 204)
+        Me.CboOficial.Location = New System.Drawing.Point(10, 163)
         Me.CboOficial.Name = "CboOficial"
-        Me.CboOficial.Size = New System.Drawing.Size(200, 24)
+        Me.CboOficial.Size = New System.Drawing.Size(310, 24)
         Me.CboOficial.TabIndex = 9
         '
-        'Label7
+        'TxtIdUsuario
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("News701 BT", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(412, 207)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(54, 16)
-        Me.Label7.TabIndex = 28
-        Me.Label7.Text = "Oficial"
-        '
-        'TxtEstado
-        '
-        Me.TxtEstado.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtEstado.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEstado.Location = New System.Drawing.Point(485, 244)
-        Me.TxtEstado.Name = "TxtEstado"
-        Me.TxtEstado.Size = New System.Drawing.Size(193, 18)
-        Me.TxtEstado.TabIndex = 8
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel10.Location = New System.Drawing.Point(481, 239)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(200, 29)
-        Me.Panel10.TabIndex = 20
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("News701 BT", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(410, 246)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 16)
-        Me.Label9.TabIndex = 18
-        Me.Label9.Text = "Estado"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("News701 BT", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(377, 172)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 16)
-        Me.Label6.TabIndex = 9
-        Me.Label6.Text = "Tipo Acceso"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("News701 BT", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(379, 133)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(86, 16)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Contraseña"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("News701 BT", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(403, 99)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 16)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Usuario"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'TxtCodigoUsuario
-        '
-        Me.TxtCodigoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoUsuario.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoUsuario.Location = New System.Drawing.Point(485, 61)
-        Me.TxtCodigoUsuario.Name = "TxtCodigoUsuario"
-        Me.TxtCodigoUsuario.Size = New System.Drawing.Size(193, 18)
-        Me.TxtCodigoUsuario.TabIndex = 1
+        Me.TxtIdUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtIdUsuario.Enabled = False
+        Me.TxtIdUsuario.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtIdUsuario.Location = New System.Drawing.Point(13, 20)
+        Me.TxtIdUsuario.Name = "TxtIdUsuario"
+        Me.TxtIdUsuario.Size = New System.Drawing.Size(193, 18)
+        Me.TxtIdUsuario.TabIndex = 1
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(481, 56)
+        Me.Panel2.Enabled = False
+        Me.Panel2.Location = New System.Drawing.Point(9, 15)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("News701 BT", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(344, 59)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Código Usuario"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.CboBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLapiz)
-        Me.TabPage2.Controls.Add(Me.PbLupa)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 28)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(701, 510)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Ver Datos"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 125)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(665, 355)
-        Me.DataGridView1.TabIndex = 9
-        '
-        'PbIcono
-        '
-        Me.PbIcono.BackColor = System.Drawing.Color.Transparent
-        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.usuario
-        Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbIcono.Location = New System.Drawing.Point(134, 62)
-        Me.PbIcono.Name = "PbIcono"
-        Me.PbIcono.Size = New System.Drawing.Size(184, 193)
-        Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PbIcono.TabIndex = 0
-        Me.PbIcono.TabStop = False
         '
         'BtnCancelar
         '
@@ -441,6 +349,93 @@ Partial Class FrmUsuario
         Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnModificar.UseVisualStyleBackColor = False
         '
+        'PbIcono
+        '
+        Me.PbIcono.BackColor = System.Drawing.Color.Transparent
+        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.usuario
+        Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbIcono.Location = New System.Drawing.Point(134, 62)
+        Me.PbIcono.Name = "PbIcono"
+        Me.PbIcono.Size = New System.Drawing.Size(184, 193)
+        Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PbIcono.TabIndex = 0
+        Me.PbIcono.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(412, 207)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(45, 16)
+        Me.Label7.TabIndex = 28
+        Me.Label7.Text = "Oficial"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(410, 246)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(51, 16)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "Estado"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(377, 172)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(85, 16)
+        Me.Label6.TabIndex = 9
+        Me.Label6.Text = "Tipo Acceso"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(379, 133)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(77, 16)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Contraseña"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(403, 99)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 16)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Usuario"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(344, 59)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(102, 16)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Código Usuario"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.TxtBusqueda)
+        Me.TabPage2.Controls.Add(Me.PbLupa)
+        Me.TabPage2.Controls.Add(Me.DgvUsuario)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 28)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(701, 510)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Ver Datos"
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -453,40 +448,54 @@ Partial Class FrmUsuario
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(341, 76)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 76)
         Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(332, 26)
+        Me.TxtBusqueda.Size = New System.Drawing.Size(629, 26)
         Me.TxtBusqueda.TabIndex = 85
-        '
-        'CboBusqueda
-        '
-        Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(36, 76)
-        Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(243, 27)
-        Me.CboBusqueda.TabIndex = 84
-        '
-        'PbLapiz
-        '
-        Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
-        Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
-        Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(309, 76)
-        Me.PbLapiz.Name = "PbLapiz"
-        Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
-        Me.PbLapiz.TabIndex = 87
-        Me.PbLapiz.TabStop = False
         '
         'PbLupa
         '
         Me.PbLupa.BackColor = System.Drawing.Color.Transparent
         Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
         Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(8, 76)
+        Me.PbLupa.Location = New System.Drawing.Point(16, 75)
         Me.PbLupa.Name = "PbLupa"
         Me.PbLupa.Size = New System.Drawing.Size(22, 27)
         Me.PbLupa.TabIndex = 86
         Me.PbLupa.TabStop = False
+        '
+        'DgvUsuario
+        '
+        Me.DgvUsuario.AllowUserToAddRows = False
+        Me.DgvUsuario.AllowUserToDeleteRows = False
+        Me.DgvUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvUsuario.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvUsuario.ContextMenuStrip = Me.CmsUsuario
+        Me.DgvUsuario.Location = New System.Drawing.Point(16, 125)
+        Me.DgvUsuario.Name = "DgvUsuario"
+        Me.DgvUsuario.ReadOnly = True
+        Me.DgvUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvUsuario.Size = New System.Drawing.Size(665, 355)
+        Me.DgvUsuario.TabIndex = 9
+        '
+        'CmsUsuario
+        '
+        Me.CmsUsuario.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsUsuario.Name = "CmsUsuario"
+        Me.CmsUsuario.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'PbSalir
         '
@@ -498,54 +507,67 @@ Partial Class FrmUsuario
         Me.PbSalir.TabIndex = 20
         Me.PbSalir.TabStop = False
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(277, 12)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(171, 43)
+        Me.Label14.TabIndex = 30
+        Me.Label14.Text = "USUARIO"
+        '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(724, 598)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PbSalir)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TbcUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmUsuario"
         Me.Text = "FrmUsuario"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TbcUsuario.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PlUsuario.ResumeLayout(False)
+        Me.PlUsuario.PerformLayout()
+        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvUsuario, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsUsuario.ResumeLayout(False)
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TbcUsuario As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents PbIcono As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents txtContraseña As TextBox
+    Friend WithEvents txtContrasena As TextBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents TxtUsuario As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents CboTipoAcceso As ComboBox
     Friend WithEvents CboOficial As ComboBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TxtEstado As TextBox
-    Friend WithEvents Panel10 As Panel
     Friend WithEvents Label9 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TxtCodigoUsuario As TextBox
+    Friend WithEvents TxtIdUsuario As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvUsuario As DataGridView
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
@@ -556,8 +578,12 @@ Partial Class FrmUsuario
     Friend WithEvents BtnModificar As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents CboBusqueda As ComboBox
-    Friend WithEvents PbLapiz As PictureBox
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents PbSalir As PictureBox
+    Friend WithEvents ChkEstado As CheckBox
+    Friend WithEvents PlUsuario As Panel
+    Friend WithEvents CmsUsuario As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label14 As Label
 End Class

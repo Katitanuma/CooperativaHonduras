@@ -72,10 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FORMULARIOS\FrmCuenta.Designer.vb">
+    <Compile Include="Conexion.vb" />
+    <Compile Include="Formularios\FrmCuenta.Designer.vb">
       <DependentUpon>FrmCuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmCuenta.vb">
+    <Compile Include="Formularios\FrmCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\FrmCargo.Designer.vb">
@@ -84,10 +85,10 @@
     <Compile Include="Catálogos\FrmCargo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmLogin.Designer.vb">
+    <Compile Include="Formularios\FrmLogin.Designer.vb">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmLogin.vb">
+    <Compile Include="Formularios\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\FrmProfesion.Designer.vb">
@@ -96,16 +97,16 @@
     <Compile Include="Catálogos\FrmProfesion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmOficial.Designer.vb">
+    <Compile Include="Formularios\FrmOficial.Designer.vb">
       <DependentUpon>FrmOficial.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmOficial.vb">
+    <Compile Include="Formularios\FrmOficial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmAval.Designer.vb">
+    <Compile Include="Formularios\FrmAval.Designer.vb">
       <DependentUpon>FrmAval.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmAval.vb">
+    <Compile Include="Formularios\FrmAval.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\FrmCiudad.Designer.vb">
@@ -132,16 +133,16 @@
     <Compile Include="Catálogos\FrmPais.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmPrestamo.Designer.vb">
+    <Compile Include="Formularios\FrmPrestamo.Designer.vb">
       <DependentUpon>FrmPrestamo.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmPrestamo.vb">
+    <Compile Include="Formularios\FrmPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmSocio.Designer.vb">
+    <Compile Include="Formularios\FrmSocio.Designer.vb">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmSocio.vb">
+    <Compile Include="Formularios\FrmSocio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\FrmTipodeCuenta.Designer.vb">
@@ -156,10 +157,10 @@
     <Compile Include="Catálogos\FrmTipoPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuario.Designer.vb">
+    <Compile Include="Formularios\FrmUsuario.Designer.vb">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuario.vb">
+    <Compile Include="Formularios\FrmUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -177,30 +178,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="FORMULARIOS\PantallaPrincipal.Designer.vb">
+    <Compile Include="Formularios\PantallaPrincipal.Designer.vb">
       <DependentUpon>PantallaPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\PantallaPrincipal.vb">
+    <Compile Include="Formularios\PantallaPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FORMULARIOS\FrmCuenta.resx">
+    <EmbeddedResource Include="Formularios\FrmCuenta.resx">
       <DependentUpon>FrmCuenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\FrmCargo.resx">
       <DependentUpon>FrmCargo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FrmLogin.resx">
+    <EmbeddedResource Include="Formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\FrmProfesion.resx">
       <DependentUpon>FrmProfesion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FrmOficial.resx">
+    <EmbeddedResource Include="Formularios\FrmOficial.resx">
       <DependentUpon>FrmOficial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FrmAval.resx">
+    <EmbeddedResource Include="Formularios\FrmAval.resx">
       <DependentUpon>FrmAval.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\FrmCiudad.resx">
@@ -215,10 +216,10 @@
     <EmbeddedResource Include="Catálogos\FrmPais.resx">
       <DependentUpon>FrmPais.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FrmPrestamo.resx">
+    <EmbeddedResource Include="Formularios\FrmPrestamo.resx">
       <DependentUpon>FrmPrestamo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FrmSocio.resx">
+    <EmbeddedResource Include="Formularios\FrmSocio.resx">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\FrmTipodeCuenta.resx">
@@ -227,7 +228,7 @@
     <EmbeddedResource Include="Catálogos\FrmTipoPrestamo.resx">
       <DependentUpon>FrmTipoPrestamo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuario.resx">
+    <EmbeddedResource Include="Formularios\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -236,7 +237,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\PantallaPrincipal.resx">
+    <EmbeddedResource Include="Formularios\PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

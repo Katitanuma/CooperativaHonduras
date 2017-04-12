@@ -43,23 +43,22 @@ Partial Class FrmCiudad
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.CboBusqueda = New System.Windows.Forms.ComboBox()
-        Me.PbLapiz = New System.Windows.Forms.PictureBox()
-        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvCiudad = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
+        Me.PlCiudad = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvCiudad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PlCiudad.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -88,6 +87,7 @@ Partial Class FrmCiudad
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.PlCiudad)
         Me.Panel1.Controls.Add(Me.BtnCancelar)
         Me.Panel1.Controls.Add(Me.BtnGuardar)
         Me.Panel1.Controls.Add(Me.BtnNuevo)
@@ -97,13 +97,8 @@ Partial Class FrmCiudad
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.PbIcono)
-        Me.Panel1.Controls.Add(Me.TxtCiudad)
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.CboDepartamento)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TxtCodigoCiudad)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(-96, 1)
@@ -253,7 +248,7 @@ Partial Class FrmCiudad
         '
         Me.TxtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCiudad.Location = New System.Drawing.Point(463, 177)
+        Me.TxtCiudad.Location = New System.Drawing.Point(6, 73)
         Me.TxtCiudad.Name = "TxtCiudad"
         Me.TxtCiudad.Size = New System.Drawing.Size(265, 18)
         Me.TxtCiudad.TabIndex = 29
@@ -262,7 +257,7 @@ Partial Class FrmCiudad
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(459, 172)
+        Me.Panel3.Location = New System.Drawing.Point(2, 68)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(273, 29)
         Me.Panel3.TabIndex = 30
@@ -272,7 +267,7 @@ Partial Class FrmCiudad
         Me.CboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CboDepartamento.FormattingEnabled = True
-        Me.CboDepartamento.Location = New System.Drawing.Point(459, 216)
+        Me.CboDepartamento.Location = New System.Drawing.Point(2, 112)
         Me.CboDepartamento.Name = "CboDepartamento"
         Me.CboDepartamento.Size = New System.Drawing.Size(273, 24)
         Me.CboDepartamento.TabIndex = 10
@@ -303,7 +298,7 @@ Partial Class FrmCiudad
         Me.TxtCodigoCiudad.BackColor = System.Drawing.Color.White
         Me.TxtCodigoCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCodigoCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoCiudad.Location = New System.Drawing.Point(463, 142)
+        Me.TxtCodigoCiudad.Location = New System.Drawing.Point(6, 38)
         Me.TxtCodigoCiudad.Name = "TxtCodigoCiudad"
         Me.TxtCodigoCiudad.ReadOnly = True
         Me.TxtCodigoCiudad.Size = New System.Drawing.Size(193, 18)
@@ -313,7 +308,7 @@ Partial Class FrmCiudad
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(459, 137)
+        Me.Panel2.Location = New System.Drawing.Point(2, 33)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
@@ -331,11 +326,9 @@ Partial Class FrmCiudad
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
+        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.CboBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLapiz)
-        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.DgvCiudad)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
@@ -343,6 +336,17 @@ Partial Class FrmCiudad
         Me.TabPage2.Size = New System.Drawing.Size(701, 510)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Ver Datos"
+        '
+        'PbLupa
+        '
+        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
+        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
+        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbLupa.Location = New System.Drawing.Point(16, 93)
+        Me.PbLupa.Name = "PbLupa"
+        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
+        Me.PbLupa.TabIndex = 87
+        Me.PbLupa.TabStop = False
         '
         'Label4
         '
@@ -356,40 +360,10 @@ Partial Class FrmCiudad
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(325, 76)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 94)
         Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(332, 26)
+        Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
         Me.TxtBusqueda.TabIndex = 80
-        '
-        'CboBusqueda
-        '
-        Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(92, 76)
-        Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(161, 27)
-        Me.CboBusqueda.TabIndex = 79
-        '
-        'PbLapiz
-        '
-        Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
-        Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
-        Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(293, 76)
-        Me.PbLapiz.Name = "PbLapiz"
-        Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
-        Me.PbLapiz.TabIndex = 82
-        Me.PbLapiz.TabStop = False
-        '
-        'PbLupa
-        '
-        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
-        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
-        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(64, 76)
-        Me.PbLupa.Name = "PbLupa"
-        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
-        Me.PbLupa.TabIndex = 81
-        Me.PbLupa.TabStop = False
         '
         'DgvCiudad
         '
@@ -423,6 +397,18 @@ Partial Class FrmCiudad
         Me.PbSalir.TabIndex = 33
         Me.PbSalir.TabStop = False
         '
+        'PlCiudad
+        '
+        Me.PlCiudad.Controls.Add(Me.TxtCiudad)
+        Me.PlCiudad.Controls.Add(Me.Panel3)
+        Me.PlCiudad.Controls.Add(Me.CboDepartamento)
+        Me.PlCiudad.Controls.Add(Me.TxtCodigoCiudad)
+        Me.PlCiudad.Controls.Add(Me.Panel2)
+        Me.PlCiudad.Location = New System.Drawing.Point(457, 104)
+        Me.PlCiudad.Name = "PlCiudad"
+        Me.PlCiudad.Size = New System.Drawing.Size(294, 156)
+        Me.PlCiudad.TabIndex = 105
+        '
         'FrmCiudad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -444,10 +430,11 @@ Partial Class FrmCiudad
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvCiudad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PlCiudad.ResumeLayout(False)
+        Me.PlCiudad.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -471,9 +458,6 @@ Partial Class FrmCiudad
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents CboBusqueda As ComboBox
-    Friend WithEvents PbLapiz As PictureBox
-    Friend WithEvents PbLupa As PictureBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
@@ -482,4 +466,6 @@ Partial Class FrmCiudad
     Friend WithEvents LblGuardar As Label
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
+    Friend WithEvents PbLupa As PictureBox
+    Friend WithEvents PlCiudad As Panel
 End Class

@@ -25,6 +25,26 @@ Partial Class FrmSocio
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PlSocio = New System.Windows.Forms.Panel()
+        Me.CboSexo = New System.Windows.Forms.ComboBox()
+        Me.CboEstadoCIvil = New System.Windows.Forms.ComboBox()
+        Me.CboNacionalidad = New System.Windows.Forms.ComboBox()
+        Me.TxtTelefonoTrabajo = New System.Windows.Forms.TextBox()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.TxtTelefonoCasa = New System.Windows.Forms.TextBox()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.TxtLugardeTrabajo = New System.Windows.Forms.TextBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.TxtDIreccion = New System.Windows.Forms.TextBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.TxtRTN = New System.Windows.Forms.TextBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.TxtApellido = New System.Windows.Forms.TextBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TxtCodigoSocio = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -34,41 +54,20 @@ Partial Class FrmSocio
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
-        Me.CboSexo = New System.Windows.Forms.ComboBox()
-        Me.CboEstadoCIvil = New System.Windows.Forms.ComboBox()
-        Me.CboNacionalidad = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TxtTelefonoTrabajo = New System.Windows.Forms.TextBox()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.TxtTelefonoCasa = New System.Windows.Forms.TextBox()
-        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TxtLugardeTrabajo = New System.Windows.Forms.TextBox()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtDIreccion = New System.Windows.Forms.TextBox()
-        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TxtRTN = New System.Windows.Forms.TextBox()
-        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtApellido = New System.Windows.Forms.TextBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtNombre = New System.Windows.Forms.TextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtCodigoSocio = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.CboBusqueda = New System.Windows.Forms.ComboBox()
-        Me.PbLapiz = New System.Windows.Forms.PictureBox()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvSocio = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -76,9 +75,9 @@ Partial Class FrmSocio
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.PlSocio.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvSocio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +109,7 @@ Partial Class FrmSocio
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.PlSocio)
         Me.Panel1.Controls.Add(Me.BtnCancelar)
         Me.Panel1.Controls.Add(Me.BtnGuardar)
         Me.Panel1.Controls.Add(Me.BtnNuevo)
@@ -119,41 +119,225 @@ Partial Class FrmSocio
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.PbIcono)
-        Me.Panel1.Controls.Add(Me.CboSexo)
-        Me.Panel1.Controls.Add(Me.CboEstadoCIvil)
-        Me.Panel1.Controls.Add(Me.CboNacionalidad)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.TxtTelefonoTrabajo)
-        Me.Panel1.Controls.Add(Me.Panel8)
-        Me.Panel1.Controls.Add(Me.TxtTelefonoCasa)
-        Me.Panel1.Controls.Add(Me.Panel10)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.TxtLugardeTrabajo)
-        Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TxtDIreccion)
-        Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.TxtRTN)
-        Me.Panel1.Controls.Add(Me.Panel7)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.TxtApellido)
-        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TxtNombre)
-        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TxtCodigoSocio)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(-13, -3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(714, 538)
         Me.Panel1.TabIndex = 0
+        '
+        'PlSocio
+        '
+        Me.PlSocio.Controls.Add(Me.CboSexo)
+        Me.PlSocio.Controls.Add(Me.CboEstadoCIvil)
+        Me.PlSocio.Controls.Add(Me.CboNacionalidad)
+        Me.PlSocio.Controls.Add(Me.TxtTelefonoTrabajo)
+        Me.PlSocio.Controls.Add(Me.Panel8)
+        Me.PlSocio.Controls.Add(Me.TxtTelefonoCasa)
+        Me.PlSocio.Controls.Add(Me.Panel10)
+        Me.PlSocio.Controls.Add(Me.TxtLugardeTrabajo)
+        Me.PlSocio.Controls.Add(Me.Panel5)
+        Me.PlSocio.Controls.Add(Me.TxtDIreccion)
+        Me.PlSocio.Controls.Add(Me.Panel6)
+        Me.PlSocio.Controls.Add(Me.TxtRTN)
+        Me.PlSocio.Controls.Add(Me.Panel7)
+        Me.PlSocio.Controls.Add(Me.TxtApellido)
+        Me.PlSocio.Controls.Add(Me.Panel4)
+        Me.PlSocio.Controls.Add(Me.TxtNombre)
+        Me.PlSocio.Controls.Add(Me.Panel3)
+        Me.PlSocio.Controls.Add(Me.TxtCodigoSocio)
+        Me.PlSocio.Controls.Add(Me.Panel2)
+        Me.PlSocio.Location = New System.Drawing.Point(374, 11)
+        Me.PlSocio.Name = "PlSocio"
+        Me.PlSocio.Size = New System.Drawing.Size(306, 417)
+        Me.PlSocio.TabIndex = 113
+        '
+        'CboSexo
+        '
+        Me.CboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboSexo.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboSexo.FormattingEnabled = True
+        Me.CboSexo.Location = New System.Drawing.Point(8, 387)
+        Me.CboSexo.Name = "CboSexo"
+        Me.CboSexo.Size = New System.Drawing.Size(200, 24)
+        Me.CboSexo.TabIndex = 11
+        '
+        'CboEstadoCIvil
+        '
+        Me.CboEstadoCIvil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboEstadoCIvil.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboEstadoCIvil.FormattingEnabled = True
+        Me.CboEstadoCIvil.Location = New System.Drawing.Point(8, 352)
+        Me.CboEstadoCIvil.Name = "CboEstadoCIvil"
+        Me.CboEstadoCIvil.Size = New System.Drawing.Size(243, 24)
+        Me.CboEstadoCIvil.TabIndex = 10
+        '
+        'CboNacionalidad
+        '
+        Me.CboNacionalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboNacionalidad.FormattingEnabled = True
+        Me.CboNacionalidad.Location = New System.Drawing.Point(8, 319)
+        Me.CboNacionalidad.Name = "CboNacionalidad"
+        Me.CboNacionalidad.Size = New System.Drawing.Size(263, 24)
+        Me.CboNacionalidad.TabIndex = 9
+        '
+        'TxtTelefonoTrabajo
+        '
+        Me.TxtTelefonoTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtTelefonoTrabajo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTelefonoTrabajo.Location = New System.Drawing.Point(12, 251)
+        Me.TxtTelefonoTrabajo.Name = "TxtTelefonoTrabajo"
+        Me.TxtTelefonoTrabajo.Size = New System.Drawing.Size(193, 18)
+        Me.TxtTelefonoTrabajo.TabIndex = 7
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel8.Location = New System.Drawing.Point(8, 246)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(200, 29)
+        Me.Panel8.TabIndex = 26
+        '
+        'TxtTelefonoCasa
+        '
+        Me.TxtTelefonoCasa.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtTelefonoCasa.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTelefonoCasa.Location = New System.Drawing.Point(12, 286)
+        Me.TxtTelefonoCasa.Name = "TxtTelefonoCasa"
+        Me.TxtTelefonoCasa.Size = New System.Drawing.Size(193, 18)
+        Me.TxtTelefonoCasa.TabIndex = 8
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel10.Location = New System.Drawing.Point(8, 281)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(200, 29)
+        Me.Panel10.TabIndex = 20
+        '
+        'TxtLugardeTrabajo
+        '
+        Me.TxtLugardeTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtLugardeTrabajo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtLugardeTrabajo.Location = New System.Drawing.Point(12, 216)
+        Me.TxtLugardeTrabajo.Name = "TxtLugardeTrabajo"
+        Me.TxtLugardeTrabajo.Size = New System.Drawing.Size(239, 18)
+        Me.TxtLugardeTrabajo.TabIndex = 6
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Location = New System.Drawing.Point(8, 211)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(247, 29)
+        Me.Panel5.TabIndex = 17
+        '
+        'TxtDIreccion
+        '
+        Me.TxtDIreccion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtDIreccion.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDIreccion.Location = New System.Drawing.Point(13, 155)
+        Me.TxtDIreccion.Multiline = True
+        Me.TxtDIreccion.Name = "TxtDIreccion"
+        Me.TxtDIreccion.Size = New System.Drawing.Size(278, 44)
+        Me.TxtDIreccion.TabIndex = 5
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel6.Location = New System.Drawing.Point(9, 150)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(286, 54)
+        Me.Panel6.TabIndex = 14
+        '
+        'TxtRTN
+        '
+        Me.TxtRTN.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtRTN.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtRTN.Location = New System.Drawing.Point(13, 120)
+        Me.TxtRTN.Name = "TxtRTN"
+        Me.TxtRTN.Size = New System.Drawing.Size(254, 18)
+        Me.TxtRTN.TabIndex = 4
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Location = New System.Drawing.Point(9, 115)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(262, 29)
+        Me.Panel7.TabIndex = 11
+        '
+        'TxtApellido
+        '
+        Me.TxtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtApellido.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtApellido.Location = New System.Drawing.Point(13, 85)
+        Me.TxtApellido.Name = "TxtApellido"
+        Me.TxtApellido.Size = New System.Drawing.Size(278, 18)
+        Me.TxtApellido.TabIndex = 3
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Location = New System.Drawing.Point(9, 80)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(286, 29)
+        Me.Panel4.TabIndex = 8
+        '
+        'TxtNombre
+        '
+        Me.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtNombre.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombre.Location = New System.Drawing.Point(13, 50)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(278, 18)
+        Me.TxtNombre.TabIndex = 2
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Location = New System.Drawing.Point(9, 45)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(286, 29)
+        Me.Panel3.TabIndex = 5
+        '
+        'TxtCodigoSocio
+        '
+        Me.TxtCodigoSocio.BackColor = System.Drawing.Color.White
+        Me.TxtCodigoSocio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoSocio.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoSocio.Location = New System.Drawing.Point(13, 15)
+        Me.TxtCodigoSocio.Name = "TxtCodigoSocio"
+        Me.TxtCodigoSocio.ReadOnly = True
+        Me.TxtCodigoSocio.Size = New System.Drawing.Size(192, 18)
+        Me.TxtCodigoSocio.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(9, 10)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.TabIndex = 2
         '
         'BtnCancelar
         '
@@ -293,36 +477,6 @@ Partial Class FrmSocio
         Me.PbIcono.TabIndex = 0
         Me.PbIcono.TabStop = False
         '
-        'CboSexo
-        '
-        Me.CboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboSexo.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.CboSexo.FormattingEnabled = True
-        Me.CboSexo.Location = New System.Drawing.Point(382, 398)
-        Me.CboSexo.Name = "CboSexo"
-        Me.CboSexo.Size = New System.Drawing.Size(200, 24)
-        Me.CboSexo.TabIndex = 11
-        '
-        'CboEstadoCIvil
-        '
-        Me.CboEstadoCIvil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboEstadoCIvil.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.CboEstadoCIvil.FormattingEnabled = True
-        Me.CboEstadoCIvil.Location = New System.Drawing.Point(382, 363)
-        Me.CboEstadoCIvil.Name = "CboEstadoCIvil"
-        Me.CboEstadoCIvil.Size = New System.Drawing.Size(243, 24)
-        Me.CboEstadoCIvil.TabIndex = 10
-        '
-        'CboNacionalidad
-        '
-        Me.CboNacionalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.CboNacionalidad.FormattingEnabled = True
-        Me.CboNacionalidad.Location = New System.Drawing.Point(382, 330)
-        Me.CboNacionalidad.Name = "CboNacionalidad"
-        Me.CboNacionalidad.Size = New System.Drawing.Size(263, 24)
-        Me.CboNacionalidad.TabIndex = 9
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -363,42 +517,6 @@ Partial Class FrmSocio
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "Teléfono del Trabajo"
         '
-        'TxtTelefonoTrabajo
-        '
-        Me.TxtTelefonoTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTelefonoTrabajo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTelefonoTrabajo.Location = New System.Drawing.Point(386, 262)
-        Me.TxtTelefonoTrabajo.Name = "TxtTelefonoTrabajo"
-        Me.TxtTelefonoTrabajo.Size = New System.Drawing.Size(193, 18)
-        Me.TxtTelefonoTrabajo.TabIndex = 7
-        '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel8.Location = New System.Drawing.Point(382, 257)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(200, 29)
-        Me.Panel8.TabIndex = 26
-        '
-        'TxtTelefonoCasa
-        '
-        Me.TxtTelefonoCasa.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTelefonoCasa.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTelefonoCasa.Location = New System.Drawing.Point(386, 297)
-        Me.TxtTelefonoCasa.Name = "TxtTelefonoCasa"
-        Me.TxtTelefonoCasa.Size = New System.Drawing.Size(193, 18)
-        Me.TxtTelefonoCasa.TabIndex = 8
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel10.Location = New System.Drawing.Point(382, 292)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(200, 29)
-        Me.Panel10.TabIndex = 20
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -408,24 +526,6 @@ Partial Class FrmSocio
         Me.Label9.Size = New System.Drawing.Size(128, 16)
         Me.Label9.TabIndex = 18
         Me.Label9.Text = "Teléfono de la casa"
-        '
-        'TxtLugardeTrabajo
-        '
-        Me.TxtLugardeTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtLugardeTrabajo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtLugardeTrabajo.Location = New System.Drawing.Point(386, 227)
-        Me.TxtLugardeTrabajo.Name = "TxtLugardeTrabajo"
-        Me.TxtLugardeTrabajo.Size = New System.Drawing.Size(239, 18)
-        Me.TxtLugardeTrabajo.TabIndex = 6
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Location = New System.Drawing.Point(382, 222)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(247, 29)
-        Me.Panel5.TabIndex = 17
         '
         'Label4
         '
@@ -437,25 +537,6 @@ Partial Class FrmSocio
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Lugar de Trabajo"
         '
-        'TxtDIreccion
-        '
-        Me.TxtDIreccion.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtDIreccion.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDIreccion.Location = New System.Drawing.Point(387, 166)
-        Me.TxtDIreccion.Multiline = True
-        Me.TxtDIreccion.Name = "TxtDIreccion"
-        Me.TxtDIreccion.Size = New System.Drawing.Size(278, 44)
-        Me.TxtDIreccion.TabIndex = 5
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel6.Location = New System.Drawing.Point(383, 161)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(286, 54)
-        Me.Panel6.TabIndex = 14
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -465,24 +546,6 @@ Partial Class FrmSocio
         Me.Label5.Size = New System.Drawing.Size(65, 16)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Dirección"
-        '
-        'TxtRTN
-        '
-        Me.TxtRTN.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtRTN.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRTN.Location = New System.Drawing.Point(387, 131)
-        Me.TxtRTN.Name = "TxtRTN"
-        Me.TxtRTN.Size = New System.Drawing.Size(254, 18)
-        Me.TxtRTN.TabIndex = 4
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Location = New System.Drawing.Point(383, 126)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(262, 29)
-        Me.Panel7.TabIndex = 11
         '
         'Label6
         '
@@ -494,24 +557,6 @@ Partial Class FrmSocio
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "RTN"
         '
-        'TxtApellido
-        '
-        Me.TxtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtApellido.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtApellido.Location = New System.Drawing.Point(387, 96)
-        Me.TxtApellido.Name = "TxtApellido"
-        Me.TxtApellido.Size = New System.Drawing.Size(278, 18)
-        Me.TxtApellido.TabIndex = 3
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Location = New System.Drawing.Point(383, 91)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(286, 29)
-        Me.Panel4.TabIndex = 8
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -522,24 +567,6 @@ Partial Class FrmSocio
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Apellidos"
         '
-        'TxtNombre
-        '
-        Me.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtNombre.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombre.Location = New System.Drawing.Point(387, 61)
-        Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(278, 18)
-        Me.TxtNombre.TabIndex = 2
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(383, 56)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(286, 29)
-        Me.Panel3.TabIndex = 5
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -549,26 +576,6 @@ Partial Class FrmSocio
         Me.Label2.Size = New System.Drawing.Size(64, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nombres"
-        '
-        'TxtCodigoSocio
-        '
-        Me.TxtCodigoSocio.BackColor = System.Drawing.Color.White
-        Me.TxtCodigoSocio.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoSocio.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoSocio.Location = New System.Drawing.Point(387, 26)
-        Me.TxtCodigoSocio.Name = "TxtCodigoSocio"
-        Me.TxtCodigoSocio.ReadOnly = True
-        Me.TxtCodigoSocio.Size = New System.Drawing.Size(192, 18)
-        Me.TxtCodigoSocio.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(383, 21)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
-        Me.Panel2.TabIndex = 2
         '
         'Label1
         '
@@ -585,8 +592,6 @@ Partial Class FrmSocio
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
         Me.TabPage2.Controls.Add(Me.Label12)
         Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.CboBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLapiz)
         Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.DgvSocio)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
@@ -608,29 +613,10 @@ Partial Class FrmSocio
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(384, 85)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 85)
         Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(297, 26)
+        Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
         Me.TxtBusqueda.TabIndex = 90
-        '
-        'CboBusqueda
-        '
-        Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(44, 85)
-        Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(272, 27)
-        Me.CboBusqueda.TabIndex = 89
-        '
-        'PbLapiz
-        '
-        Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
-        Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
-        Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(351, 85)
-        Me.PbLapiz.Name = "PbLapiz"
-        Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
-        Me.PbLapiz.TabIndex = 92
-        Me.PbLapiz.TabStop = False
         '
         'PbLupa
         '
@@ -658,7 +644,7 @@ Partial Class FrmSocio
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(340, 13)
+        Me.Label14.Location = New System.Drawing.Point(314, 12)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(113, 43)
         Me.Label14.TabIndex = 29
@@ -690,10 +676,11 @@ Partial Class FrmSocio
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PlSocio.ResumeLayout(False)
+        Me.PlSocio.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvSocio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
@@ -749,8 +736,7 @@ Partial Class FrmSocio
     Friend WithEvents BtnModificar As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents CboBusqueda As ComboBox
-    Friend WithEvents PbLapiz As PictureBox
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents PbSalir As PictureBox
+    Friend WithEvents PlSocio As Panel
 End Class

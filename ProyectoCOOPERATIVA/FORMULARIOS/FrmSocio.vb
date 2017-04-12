@@ -40,4 +40,6 @@ Public Class FrmSocio
         PantallaPrincipal.PnlLogo.BringToFront()
         PantallaPrincipal.PnlLogo1.Visible = False
     End Sub
+
+
 End Class

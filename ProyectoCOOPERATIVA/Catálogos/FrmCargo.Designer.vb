@@ -34,18 +34,17 @@ Partial Class FrmCargo
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PlCargo = New System.Windows.Forms.Panel()
         Me.TxtCargo = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtCodigoCargo = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.CboBusqueda = New System.Windows.Forms.ComboBox()
-        Me.PbLapiz = New System.Windows.Forms.PictureBox()
-        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvCargo = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
@@ -53,8 +52,8 @@ Partial Class FrmCargo
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PlCargo.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,12 +95,9 @@ Partial Class FrmCargo
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.PbIcono)
-        Me.Panel1.Controls.Add(Me.TxtCargo)
-        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TxtCodigoCargo)
-        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.PlCargo)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(-50, -1)
         Me.Panel1.Name = "Panel1"
@@ -246,24 +242,6 @@ Partial Class FrmCargo
         Me.PbIcono.TabIndex = 0
         Me.PbIcono.TabStop = False
         '
-        'TxtCargo
-        '
-        Me.TxtCargo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCargo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCargo.Location = New System.Drawing.Point(430, 185)
-        Me.TxtCargo.Name = "TxtCargo"
-        Me.TxtCargo.Size = New System.Drawing.Size(249, 18)
-        Me.TxtCargo.TabIndex = 29
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(424, 180)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(259, 29)
-        Me.Panel3.TabIndex = 30
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -275,26 +253,6 @@ Partial Class FrmCargo
         Me.Label2.Text = "Cargo"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TxtCodigoCargo
-        '
-        Me.TxtCodigoCargo.BackColor = System.Drawing.Color.White
-        Me.TxtCodigoCargo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoCargo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoCargo.Location = New System.Drawing.Point(428, 150)
-        Me.TxtCodigoCargo.Name = "TxtCodigoCargo"
-        Me.TxtCodigoCargo.ReadOnly = True
-        Me.TxtCodigoCargo.Size = New System.Drawing.Size(150, 18)
-        Me.TxtCodigoCargo.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(424, 145)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(158, 29)
-        Me.Panel2.TabIndex = 2
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -305,14 +263,61 @@ Partial Class FrmCargo
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Código Cargo"
         '
+        'PlCargo
+        '
+        Me.PlCargo.Controls.Add(Me.TxtCargo)
+        Me.PlCargo.Controls.Add(Me.Panel3)
+        Me.PlCargo.Controls.Add(Me.TxtCodigoCargo)
+        Me.PlCargo.Controls.Add(Me.Panel2)
+        Me.PlCargo.Location = New System.Drawing.Point(422, 122)
+        Me.PlCargo.Name = "PlCargo"
+        Me.PlCargo.Size = New System.Drawing.Size(281, 116)
+        Me.PlCargo.TabIndex = 105
+        '
+        'TxtCargo
+        '
+        Me.TxtCargo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCargo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCargo.Location = New System.Drawing.Point(15, 63)
+        Me.TxtCargo.Name = "TxtCargo"
+        Me.TxtCargo.Size = New System.Drawing.Size(249, 18)
+        Me.TxtCargo.TabIndex = 29
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Location = New System.Drawing.Point(9, 58)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(259, 29)
+        Me.Panel3.TabIndex = 30
+        '
+        'TxtCodigoCargo
+        '
+        Me.TxtCodigoCargo.BackColor = System.Drawing.Color.White
+        Me.TxtCodigoCargo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoCargo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoCargo.Location = New System.Drawing.Point(13, 28)
+        Me.TxtCodigoCargo.Name = "TxtCodigoCargo"
+        Me.TxtCodigoCargo.ReadOnly = True
+        Me.TxtCodigoCargo.Size = New System.Drawing.Size(150, 18)
+        Me.TxtCodigoCargo.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(9, 23)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(158, 29)
+        Me.Panel2.TabIndex = 2
+        '
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
+        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.CboBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLapiz)
-        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.DgvCargo)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
@@ -320,6 +325,17 @@ Partial Class FrmCargo
         Me.TabPage2.Size = New System.Drawing.Size(701, 510)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Ver Datos"
+        '
+        'PbLupa
+        '
+        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
+        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
+        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbLupa.Location = New System.Drawing.Point(22, 91)
+        Me.PbLupa.Name = "PbLupa"
+        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
+        Me.PbLupa.TabIndex = 87
+        Me.PbLupa.TabStop = False
         '
         'Label4
         '
@@ -333,40 +349,10 @@ Partial Class FrmCargo
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(349, 76)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(50, 92)
         Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(332, 26)
+        Me.TxtBusqueda.Size = New System.Drawing.Size(631, 26)
         Me.TxtBusqueda.TabIndex = 75
-        '
-        'CboBusqueda
-        '
-        Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Location = New System.Drawing.Point(44, 76)
-        Me.CboBusqueda.Name = "CboBusqueda"
-        Me.CboBusqueda.Size = New System.Drawing.Size(219, 27)
-        Me.CboBusqueda.TabIndex = 74
-        '
-        'PbLapiz
-        '
-        Me.PbLapiz.BackColor = System.Drawing.Color.Transparent
-        Me.PbLapiz.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lapiz
-        Me.PbLapiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLapiz.Location = New System.Drawing.Point(317, 76)
-        Me.PbLapiz.Name = "PbLapiz"
-        Me.PbLapiz.Size = New System.Drawing.Size(27, 27)
-        Me.PbLapiz.TabIndex = 77
-        Me.PbLapiz.TabStop = False
-        '
-        'PbLupa
-        '
-        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
-        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
-        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(16, 76)
-        Me.PbLupa.Name = "PbLupa"
-        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
-        Me.PbLupa.TabIndex = 76
-        Me.PbLupa.TabStop = False
         '
         'DgvCargo
         '
@@ -420,9 +406,10 @@ Partial Class FrmCargo
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PlCargo.ResumeLayout(False)
+        Me.PlCargo.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLapiz, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
@@ -447,9 +434,6 @@ Partial Class FrmCargo
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents CboBusqueda As ComboBox
-    Friend WithEvents PbLapiz As PictureBox
-    Friend WithEvents PbLupa As PictureBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
@@ -458,4 +442,6 @@ Partial Class FrmCargo
     Friend WithEvents LblGuardar As Label
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
+    Friend WithEvents PbLupa As PictureBox
+    Friend WithEvents PlCargo As Panel
 End Class

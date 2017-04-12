@@ -98,7 +98,7 @@ Partial Class FrmLogin
         Me.MinimizeBox = False
         Me.Name = "FrmLogin"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmLogin"
         Me.PnLogin.ResumeLayout(False)
         Me.PnLogin.PerformLayout()
