@@ -22,9 +22,16 @@ Partial Class FrmNacionalidad
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PlNacionalidad = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TxtNacionalidad = New System.Windows.Forms.TextBox()
+        Me.CboPais = New System.Windows.Forms.ComboBox()
+        Me.TxtCodigoNacionalidad = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -34,32 +41,30 @@ Partial Class FrmNacionalidad
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TxtNacionalidad = New System.Windows.Forms.TextBox()
-        Me.CboPais = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtCodigoNacionalidad = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvNacionalidad = New System.Windows.Forms.DataGridView()
+        Me.CMSNacionalidad = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.PlNacionalidad = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PlNacionalidad.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvNacionalidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CMSNacionalidad.SuspendLayout()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PlNacionalidad.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -106,6 +111,66 @@ Partial Class FrmNacionalidad
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(812, 509)
         Me.Panel1.TabIndex = 14
+        '
+        'PlNacionalidad
+        '
+        Me.PlNacionalidad.Controls.Add(Me.Panel3)
+        Me.PlNacionalidad.Controls.Add(Me.CboPais)
+        Me.PlNacionalidad.Controls.Add(Me.TxtCodigoNacionalidad)
+        Me.PlNacionalidad.Controls.Add(Me.Panel2)
+        Me.PlNacionalidad.Location = New System.Drawing.Point(489, 129)
+        Me.PlNacionalidad.Name = "PlNacionalidad"
+        Me.PlNacionalidad.Size = New System.Drawing.Size(300, 148)
+        Me.PlNacionalidad.TabIndex = 105
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.TxtNacionalidad)
+        Me.Panel3.Location = New System.Drawing.Point(2, 61)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(274, 29)
+        Me.Panel3.TabIndex = 30
+        '
+        'TxtNacionalidad
+        '
+        Me.TxtNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtNacionalidad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNacionalidad.Location = New System.Drawing.Point(3, 5)
+        Me.TxtNacionalidad.Name = "TxtNacionalidad"
+        Me.TxtNacionalidad.Size = New System.Drawing.Size(266, 18)
+        Me.TxtNacionalidad.TabIndex = 48
+        '
+        'CboPais
+        '
+        Me.CboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboPais.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboPais.FormattingEnabled = True
+        Me.CboPais.Location = New System.Drawing.Point(2, 100)
+        Me.CboPais.Name = "CboPais"
+        Me.CboPais.Size = New System.Drawing.Size(274, 24)
+        Me.CboPais.TabIndex = 10
+        '
+        'TxtCodigoNacionalidad
+        '
+        Me.TxtCodigoNacionalidad.BackColor = System.Drawing.Color.White
+        Me.TxtCodigoNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoNacionalidad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoNacionalidad.Location = New System.Drawing.Point(6, 31)
+        Me.TxtCodigoNacionalidad.Name = "TxtCodigoNacionalidad"
+        Me.TxtCodigoNacionalidad.ReadOnly = True
+        Me.TxtCodigoNacionalidad.Size = New System.Drawing.Size(164, 18)
+        Me.TxtCodigoNacionalidad.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(2, 26)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(172, 29)
+        Me.Panel2.TabIndex = 2
         '
         'BtnCancelar
         '
@@ -245,35 +310,6 @@ Partial Class FrmNacionalidad
         Me.PbIcono.TabIndex = 0
         Me.PbIcono.TabStop = False
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.TxtNacionalidad)
-        Me.Panel3.Location = New System.Drawing.Point(2, 61)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(274, 29)
-        Me.Panel3.TabIndex = 30
-        '
-        'TxtNacionalidad
-        '
-        Me.TxtNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtNacionalidad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNacionalidad.Location = New System.Drawing.Point(3, 5)
-        Me.TxtNacionalidad.Name = "TxtNacionalidad"
-        Me.TxtNacionalidad.Size = New System.Drawing.Size(266, 18)
-        Me.TxtNacionalidad.TabIndex = 48
-        '
-        'CboPais
-        '
-        Me.CboPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboPais.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.CboPais.FormattingEnabled = True
-        Me.CboPais.Location = New System.Drawing.Point(2, 100)
-        Me.CboPais.Name = "CboPais"
-        Me.CboPais.Size = New System.Drawing.Size(274, 24)
-        Me.CboPais.TabIndex = 10
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -294,26 +330,6 @@ Partial Class FrmNacionalidad
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nacionalidad"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'TxtCodigoNacionalidad
-        '
-        Me.TxtCodigoNacionalidad.BackColor = System.Drawing.Color.White
-        Me.TxtCodigoNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoNacionalidad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoNacionalidad.Location = New System.Drawing.Point(6, 31)
-        Me.TxtCodigoNacionalidad.Name = "TxtCodigoNacionalidad"
-        Me.TxtCodigoNacionalidad.ReadOnly = True
-        Me.TxtCodigoNacionalidad.Size = New System.Drawing.Size(164, 18)
-        Me.TxtCodigoNacionalidad.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(2, 26)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(172, 29)
-        Me.Panel2.TabIndex = 2
         '
         'Label1
         '
@@ -373,10 +389,30 @@ Partial Class FrmNacionalidad
         Me.DgvNacionalidad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvNacionalidad.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DgvNacionalidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvNacionalidad.ContextMenuStrip = Me.CMSNacionalidad
         Me.DgvNacionalidad.Location = New System.Drawing.Point(16, 137)
         Me.DgvNacionalidad.Name = "DgvNacionalidad"
+        Me.DgvNacionalidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvNacionalidad.Size = New System.Drawing.Size(665, 355)
         Me.DgvNacionalidad.TabIndex = 15
+        '
+        'CMSNacionalidad
+        '
+        Me.CMSNacionalidad.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CMSNacionalidad.Name = "CMSNacionalidad"
+        Me.CMSNacionalidad.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'Label14
         '
@@ -399,17 +435,6 @@ Partial Class FrmNacionalidad
         Me.PbSalir.TabIndex = 20
         Me.PbSalir.TabStop = False
         '
-        'PlNacionalidad
-        '
-        Me.PlNacionalidad.Controls.Add(Me.Panel3)
-        Me.PlNacionalidad.Controls.Add(Me.CboPais)
-        Me.PlNacionalidad.Controls.Add(Me.TxtCodigoNacionalidad)
-        Me.PlNacionalidad.Controls.Add(Me.Panel2)
-        Me.PlNacionalidad.Location = New System.Drawing.Point(489, 129)
-        Me.PlNacionalidad.Name = "PlNacionalidad"
-        Me.PlNacionalidad.Size = New System.Drawing.Size(300, 148)
-        Me.PlNacionalidad.TabIndex = 105
-        '
         'FrmNacionalidad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -423,21 +448,23 @@ Partial Class FrmNacionalidad
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmNacionalidad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión de Nacionalidad"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PlNacionalidad.ResumeLayout(False)
+        Me.PlNacionalidad.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvNacionalidad, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CMSNacionalidad.ResumeLayout(False)
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PlNacionalidad.ResumeLayout(False)
-        Me.PlNacionalidad.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -471,4 +498,7 @@ Partial Class FrmNacionalidad
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents PlNacionalidad As Panel
+    Friend WithEvents CMSNacionalidad As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

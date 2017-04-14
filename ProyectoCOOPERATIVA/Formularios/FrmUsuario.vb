@@ -425,4 +425,12 @@ Public Class FrmUsuario
             BusquedaFiltradasUsuario()
         End If
     End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub PbLupa_Click(sender As Object, e As EventArgs) Handles PbLupa.Click
+
+    End Sub
 End Class

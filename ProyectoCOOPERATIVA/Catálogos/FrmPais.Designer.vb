@@ -22,9 +22,15 @@ Partial Class FrmPais
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PlPais = New System.Windows.Forms.Panel()
+        Me.TxtPais = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TxtCodigoPais = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -34,29 +40,28 @@ Partial Class FrmPais
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
-        Me.TxtPais = New System.Windows.Forms.TextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtCodigoPais = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvPais = New System.Windows.Forms.DataGridView()
+        Me.CMSPais = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.PlPais = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.PlPais.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvPais, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CMSPais.SuspendLayout()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PlPais.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -104,6 +109,55 @@ Partial Class FrmPais
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(746, 507)
         Me.Panel1.TabIndex = 17
+        '
+        'PlPais
+        '
+        Me.PlPais.Controls.Add(Me.TxtPais)
+        Me.PlPais.Controls.Add(Me.Panel3)
+        Me.PlPais.Controls.Add(Me.TxtCodigoPais)
+        Me.PlPais.Controls.Add(Me.Panel2)
+        Me.PlPais.Location = New System.Drawing.Point(402, 142)
+        Me.PlPais.Name = "PlPais"
+        Me.PlPais.Size = New System.Drawing.Size(306, 121)
+        Me.PlPais.TabIndex = 105
+        '
+        'TxtPais
+        '
+        Me.TxtPais.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtPais.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPais.Location = New System.Drawing.Point(5, 60)
+        Me.TxtPais.Name = "TxtPais"
+        Me.TxtPais.Size = New System.Drawing.Size(277, 18)
+        Me.TxtPais.TabIndex = 29
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Location = New System.Drawing.Point(1, 55)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(285, 29)
+        Me.Panel3.TabIndex = 30
+        '
+        'TxtCodigoPais
+        '
+        Me.TxtCodigoPais.BackColor = System.Drawing.Color.White
+        Me.TxtCodigoPais.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoPais.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoPais.Location = New System.Drawing.Point(5, 25)
+        Me.TxtCodigoPais.Name = "TxtCodigoPais"
+        Me.TxtCodigoPais.ReadOnly = True
+        Me.TxtCodigoPais.Size = New System.Drawing.Size(193, 18)
+        Me.TxtCodigoPais.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(1, 20)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.TabIndex = 2
         '
         'BtnCancelar
         '
@@ -243,24 +297,6 @@ Partial Class FrmPais
         Me.PbIcono.TabIndex = 0
         Me.PbIcono.TabStop = False
         '
-        'TxtPais
-        '
-        Me.TxtPais.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtPais.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPais.Location = New System.Drawing.Point(5, 60)
-        Me.TxtPais.Name = "TxtPais"
-        Me.TxtPais.Size = New System.Drawing.Size(277, 18)
-        Me.TxtPais.TabIndex = 29
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(1, 55)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(285, 29)
-        Me.Panel3.TabIndex = 30
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -271,26 +307,6 @@ Partial Class FrmPais
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "País"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'TxtCodigoPais
-        '
-        Me.TxtCodigoPais.BackColor = System.Drawing.Color.White
-        Me.TxtCodigoPais.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoPais.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoPais.Location = New System.Drawing.Point(5, 25)
-        Me.TxtCodigoPais.Name = "TxtCodigoPais"
-        Me.TxtCodigoPais.ReadOnly = True
-        Me.TxtCodigoPais.Size = New System.Drawing.Size(193, 18)
-        Me.TxtCodigoPais.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(1, 20)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
-        Me.Panel2.TabIndex = 2
         '
         'Label1
         '
@@ -346,14 +362,36 @@ Partial Class FrmPais
         '
         'DgvPais
         '
+        Me.DgvPais.AllowUserToAddRows = False
         Me.DgvPais.AllowUserToDeleteRows = False
         Me.DgvPais.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvPais.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DgvPais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvPais.ContextMenuStrip = Me.CMSPais
         Me.DgvPais.Location = New System.Drawing.Point(16, 137)
         Me.DgvPais.Name = "DgvPais"
+        Me.DgvPais.ReadOnly = True
+        Me.DgvPais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvPais.Size = New System.Drawing.Size(665, 355)
         Me.DgvPais.TabIndex = 18
+        '
+        'CMSPais
+        '
+        Me.CMSPais.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CMSPais.Name = "CMSPais"
+        Me.CMSPais.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'Label14
         '
@@ -376,17 +414,6 @@ Partial Class FrmPais
         Me.PbSalir.TabIndex = 23
         Me.PbSalir.TabStop = False
         '
-        'PlPais
-        '
-        Me.PlPais.Controls.Add(Me.TxtPais)
-        Me.PlPais.Controls.Add(Me.Panel3)
-        Me.PlPais.Controls.Add(Me.TxtCodigoPais)
-        Me.PlPais.Controls.Add(Me.Panel2)
-        Me.PlPais.Location = New System.Drawing.Point(402, 142)
-        Me.PlPais.Name = "PlPais"
-        Me.PlPais.Size = New System.Drawing.Size(306, 121)
-        Me.PlPais.TabIndex = 105
-        '
         'FrmPais
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -405,14 +432,15 @@ Partial Class FrmPais
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PlPais.ResumeLayout(False)
+        Me.PlPais.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvPais, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CMSPais.ResumeLayout(False)
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PlPais.ResumeLayout(False)
-        Me.PlPais.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -444,4 +472,7 @@ Partial Class FrmPais
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents PlPais As Panel
+    Friend WithEvents CMSPais As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -22,12 +22,13 @@ Partial Class FrmSocio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PlSocio = New System.Windows.Forms.Panel()
         Me.CboSexo = New System.Windows.Forms.ComboBox()
-        Me.CboEstadoCIvil = New System.Windows.Forms.ComboBox()
+        Me.CboEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.CboNacionalidad = New System.Windows.Forms.ComboBox()
         Me.TxtTelefonoTrabajo = New System.Windows.Forms.TextBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -72,6 +73,9 @@ Partial Class FrmSocio
         Me.DgvSocio = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
+        Me.CMSSocio = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -81,6 +85,7 @@ Partial Class FrmSocio
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvSocio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CMSSocio.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -139,7 +144,7 @@ Partial Class FrmSocio
         'PlSocio
         '
         Me.PlSocio.Controls.Add(Me.CboSexo)
-        Me.PlSocio.Controls.Add(Me.CboEstadoCIvil)
+        Me.PlSocio.Controls.Add(Me.CboEstadoCivil)
         Me.PlSocio.Controls.Add(Me.CboNacionalidad)
         Me.PlSocio.Controls.Add(Me.TxtTelefonoTrabajo)
         Me.PlSocio.Controls.Add(Me.Panel8)
@@ -172,15 +177,15 @@ Partial Class FrmSocio
         Me.CboSexo.Size = New System.Drawing.Size(200, 24)
         Me.CboSexo.TabIndex = 11
         '
-        'CboEstadoCIvil
+        'CboEstadoCivil
         '
-        Me.CboEstadoCIvil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboEstadoCIvil.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.CboEstadoCIvil.FormattingEnabled = True
-        Me.CboEstadoCIvil.Location = New System.Drawing.Point(8, 352)
-        Me.CboEstadoCIvil.Name = "CboEstadoCIvil"
-        Me.CboEstadoCIvil.Size = New System.Drawing.Size(243, 24)
-        Me.CboEstadoCIvil.TabIndex = 10
+        Me.CboEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboEstadoCivil.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboEstadoCivil.FormattingEnabled = True
+        Me.CboEstadoCivil.Location = New System.Drawing.Point(8, 352)
+        Me.CboEstadoCivil.Name = "CboEstadoCivil"
+        Me.CboEstadoCivil.Size = New System.Drawing.Size(243, 24)
+        Me.CboEstadoCivil.TabIndex = 10
         '
         'CboNacionalidad
         '
@@ -631,11 +636,16 @@ Partial Class FrmSocio
         '
         'DgvSocio
         '
+        Me.DgvSocio.AllowUserToAddRows = False
+        Me.DgvSocio.AllowUserToDeleteRows = False
         Me.DgvSocio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvSocio.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DgvSocio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvSocio.ContextMenuStrip = Me.CMSSocio
         Me.DgvSocio.Location = New System.Drawing.Point(16, 132)
         Me.DgvSocio.Name = "DgvSocio"
+        Me.DgvSocio.ReadOnly = True
+        Me.DgvSocio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvSocio.Size = New System.Drawing.Size(665, 373)
         Me.DgvSocio.TabIndex = 1
         '
@@ -659,6 +669,24 @@ Partial Class FrmSocio
         Me.PbSalir.Size = New System.Drawing.Size(33, 32)
         Me.PbSalir.TabIndex = 30
         Me.PbSalir.TabStop = False
+        '
+        'CMSSocio
+        '
+        Me.CMSSocio.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CMSSocio.Name = "CMSSocio"
+        Me.CMSSocio.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'FrmSocio
         '
@@ -684,6 +712,7 @@ Partial Class FrmSocio
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvSocio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CMSSocio.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -694,7 +723,7 @@ Partial Class FrmSocio
     Friend WithEvents PbIcono As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents CboSexo As ComboBox
-    Friend WithEvents CboEstadoCIvil As ComboBox
+    Friend WithEvents CboEstadoCivil As ComboBox
     Friend WithEvents CboNacionalidad As ComboBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label8 As Label
@@ -739,4 +768,7 @@ Partial Class FrmSocio
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents PlSocio As Panel
+    Friend WithEvents CMSSocio As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class
