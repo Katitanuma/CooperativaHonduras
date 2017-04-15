@@ -72,11 +72,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Conexion.vb" />
-    <Compile Include="Formularios\FrmCuenta.Designer.vb">
+    <Compile Include="FormularioAbiertos.vb" />
+    <Compile Include="Transaccionales\FrmCuenta.Designer.vb">
       <DependentUpon>FrmCuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmCuenta.vb">
+    <Compile Include="Transaccionales\FrmCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\FrmCargo.Designer.vb">
@@ -85,10 +87,10 @@
     <Compile Include="Catálogos\FrmCargo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmLogin.Designer.vb">
+    <Compile Include="Transaccionales\FrmLogin.Designer.vb">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmLogin.vb">
+    <Compile Include="Transaccionales\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\FrmProfesion.Designer.vb">
@@ -97,16 +99,16 @@
     <Compile Include="Catálogos\FrmProfesion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmOficial.Designer.vb">
+    <Compile Include="Transaccionales\FrmOficial.Designer.vb">
       <DependentUpon>FrmOficial.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmOficial.vb">
+    <Compile Include="Transaccionales\FrmOficial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmAval.Designer.vb">
+    <Compile Include="Transaccionales\FrmAval.Designer.vb">
       <DependentUpon>FrmAval.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmAval.vb">
+    <Compile Include="Transaccionales\FrmAval.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\FrmCiudad.Designer.vb">
@@ -133,16 +135,16 @@
     <Compile Include="Catálogos\FrmPais.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmPrestamo.Designer.vb">
+    <Compile Include="Transaccionales\FrmPrestamo.Designer.vb">
       <DependentUpon>FrmPrestamo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmPrestamo.vb">
+    <Compile Include="Transaccionales\FrmPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmSocio.Designer.vb">
+    <Compile Include="Transaccionales\FrmSocio.Designer.vb">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmSocio.vb">
+    <Compile Include="Transaccionales\FrmSocio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\FrmTipodeCuenta.Designer.vb">
@@ -157,10 +159,10 @@
     <Compile Include="Catálogos\FrmTipoPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmUsuario.Designer.vb">
+    <Compile Include="Transaccionales\FrmUsuario.Designer.vb">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmUsuario.vb">
+    <Compile Include="Transaccionales\FrmUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -178,30 +180,36 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Formularios\PantallaPrincipal.Designer.vb">
+    <Compile Include="Transaccionales\PantallaPrincipal.Designer.vb">
       <DependentUpon>PantallaPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\PantallaPrincipal.vb">
+    <Compile Include="Transaccionales\PantallaPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaccionales\Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaccionales\Splash.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\FrmCuenta.resx">
+    <EmbeddedResource Include="Transaccionales\FrmCuenta.resx">
       <DependentUpon>FrmCuenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\FrmCargo.resx">
       <DependentUpon>FrmCargo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmLogin.resx">
+    <EmbeddedResource Include="Transaccionales\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\FrmProfesion.resx">
       <DependentUpon>FrmProfesion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmOficial.resx">
+    <EmbeddedResource Include="Transaccionales\FrmOficial.resx">
       <DependentUpon>FrmOficial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmAval.resx">
+    <EmbeddedResource Include="Transaccionales\FrmAval.resx">
       <DependentUpon>FrmAval.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\FrmCiudad.resx">
@@ -216,10 +224,10 @@
     <EmbeddedResource Include="Catálogos\FrmPais.resx">
       <DependentUpon>FrmPais.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmPrestamo.resx">
+    <EmbeddedResource Include="Transaccionales\FrmPrestamo.resx">
       <DependentUpon>FrmPrestamo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmSocio.resx">
+    <EmbeddedResource Include="Transaccionales\FrmSocio.resx">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\FrmTipodeCuenta.resx">
@@ -228,7 +236,7 @@
     <EmbeddedResource Include="Catálogos\FrmTipoPrestamo.resx">
       <DependentUpon>FrmTipoPrestamo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmUsuario.resx">
+    <EmbeddedResource Include="Transaccionales\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -237,8 +245,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\PantallaPrincipal.resx">
+    <EmbeddedResource Include="Transaccionales\PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaccionales\Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -441,6 +452,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo SysCAp3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashCientifica.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

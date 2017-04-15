@@ -38,8 +38,9 @@ Public Class FrmSocio
         LblCancelar.Visible = False
     End Sub
     Private Sub FrmSocio_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        PantallaPrincipal.PnlLogo.BringToFront()
-        PantallaPrincipal.PnlLogo1.Visible = False
+        CierreFormulario(FrmCiudad, frmDepartamento, FrmNacionalidad, FrmPais,
+                       FrmProfesion, FrmTipodeCuenta, FrmTipoPrestamo, FrmCargo, FrmCuenta,
+                       FrmOficial, FrmPrestamo, FrmAval, FrmUsuario)
     End Sub
 
 
@@ -49,6 +50,7 @@ Public Class FrmSocio
         Call LlenarComboBoxSexo()
         Call MostrarTodosSocio()
         Call HabilitarControles(True, False, False, False, False)
+        Call LimpiarSocio()
     End Sub
 
     Private Sub HabilitarControles(ByVal Nuevo As Boolean, ByVal Guardar As Boolean, ByVal Modificar As Boolean, ByVal Cancelar As Boolean, ByVal Panel As Boolean)
@@ -194,7 +196,7 @@ Public Class FrmSocio
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
 
-                    .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = TxtCodigoSocio.Text.Trim
+                    .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = MtbCodigoSocio.Text.Trim
                     .Parameters.Add("@NombreSocio", SqlDbType.NVarChar, 50).Value = TxtNombre.Text.Trim
                     .Parameters.Add("@ApellidoSocio", SqlDbType.NVarChar, 50).Value = TxtApellido.Text.Trim
                     .Parameters.Add("@RTN", SqlDbType.NVarChar, 15).Value = TxtRTN.Text.Trim
@@ -231,7 +233,7 @@ Public Class FrmSocio
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
 
-                    .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = TxtCodigoSocio.Text.Trim
+                    .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = MtbCodigoSocio.Text.Trim
                     .Parameters.Add("@NombreSocio", SqlDbType.NVarChar, 50).Value = TxtNombre.Text.Trim
                     .Parameters.Add("@ApellidoSocio", SqlDbType.NVarChar, 50).Value = TxtApellido.Text.Trim
                     .Parameters.Add("@RTN", SqlDbType.NVarChar, 15).Value = TxtRTN.Text.Trim
@@ -268,7 +270,7 @@ Public Class FrmSocio
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
 
-                    .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = CInt(DgvSocio.CurrentRow.Cells(0).Value)
+                    .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = DgvSocio.CurrentRow.Cells(0).Value.ToString
                     .ExecuteNonQuery()
                 End With
                 MessageBox.Show("Socio eliminado con éxito", "SYS CAP")
@@ -353,7 +355,7 @@ Public Class FrmSocio
 
         Dim Estado As Boolean
 
-        If TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        If MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -363,47 +365,47 @@ Public Class FrmSocio
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -413,42 +415,42 @@ Public Class FrmSocio
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -459,37 +461,37 @@ Public Class FrmSocio
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing AndAlso TxtTelefonoTrabajo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -499,32 +501,32 @@ Public Class FrmSocio
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtTelefonoTrabajo.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing And TxtLugardeTrabajo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -534,27 +536,27 @@ Public Class FrmSocio
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtTelefonoCasa.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing And TxtDIreccion.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -564,22 +566,22 @@ Public Class FrmSocio
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And CboNacionalidad.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing And TxtRTN.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -589,17 +591,17 @@ Public Class FrmSocio
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And CboEstadoCivil.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing And TxtApellido.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar todos los campos", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -609,17 +611,17 @@ Public Class FrmSocio
             MessageBox.Show("Tiene que seleccionar el estado civil y el sexo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And CboSexo.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And CboSexo.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar el códgio del socio y seleccionar el sexo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing And TxtNombre.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing And TxtNombre.Text = Nothing Then
 
             MessageBox.Show("Tiene que ingresar el código del socio y el nombre", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
 
-        ElseIf TxtCodigoSocio.Text = Nothing Then
+        ElseIf MtbCodigoSocio.MaskFull = Nothing Then
 
             MessageBox.Show("Tiene que ingresar el código del socio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
@@ -707,21 +709,20 @@ Public Class FrmSocio
 
         If ValidarSocio() = True Then
 
-            If ExisteRTNSocio() = False Then
-                Call ModificarSocio()
+
+            Call ModificarSocio()
                 Call MostrarTodosSocio()
                 Call LimpiarSocio()
                 Call HabilitarControles(True, False, False, False, False)
-            Else
-                MessageBox.Show("Ya existe ese socio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            End If
+
         End If
 
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
         Call HabilitarControles(False, False, True, True, True)
-        TxtCodigoSocio.Text = DgvSocio.CurrentRow.Cells(0).Value.ToString
+        TbcSocio.SelectedIndex = 0
+        MtbCodigoSocio.Text = DgvSocio.CurrentRow.Cells(0).Value.ToString
         TxtNombre.Text = DgvSocio.CurrentRow.Cells(1).Value.ToString
         TxtApellido.Text = DgvSocio.CurrentRow.Cells(2).Value.ToString
         TxtRTN.Text = DgvSocio.CurrentRow.Cells(3).Value.ToString
@@ -732,7 +733,7 @@ Public Class FrmSocio
         CboNacionalidad.Text = DgvSocio.CurrentRow.Cells(8).Value.ToString
         CboEstadoCivil.Text = DgvSocio.CurrentRow.Cells(9).Value.ToString
         CboSexo.Text = DgvSocio.CurrentRow.Cells(10).Value.ToString
-        TxtCodigoSocio.ReadOnly = True
+        MtbCodigoSocio.ReadOnly = True
 
     End Sub
 
@@ -747,7 +748,7 @@ Public Class FrmSocio
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         Call HabilitarControles(False, True, False, True, True)
-        TxtCodigoSocio.ReadOnly = False
+        MtbCodigoSocio.ReadOnly = False
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
@@ -756,7 +757,7 @@ Public Class FrmSocio
     End Sub
 
     Private Sub LimpiarSocio()
-        TxtCodigoSocio.Text = ""
+        MtbCodigoSocio.Text = ""
         TxtNombre.Text = ""
         TxtApellido.Text = ""
         TxtRTN.Text = ""
@@ -764,9 +765,9 @@ Public Class FrmSocio
         TxtLugardeTrabajo.Text = ""
         TxtTelefonoTrabajo.Text = ""
         TxtTelefonoCasa.Text = ""
-        CboNacionalidad.Text = ""
-        CboEstadoCivil.Text = ""
-        CboSexo.Text = ""
+        CboNacionalidad.Text = Nothing
+        CboEstadoCivil.Text = Nothing
+        CboSexo.Text = Nothing
 
     End Sub
 

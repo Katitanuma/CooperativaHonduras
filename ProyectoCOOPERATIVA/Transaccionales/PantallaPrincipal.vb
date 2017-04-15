@@ -411,7 +411,7 @@ Public Class PantallaPrincipal
     End Sub
 
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
-        Me.Close()
+        Application.Exit()
     End Sub
 
     Private Sub PbSalir_MouseHover(sender As Object, e As EventArgs) Handles PbSalir.MouseHover
@@ -444,5 +444,9 @@ Public Class PantallaPrincipal
         PnlLogo1.Visible = True
     End Sub
 
-
+    Private Sub PbCambioSesion_Click(sender As Object, e As EventArgs) Handles PbCambioSesion.Click
+        Me.Hide()
+        FrmLogin.Show()
+        FrmLogin.UsernameTextBox.Focus()
+    End Sub
 End Class

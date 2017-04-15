@@ -41,9 +41,7 @@ Partial Class FrmOficial
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PlOficial = New System.Windows.Forms.Panel()
@@ -52,10 +50,12 @@ Partial Class FrmOficial
         Me.CboEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.CboSexo = New System.Windows.Forms.ComboBox()
         Me.CboCiudad = New System.Windows.Forms.ComboBox()
-        Me.TxtApellido = New System.Windows.Forms.TextBox()
-        Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.MtbCodigoOficial = New System.Windows.Forms.MaskedTextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.TxtApellido = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -69,10 +69,10 @@ Partial Class FrmOficial
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel4.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.PlOficial.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvOficial, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -329,16 +329,6 @@ Partial Class FrmOficial
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Cargo"
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.TxtApellido)
-        Me.Panel4.Location = New System.Drawing.Point(2, 80)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(279, 29)
-        Me.Panel4.TabIndex = 8
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -348,16 +338,6 @@ Partial Class FrmOficial
         Me.Label3.Size = New System.Drawing.Size(65, 16)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Apellidos"
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.TxtNombre)
-        Me.Panel3.Location = New System.Drawing.Point(2, 44)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(279, 29)
-        Me.Panel3.TabIndex = 5
         '
         'Label2
         '
@@ -444,24 +424,6 @@ Partial Class FrmOficial
         Me.CboCiudad.Size = New System.Drawing.Size(249, 24)
         Me.CboCiudad.TabIndex = 9
         '
-        'TxtApellido
-        '
-        Me.TxtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtApellido.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtApellido.Location = New System.Drawing.Point(6, 4)
-        Me.TxtApellido.Name = "TxtApellido"
-        Me.TxtApellido.Size = New System.Drawing.Size(269, 18)
-        Me.TxtApellido.TabIndex = 3
-        '
-        'TxtNombre
-        '
-        Me.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtNombre.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNombre.Location = New System.Drawing.Point(5, 5)
-        Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(269, 18)
-        Me.TxtNombre.TabIndex = 2
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
@@ -481,6 +443,44 @@ Partial Class FrmOficial
         Me.MtbCodigoOficial.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.MtbCodigoOficial.Size = New System.Drawing.Size(190, 15)
         Me.MtbCodigoOficial.TabIndex = 97
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.TxtNombre)
+        Me.Panel3.Location = New System.Drawing.Point(2, 44)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(279, 29)
+        Me.Panel3.TabIndex = 5
+        '
+        'TxtNombre
+        '
+        Me.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtNombre.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNombre.Location = New System.Drawing.Point(5, 5)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(269, 18)
+        Me.TxtNombre.TabIndex = 2
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.TxtApellido)
+        Me.Panel4.Location = New System.Drawing.Point(2, 80)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(279, 29)
+        Me.Panel4.TabIndex = 8
+        '
+        'TxtApellido
+        '
+        Me.TxtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtApellido.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtApellido.Location = New System.Drawing.Point(6, 4)
+        Me.TxtApellido.Name = "TxtApellido"
+        Me.TxtApellido.Size = New System.Drawing.Size(269, 18)
+        Me.TxtApellido.TabIndex = 3
         '
         'TabPage2
         '
@@ -587,13 +587,13 @@ Partial Class FrmOficial
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.PlOficial.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()

@@ -7,8 +7,9 @@ Public Class frmDepartamento
     End Sub
 
     Private Sub DEPARTAMENTO_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        PantallaPrincipal.PnlLogo.BringToFront()
-        PantallaPrincipal.PnlLogo1.Visible = False
+        CierreFormulario(FrmCiudad, FrmAval, FrmNacionalidad, FrmPais,
+                       FrmProfesion, FrmTipodeCuenta, FrmTipoPrestamo, FrmCargo, FrmCuenta,
+                       FrmOficial, FrmPrestamo, FrmSocio, FrmUsuario)
     End Sub
 
     Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) Handles BtnNuevo.MouseHover
@@ -347,6 +348,7 @@ Public Class frmDepartamento
         Call HabilitarControles(True, False, False, False, False)
         Call MostrarTodoDepartamento()
         Call LlenarComboBoxPais()
+        Call LimpiarDepartamento()
 
     End Sub
 
@@ -354,15 +356,13 @@ Public Class frmDepartamento
 
         If ValidarDepartamento() = True Then
 
-            If ExisteDepartamento() = False Then
 
-                Call ActualizarDepartamento()
+
+            Call ActualizarDepartamento()
                 Call MostrarTodoDepartamento()
                 Call LimpiarDepartamento()
                 Call HabilitarControles(True, False, False, False, False)
-            Else
-                MessageBox.Show("Ya existe ese departamento", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+
         End If
     End Sub
 
@@ -371,7 +371,7 @@ Public Class frmDepartamento
         Call HabilitarControles(False, False, True, True, True)
         TxtCodigoDepartamento.Text = DgvDepartamento.CurrentRow.Cells(0).Value
         TxtDepartamento.Text = DgvDepartamento.CurrentRow.Cells(1).Value.ToString
-        CboPais.Text = DgvDepartamento.CurrentRow.Cells(2).ToString
+        CboPais.Text = DgvDepartamento.CurrentRow.Cells(2).Value.ToString
         TabPage1.Show()
 
     End Sub
@@ -389,7 +389,8 @@ Public Class frmDepartamento
 
         Call MostrarTodoDepartamento()
         TxtDepartamento.Text = ""
-        TxtCodigoDepartamento.Text = ""
+        TxtCodigoDepartamento.Text = Nothing
+        CboPais.Text = Nothing
 
     End Sub
 
@@ -458,5 +459,6 @@ Public Class frmDepartamento
             BusquedaFiltradasDepartamento()
         End If
     End Sub
+
 
 End Class

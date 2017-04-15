@@ -1,14 +1,14 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.SqlClient
-Public Class FrmCiudad
+Public Class FrmCuenta
+
     Private Sub PbSalir_Click(sender As Object, e As EventArgs) Handles PbSalir.Click
         Me.Close()
-
     End Sub
 
-    Private Sub CIUDAD_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        CierreFormulario(FrmAval, frmDepartamento, FrmNacionalidad, FrmPais,
-                       FrmProfesion, FrmTipodeCuenta, FrmTipoPrestamo, FrmCargo, FrmCuenta,
+    Private Sub FrmCuenta_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        CierreFormulario(FrmCiudad, frmDepartamento, FrmNacionalidad, FrmPais,
+                       FrmProfesion, FrmTipodeCuenta, FrmTipoPrestamo, FrmCargo, FrmAval,
                        FrmOficial, FrmPrestamo, FrmSocio, FrmUsuario)
     End Sub
 
@@ -49,10 +49,10 @@ Public Class FrmCiudad
         BtnGuardar.Enabled = Guardar
         BtnModificar.Enabled = Modificar
         BtnCancelar.Enabled = Cancelar
-        PlCiudad.Enabled = Panel
+        PlCuenta.Enabled = Panel
     End Sub
 
-    Private Sub MostrarTodoCiudad()
+    Private Sub MostrarTodoCuenta()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -61,16 +61,16 @@ Public Class FrmCiudad
             Try
                 Con.Open()
                 With cmd
-                    .CommandText = "Sp_MostrarTodoCiudadDgv"
+                    .CommandText = "Sp_MostrarTodoCuentaDgv"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
                 End With
                 Dim AdaptadorCargo As New SqlDataAdapter(cmd)
                 Dim Dt As New DataTable
                 AdaptadorCargo.Fill(Dt)
-                DgvCiudad.DataSource = Dt
+                DgvCuenta.DataSource = Dt
             Catch ex As Exception
-                MessageBox.Show("Error al mostrar los datos de ciudad " + ex.Message)
+                MessageBox.Show("Error al mostrar los datos de cuenta " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -79,12 +79,14 @@ Public Class FrmCiudad
     End Sub
 
     Private Sub Limpiar()
-        TxtCodigoCiudad.Text = ""
-        TxtCiudad.Text = ""
-        CboDepartamento.Text = Nothing
+        TxtCodigoCuenta.Text = ""
+        TxtSaldoActual.Text = ""
+        CboSocio.Text = Nothing
+        CboTipoCuenta.Text = Nothing
+
     End Sub
 
-    Public Sub LlenarComboBoxDepartamento()
+    Public Sub LlenarComboBoxSocio()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -93,64 +95,65 @@ Public Class FrmCiudad
             Try
                 Con.Open()
                 With cmd
-                    .CommandText = "Sp_MostrarTodoDepartamento"
+                    .CommandText = "Sp_MostrarSocioIdentificacion"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
                     .ExecuteNonQuery()
                 End With
                 Dim AdaptadorOficial As New SqlDataAdapter(cmd)
                 Dim ds As New DataSet
-                AdaptadorOficial.Fill(ds, "Departamento")
-                CboDepartamento.DataSource = ds.Tables(0)
-                CboDepartamento.DisplayMember = ds.Tables(0).Columns("Departamento").ToString
-                CboDepartamento.ValueMember = ds.Tables(0).Columns("IdDepartamento").ToString
+                AdaptadorOficial.Fill(ds, "Socio")
+                CboSocio.DataSource = ds.Tables(0)
+                CboSocio.DisplayMember = ds.Tables(0).Columns("Nombre Completo").ToString
+                CboSocio.ValueMember = ds.Tables(0).Columns("CodigoSocio").ToString
 
             Catch ex As Exception
-                MessageBox.Show("Error al mostrar los departamentos" + ex.Message)
+                MessageBox.Show("Error al mostrar el nombre completo de los socios " + ex.Message)
             Finally
                 Con.Close()
             End Try
 
         End Using
     End Sub
-
-    Private Sub FrmCiudad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call HabilitarControles(True, False, False, False, False)
-        Call MostrarTodoCiudad()
-        Call LlenarComboBoxDepartamento()
-        Call Limpiar()
-    End Sub
-
-    Private Sub InvestigarCorrelativoCiudad()
+    Public Sub LlenarComboBoxTipoCuenta()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
+
         Using cmd As New SqlCommand
             Try
                 Con.Open()
                 With cmd
-                    .CommandText = "Sp_CorrelativoCiudad"
+                    .CommandText = "Sp_MostrarTodoTipoCuenta"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
+                    .ExecuteNonQuery()
                 End With
-                Dim LectorCorrelativo As SqlDataReader
-                LectorCorrelativo = cmd.ExecuteReader
+                Dim AdaptadorOficial As New SqlDataAdapter(cmd)
+                Dim ds As New DataSet
+                AdaptadorOficial.Fill(ds, "TipoCuenta")
+                CboTipoCuenta.DataSource = ds.Tables(0)
+                CboTipoCuenta.DisplayMember = ds.Tables(0).Columns("TipoCuenta").ToString
+                CboTipoCuenta.ValueMember = ds.Tables(0).Columns("IdTipoCuenta").ToString
 
-                If LectorCorrelativo.Read Then
-                    If LectorCorrelativo("Id") Is DBNull.Value Then
-                        TxtCodigoCiudad.Text = 1
-                    Else
-                        TxtCodigoCiudad.Text = LectorCorrelativo("Id").ToString
-                    End If
-                End If
             Catch ex As Exception
-                MsgBox(ex.Message)
+                MessageBox.Show("Error al mostrar los datos del tipo de cuenta" + ex.Message)
             Finally
                 Con.Close()
             End Try
+
         End Using
     End Sub
-    Private Function ExisteNombreCiudad() As Boolean
+
+    Private Sub FrmCuenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        HabilitarControles(True, False, False, False, False)
+        Call MostrarTodoCuenta()
+        Call LlenarComboBoxSocio()
+        Call LlenarComboBoxTipoCuenta()
+        Call Limpiar()
+    End Sub
+
+    Private Function ExisteCuenta() As Boolean
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -160,10 +163,10 @@ Public Class FrmCiudad
             Try
                 Con.Open()
                 With cmd
-                    .CommandText = "Sp_ExisteCiudad"
+                    .CommandText = "Sp_ExisteCuenta2"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
-                    .Parameters.Add("@Ciudad", SqlDbType.NVarChar, 50).Value = TxtCiudad.Text.Trim
+                    .Parameters.Add("@NumCuenta", SqlDbType.Decimal, 11).Value = CDec(TxtCodigoCuenta.Text)
                 End With
                 Dim Existe As Integer = cmd.ExecuteScalar
                 If Existe = 0 Then
@@ -180,11 +183,23 @@ Public Class FrmCiudad
         Return Valor
     End Function
 
-    Private Function ValidarCiudad()
+    Private Function ValidarCuenta()
         Dim Estado As Boolean
-        If TxtCodigoCiudad.Text = "" Then
-            MessageBox.Show("Ingrese el nombre de la ciudad", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            TxtCodigoCiudad.Focus()
+        If TxtCodigoCuenta.Text = "" Then
+            MessageBox.Show("Ingrese el número de cuenta", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TxtCodigoCuenta.Focus()
+            Estado = False
+        ElseIf CboSocio.Text = "" Then
+            MessageBox.Show("Seleccione el nombre del socio", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            CboSocio.Focus()
+            Estado = False
+        ElseIf CboTipoCuenta.Text = "" Then
+            MessageBox.Show("Seleccione el tipo de cuenta", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            CboTipoCuenta.Focus()
+            Estado = False
+        ElseIf TxtSaldoActual.Text = "" Then
+            MessageBox.Show("Ingrese el saldo actual", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TxtSaldoActual.Focus()
             Estado = False
         Else
             Estado = True
@@ -192,7 +207,7 @@ Public Class FrmCiudad
         Return Estado
     End Function
 
-    Private Sub GuardarCiudad()
+    Private Sub GuardarCuenta()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -201,16 +216,18 @@ Public Class FrmCiudad
             Try
                 Con.Open()
                 With cmd
-                    .CommandText = "Sp_InsertarCiudad"
+                    .CommandText = "Sp_InsertarCuenta"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
-                    .Parameters.Add("@Ciudad", SqlDbType.NVarChar, 50).Value = TxtCiudad.Text.Trim
-                    .Parameters.Add("@IdDepartamento", SqlDbType.Int).Value = CInt(CboDepartamento.SelectedValue)
+                    .Parameters.Add("@NumCuenta", SqlDbType.Decimal, 11, 0).Value = CDec(TxtCodigoCuenta.Text)
+                    .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = (CboSocio.SelectedValue.ToString)
+                    .Parameters.Add("@IdTipoCuenta", SqlDbType.Int).Value = CInt(CboTipoCuenta.SelectedValue.ToString)
+                    .Parameters.Add("@SaldoActual", SqlDbType.Decimal, 11, 2).Value = CDbl(TxtSaldoActual.Text)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Ciudad almacenada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cuenta almacenada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al almacenar la ciudad " + ex.Message)
+                MessageBox.Show("Error al almacenar la cuenta " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -218,21 +235,21 @@ Public Class FrmCiudad
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-        If ValidarCiudad() = True Then
-            If ExisteNombreCiudad() = False Then
-                Call GuardarCiudad()
+        If ValidarCuenta() = True Then
+            If ExisteCuenta() = False Then
+                Call GuardarCuenta()
                 Call HabilitarControles(True, False, False, False, False)
-                Call MostrarTodoCiudad()
+                Call MostrarTodoCuenta()
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrada esta ciudad", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                TxtCiudad.Text = ""
-                TxtCiudad.Focus()
+                MessageBox.Show("Ya se encuentra registrado este número de cuenta", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                TxtCodigoCuenta.Text = ""
+                TxtCodigoCuenta.Focus()
             End If
         End If
     End Sub
 
-    Private Sub EditarCiudad()
+    Private Sub EditarCuenta()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -241,17 +258,18 @@ Public Class FrmCiudad
             Try
                 Con.Open()
                 With cmd
-                    .CommandText = "Sp_ActualizarCiudad"
+                    .CommandText = "Sp_ActualizarCuenta"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
-                    .Parameters.Add("@IdCiudad", SqlDbType.Int).Value = CInt(TxtCodigoCiudad.Text)
-                    .Parameters.Add("@Ciudad", SqlDbType.NVarChar, 50).Value = TxtCiudad.Text.Trim
-                    .Parameters.Add("@IdDepartamento", SqlDbType.Int).Value = CInt(CboDepartamento.SelectedValue)
+                    .Parameters.Add("@NumCuenta", SqlDbType.Decimal, 11, 0).Value = CDec(TxtCodigoCuenta.Text)
+                    .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = (CboSocio.SelectedValue.ToString)
+                    .Parameters.Add("@IdTipoCuenta", SqlDbType.Int).Value = CInt(CboTipoCuenta.SelectedValue.ToString)
+                    .Parameters.Add("@SaldoActual", SqlDbType.Decimal, 11, 2).Value = CDec(TxtSaldoActual.Text)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Ciudad modificada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cuenta modificada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al modificar la ciudad " + ex.Message)
+                MessageBox.Show("Error al modificar la cuenta " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -259,21 +277,16 @@ Public Class FrmCiudad
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
-        If ValidarCiudad() = True Then
-            If ExisteNombreCiudad() = False Then
-                Call EditarCiudad()
+        If ValidarCuenta() = True Then
+
+            Call EditarCuenta()
                 Call HabilitarControles(True, False, False, False, False)
-                Call MostrarTodoCiudad()
-                Call Limpiar()
-            Else
-                MessageBox.Show("Ya se encuentra registrada esta ciudad", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                TxtCiudad.Text = ""
-                TxtCiudad.Focus()
-            End If
+                Call MostrarTodoCuenta()
+            Call Limpiar()
         End If
     End Sub
 
-    Private Sub EliminarCiudad()
+    Private Sub EliminarCuenta()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -282,15 +295,15 @@ Public Class FrmCiudad
             Try
                 Con.Open()
                 With cmd
-                    .CommandText = "Sp_EliminarCiudad"
+                    .CommandText = "Sp_EliminarCuenta"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
-                    .Parameters.Add("@IdCiudad", SqlDbType.Int).Value = CInt(DgvCiudad.CurrentRow.Cells(0).Value.ToString)
+                    .Parameters.Add("@NumCuenta", SqlDbType.Decimal, 11, 0).Value = CDec(DgvCuenta.CurrentRow.Cells(0).Value)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Ciudad eliminada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cuenta eliminada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al eliminar la ciudad " + ex.Message)
+                MessageBox.Show("Error al eliminar la cuenta " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -300,25 +313,27 @@ Public Class FrmCiudad
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
         If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
-            Call EliminarCiudad()
-            Call MostrarTodoCiudad()
+            Call EliminarCuenta()
+            Call MostrarTodoCuenta()
         End If
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
         Call HabilitarControles(False, False, True, True, True)
-        TbcCiudad.SelectedIndex = 0
-        TxtCodigoCiudad.Text = DgvCiudad.CurrentRow.Cells(0).Value
-        TxtCiudad.Text = DgvCiudad.CurrentRow.Cells(1).Value.ToString
-        CboDepartamento.Text = DgvCiudad.CurrentRow.Cells(2).Value.ToString
+        TbcCuenta.SelectedIndex = 0
+        TxtCodigoCuenta.Enabled = False
+        TxtCodigoCuenta.Text = DgvCuenta.CurrentRow.Cells(0).Value
+        CboSocio.Text = DgvCuenta.CurrentRow.Cells(1).Value.ToString
+        CboTipoCuenta.Text = DgvCuenta.CurrentRow.Cells(2).Value.ToString
+        TxtSaldoActual.Text = DgvCuenta.CurrentRow.Cells(3).Value.ToString
 
     End Sub
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         Call Limpiar()
-        Call InvestigarCorrelativoCiudad()
         Call HabilitarControles(False, True, False, True, True)
-        TxtCiudad.Focus()
+        TxtCodigoCuenta.Focus()
+        TxtCodigoCuenta.Enabled = True
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
@@ -326,7 +341,7 @@ Public Class FrmCiudad
         Call HabilitarControles(True, False, False, False, False)
     End Sub
 
-    Private Sub BusquedaFiltradaCiudad()
+    Private Sub BusquedaFiltradaCuenta()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -335,16 +350,16 @@ Public Class FrmCiudad
             Try
                 Con.Open()
                 With cmd
-                    .CommandText = "Sp_BusquedaCiudad"
+                    .CommandText = "Sp_BusquedaCuenta"
                     .CommandType = CommandType.StoredProcedure
-                    .Parameters.Add("@ParametroCiudad", SqlDbType.NVarChar, 50).Value = TxtBusquedaCiudad.Text.Trim
+                    .Parameters.Add("@ParametroCuenta", SqlDbType.NVarChar, 50).Value = (TxtBusquedaCuenta.Text)
                     .Connection = Con
                 End With
 
                 Dim AdaptadorBusqueda As New SqlDataAdapter(cmd)
                 Dim dt As New DataTable
                 AdaptadorBusqueda.Fill(dt)
-                DgvCiudad.DataSource = dt
+                DgvCuenta.DataSource = dt
 
             Catch ex As Exception
                 MessageBox.Show("Error al mostrar los datos " + ex.Message)
@@ -354,11 +369,32 @@ Public Class FrmCiudad
         End Using
     End Sub
 
-    Private Sub TxtBusquedaCiudad_TextChanged(sender As Object, e As EventArgs) Handles TxtBusquedaCiudad.TextChanged
-        If TxtBusquedaCiudad.Text = Nothing Then
-            MostrarTodoCiudad()
+    Private Sub TxtBusquedaCuenta_TextChanged(sender As Object, e As EventArgs) Handles TxtBusquedaCuenta.TextChanged
+        If TxtBusquedaCuenta.Text = Nothing Then
+            MostrarTodoCuenta()
         Else
-            BusquedaFiltradaCiudad()
+            BusquedaFiltradaCuenta()
+        End If
+    End Sub
+
+
+    Private Sub TxtCodigoCuenta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCodigoCuenta.KeyPress
+        If Asc(e.KeyChar) = Keys.Back Then
+
+        ElseIf Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+
+        End If
+    End Sub
+
+    Private Sub TxtSaldoActual_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtSaldoActual.KeyPress
+        If Asc(e.KeyChar) = Keys.Back Then
+        ElseIf Asc(e.KeyChar) = 46 Then
+
+
+        ElseIf Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+
         End If
     End Sub
 End Class

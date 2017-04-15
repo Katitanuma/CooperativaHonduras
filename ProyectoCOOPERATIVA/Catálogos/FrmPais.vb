@@ -7,8 +7,9 @@ Public Class FrmPais
 
     End Sub
     Private Sub PAIS_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        PantallaPrincipal.PnlLogo.BringToFront()
-        PantallaPrincipal.PnlLogo1.Visible = False
+        CierreFormulario(FrmCiudad, frmDepartamento, FrmNacionalidad, FrmAval,
+                       FrmProfesion, FrmTipodeCuenta, FrmTipoPrestamo, FrmCargo, FrmCuenta,
+                       FrmOficial, FrmPrestamo, FrmSocio, FrmUsuario)
     End Sub
 
     Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) Handles BtnNuevo.MouseHover
@@ -312,22 +313,20 @@ Public Class FrmPais
 
         Call HabilitarControles(True, False, False, False, False)
         Call MostrarTodoPais()
+        Call LimpiarPais()
 
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
 
         If ValidarPais() = True Then
-            If ExistePais() = False Then
 
-                Call ActualizarPais()
+            Call ActualizarPais()
                 Call MostrarTodoPais()
                 Call LimpiarPais()
                 Call HabilitarControles(True, False, False, False, False)
 
-            Else
-                MessageBox.Show("Ya Existe ese país", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
+
         End If
     End Sub
 

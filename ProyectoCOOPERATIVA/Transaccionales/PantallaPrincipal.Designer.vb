@@ -27,7 +27,8 @@ Partial Class PantallaPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PantallaPrincipal))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.LblOficialNombre = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.LblIdOficial = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblCooperativa = New System.Windows.Forms.Label()
@@ -80,6 +81,7 @@ Partial Class PantallaPrincipal
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.LblSalir = New System.Windows.Forms.Label()
         Me.LblCambio = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PnUbicacion2.SuspendLayout()
@@ -92,6 +94,7 @@ Partial Class PantallaPrincipal
         Me.PnlLogo1.SuspendLayout()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbCambioSesion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip
@@ -105,18 +108,26 @@ Partial Class PantallaPrincipal
         '
         'StatusStrip
         '
-        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
+        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LblOficialNombre, Me.LblIdOficial})
         Me.StatusStrip.Location = New System.Drawing.Point(0, 632)
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Size = New System.Drawing.Size(1345, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
-        'ToolStripStatusLabel
+        'LblOficialNombre
         '
-        Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
-        Me.ToolStripStatusLabel.Text = "Status"
+        Me.LblOficialNombre.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblOficialNombre.Name = "LblOficialNombre"
+        Me.LblOficialNombre.Size = New System.Drawing.Size(46, 17)
+        Me.LblOficialNombre.Text = "Status"
+        '
+        'LblIdOficial
+        '
+        Me.LblIdOficial.Name = "LblIdOficial"
+        Me.LblIdOficial.Size = New System.Drawing.Size(120, 17)
+        Me.LblIdOficial.Text = "ToolStripStatusLabel1"
+        Me.LblIdOficial.Visible = False
         '
         'Panel1
         '
@@ -760,6 +771,17 @@ Partial Class PantallaPrincipal
         Me.LblCambio.Text = "CAMBIO DE SESIÓN"
         Me.LblCambio.Visible = False
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Blue
+        Me.PictureBox3.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.logo_SysCAp3
+        Me.PictureBox3.Location = New System.Drawing.Point(2, 0)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(38, 25)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 33
+        Me.PictureBox3.TabStop = False
+        '
         'PantallaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -768,6 +790,8 @@ Partial Class PantallaPrincipal
         Me.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.FONDO1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1345, 654)
+        Me.Controls.Add(Me.StatusStrip)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.LblCambio)
         Me.Controls.Add(Me.LblSalir)
         Me.Controls.Add(Me.PbSalir)
@@ -781,7 +805,6 @@ Partial Class PantallaPrincipal
         Me.Controls.Add(Me.PnUbicacion2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip)
-        Me.Controls.Add(Me.StatusStrip)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.IsMdiContainer = True
@@ -807,12 +830,13 @@ Partial Class PantallaPrincipal
         Me.PnlLogo1.ResumeLayout(False)
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbCambioSesion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
-    Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents LblOficialNombre As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents Panel1 As Panel
@@ -866,4 +890,6 @@ Partial Class PantallaPrincipal
     Friend WithEvents LblCambio As Label
     Friend WithEvents LblUsuario As Label
     Friend WithEvents PnlUsuario As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents LblIdOficial As ToolStripStatusLabel
 End Class

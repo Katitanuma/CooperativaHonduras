@@ -22,7 +22,8 @@ Partial Class FrmCargo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.components = New System.ComponentModel.Container()
+        Me.TbcCargo = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnCancelar = New System.Windows.Forms.Button()
@@ -42,33 +43,37 @@ Partial Class FrmCargo
         Me.TxtCodigoCargo = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DgvCargo = New System.Windows.Forms.DataGridView()
+        Me.CmsCargo = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.DgvCargo = New System.Windows.Forms.DataGridView()
+        Me.TxtBusquedaCargo = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.TabControl1.SuspendLayout()
+        Me.TbcCargo.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PlCargo.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsCargo.SuspendLayout()
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TbcCargo
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(7, 46)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(709, 542)
-        Me.TabControl1.TabIndex = 24
+        Me.TbcCargo.Controls.Add(Me.TabPage1)
+        Me.TbcCargo.Controls.Add(Me.TabPage2)
+        Me.TbcCargo.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbcCargo.Location = New System.Drawing.Point(7, 46)
+        Me.TbcCargo.Name = "TbcCargo"
+        Me.TbcCargo.SelectedIndex = 0
+        Me.TbcCargo.Size = New System.Drawing.Size(709, 542)
+        Me.TbcCargo.TabIndex = 24
         '
         'TabPage1
         '
@@ -315,16 +320,50 @@ Partial Class FrmCargo
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
+        Me.TabPage2.Controls.Add(Me.DgvCargo)
         Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.DgvCargo)
+        Me.TabPage2.Controls.Add(Me.TxtBusquedaCargo)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(701, 510)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Ver Datos"
+        '
+        'DgvCargo
+        '
+        Me.DgvCargo.AllowUserToAddRows = False
+        Me.DgvCargo.AllowUserToDeleteRows = False
+        Me.DgvCargo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvCargo.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCargo.ContextMenuStrip = Me.CmsCargo
+        Me.DgvCargo.GridColor = System.Drawing.SystemColors.ButtonShadow
+        Me.DgvCargo.Location = New System.Drawing.Point(18, 136)
+        Me.DgvCargo.Name = "DgvCargo"
+        Me.DgvCargo.ReadOnly = True
+        Me.DgvCargo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvCargo.Size = New System.Drawing.Size(665, 355)
+        Me.DgvCargo.TabIndex = 88
+        '
+        'CmsCargo
+        '
+        Me.CmsCargo.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsCargo.Name = "CmsCargo"
+        Me.CmsCargo.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'PbLupa
         '
@@ -347,24 +386,12 @@ Partial Class FrmCargo
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Datos"
         '
-        'TxtBusqueda
+        'TxtBusquedaCargo
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(50, 92)
-        Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(631, 26)
-        Me.TxtBusqueda.TabIndex = 75
-        '
-        'DgvCargo
-        '
-        Me.DgvCargo.AllowUserToDeleteRows = False
-        Me.DgvCargo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvCargo.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCargo.GridColor = System.Drawing.SystemColors.ButtonShadow
-        Me.DgvCargo.Location = New System.Drawing.Point(16, 137)
-        Me.DgvCargo.Name = "DgvCargo"
-        Me.DgvCargo.Size = New System.Drawing.Size(665, 355)
-        Me.DgvCargo.TabIndex = 21
+        Me.TxtBusquedaCargo.Location = New System.Drawing.Point(50, 92)
+        Me.TxtBusquedaCargo.Name = "TxtBusquedaCargo"
+        Me.TxtBusquedaCargo.Size = New System.Drawing.Size(631, 26)
+        Me.TxtBusquedaCargo.TabIndex = 75
         '
         'Label14
         '
@@ -396,12 +423,12 @@ Partial Class FrmCargo
         Me.ClientSize = New System.Drawing.Size(724, 598)
         Me.Controls.Add(Me.PbSalir)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TbcCargo)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmCargo"
         Me.Text = "Gestión de Cargo"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TbcCargo.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -410,15 +437,16 @@ Partial Class FrmCargo
         Me.PlCargo.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsCargo.ResumeLayout(False)
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TbcCargo As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents PbIcono As PictureBox
     Friend WithEvents Panel1 As Panel
@@ -429,11 +457,10 @@ Partial Class FrmCargo
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DgvCargo As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TxtBusqueda As TextBox
+    Friend WithEvents TxtBusquedaCargo As TextBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
@@ -444,4 +471,8 @@ Partial Class FrmCargo
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents PlCargo As Panel
+    Friend WithEvents DgvCargo As DataGridView
+    Friend WithEvents CmsCargo As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

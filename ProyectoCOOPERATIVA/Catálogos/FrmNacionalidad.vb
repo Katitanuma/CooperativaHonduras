@@ -8,8 +8,9 @@ Public Class FrmNacionalidad
     End Sub
 
     Private Sub NACIONALIDAD_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        PantallaPrincipal.PnlLogo.BringToFront()
-        PantallaPrincipal.PnlLogo1.Visible = False
+        CierreFormulario(FrmCiudad, frmDepartamento, FrmAval, FrmPais,
+                       FrmProfesion, FrmTipodeCuenta, FrmTipoPrestamo, FrmCargo, FrmCuenta,
+                       FrmOficial, FrmPrestamo, FrmSocio, FrmUsuario)
     End Sub
 
     Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) Handles BtnNuevo.MouseHover
@@ -56,7 +57,7 @@ Public Class FrmNacionalidad
 
         BtnCancelar.Enabled = Cancelar
         BtnGuardar.Enabled = Guardar
-        BtnModificar.Enabled = Modificar
+        BtnModificar.Visible = Modificar
         BtnNuevo.Enabled = Nuevo
         PlNacionalidad.Enabled = Panel
 
@@ -112,7 +113,7 @@ Public Class FrmNacionalidad
                 Call HabilitarControles(True, False, False, False, False)
                 Call InsertarNacionalidad()
                 Call MostrarTodoNacionalidad()
-                Call LimpiarDepartamento()
+                Call LimpiarNacionalidad()
 
             Else
                 MessageBox.Show("Ya existe esa nacionalidad", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -124,7 +125,7 @@ Public Class FrmNacionalidad
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
 
         Call InvestigarCorrelativoNacionalidad()
-        Call LimpiarDepartamento()
+        Call LimpiarNacionalidad()
         Call HabilitarControles(True, False, False, False, False)
 
     End Sub
@@ -343,6 +344,7 @@ Public Class FrmNacionalidad
         Call HabilitarControles(True, False, False, False, False)
         Call MostrarTodoNacionalidad()
         Call LlenarComboBoxPais()
+        Call LimpiarNacionalidad()
 
     End Sub
 
@@ -350,18 +352,14 @@ Public Class FrmNacionalidad
 
         If ValidarNacionalidad() = True Then
 
-            If ExisteNacionalidad() = False Then
 
 
-                Call ActualizarNacionalidad()
+            Call ActualizarNacionalidad()
                 Call MostrarTodoNacionalidad()
-                Call LimpiarDepartamento()
+                Call LimpiarNacionalidad()
                 Call HabilitarControles(True, False, False, False, False)
 
-            Else
 
-                MessageBox.Show("Ya existe esa nacionalidad", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
         End If
     End Sub
 
@@ -370,7 +368,7 @@ Public Class FrmNacionalidad
         Call HabilitarControles(False, False, True, True, True)
         TxtCodigoNacionalidad.Text = DgvNacionalidad.CurrentRow.Cells(0).Value
         TxtNacionalidad.Text = DgvNacionalidad.CurrentRow.Cells(1).Value.ToString
-        CboPais.Text = DgvNacionalidad.CurrentRow.Cells(2).ToString
+        CboPais.Text = DgvNacionalidad.CurrentRow.Cells(2).Value.ToString
         TabPage1.Show()
 
     End Sub
@@ -384,11 +382,12 @@ Public Class FrmNacionalidad
         End If
     End Sub
 
-    Private Sub LimpiarDepartamento()
+    Private Sub LimpiarNacionalidad()
 
         Call MostrarTodoNacionalidad()
         TxtNacionalidad.Text = ""
         TxtCodigoNacionalidad.Text = ""
+        CboPais.Text = Nothing
 
     End Sub
 

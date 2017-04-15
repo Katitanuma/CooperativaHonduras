@@ -6,8 +6,9 @@ Public Class FrmUsuario
     End Sub
 
     Private Sub FrmOficial_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        PantallaPrincipal.PnlLogo.BringToFront()
-        PantallaPrincipal.PnlLogo1.Visible = False
+        CierreFormulario(FrmCiudad, frmDepartamento, FrmNacionalidad, FrmPais,
+                       FrmProfesion, FrmTipodeCuenta, FrmTipoPrestamo, FrmCargo, FrmCuenta,
+                       FrmOficial, FrmPrestamo, FrmSocio, FrmAval)
     End Sub
 
     Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) Handles BtnNuevo.MouseHover

@@ -23,7 +23,7 @@ Partial Class FrmPais
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TbcPais = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PlPais = New System.Windows.Forms.Panel()
@@ -52,7 +52,7 @@ Partial Class FrmPais
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.TabControl1.SuspendLayout()
+        Me.TbcPais.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PlPais.SuspendLayout()
@@ -64,17 +64,17 @@ Partial Class FrmPais
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TbcPais
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(7, 46)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(709, 542)
-        Me.TabControl1.TabIndex = 21
-        Me.TabControl1.TabStop = False
+        Me.TbcPais.Controls.Add(Me.TabPage1)
+        Me.TbcPais.Controls.Add(Me.TabPage2)
+        Me.TbcPais.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbcPais.Location = New System.Drawing.Point(7, 46)
+        Me.TbcPais.Name = "TbcPais"
+        Me.TbcPais.SelectedIndex = 0
+        Me.TbcPais.Size = New System.Drawing.Size(709, 542)
+        Me.TbcPais.TabIndex = 21
+        Me.TbcPais.TabStop = False
         '
         'TabPage1
         '
@@ -379,18 +379,18 @@ Partial Class FrmPais
         '
         Me.CMSPais.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
         Me.CMSPais.Name = "CMSPais"
-        Me.CMSPais.Size = New System.Drawing.Size(118, 48)
+        Me.CMSPais.Size = New System.Drawing.Size(153, 70)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'Label14
@@ -423,12 +423,12 @@ Partial Class FrmPais
         Me.ClientSize = New System.Drawing.Size(724, 598)
         Me.Controls.Add(Me.PbSalir)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TbcPais)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmPais"
         Me.Text = "Gestión de País"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TbcPais.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -446,7 +446,7 @@ Partial Class FrmPais
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TbcPais As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents PbIcono As PictureBox
     Friend WithEvents Panel1 As Panel

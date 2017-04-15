@@ -6,8 +6,9 @@ Public Class FrmOficial
     End Sub
 
     Private Sub FrmOficial_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        PantallaPrincipal.PnlLogo.BringToFront()
-        PantallaPrincipal.PnlLogo1.Visible = False
+        CierreFormulario(FrmCiudad, frmDepartamento, FrmNacionalidad, FrmPais,
+                       FrmProfesion, FrmTipodeCuenta, FrmTipoPrestamo, FrmCargo, FrmCuenta,
+                       FrmAval, FrmPrestamo, FrmSocio, FrmUsuario)
     End Sub
 
     Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) Handles BtnNuevo.MouseHover
@@ -107,9 +108,9 @@ Public Class FrmOficial
                     .Connection = Con
                 End With
 
-                Dim AdaptadorUsuario As New SqlDataAdapter(cmd)
+                Dim AdaptadorOficial As New SqlDataAdapter(cmd)
                 Dim dt As New DataTable
-                AdaptadorUsuario.Fill(dt)
+                AdaptadorOficial.Fill(dt)
                 DgvOficial.DataSource = dt
 
 
@@ -417,7 +418,7 @@ Public Class FrmOficial
         End If
     End Sub
 
-    Private Sub BusquedaFiltradaUsuario()
+    Private Sub BusquedaFiltradaOficial()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -451,7 +452,8 @@ Public Class FrmOficial
         If TxtBusqueda.Text = Nothing Then
             MostrarTodosOficial()
         Else
-            BusquedaFiltradaUsuario()
+            BusquedaFiltradaOficial()
         End If
     End Sub
+
 End Class

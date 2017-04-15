@@ -22,9 +22,15 @@ Partial Class FrmAval
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.components = New System.ComponentModel.Container()
+        Me.TbcAval = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PlAval = New System.Windows.Forms.Panel()
+        Me.TxtCodigoPrestamoAval = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.CboAval = New System.Windows.Forms.ComboBox()
+        Me.CboCodigoPrestamo = New System.Windows.Forms.ComboBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -35,41 +41,39 @@ Partial Class FrmAval
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtCodigoCargo = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.CboAval = New System.Windows.Forms.ComboBox()
-        Me.CboCodigoPrestamo = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvAval = New System.Windows.Forms.DataGridView()
+        Me.CmsAval = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.PlAval = New System.Windows.Forms.Panel()
-        Me.TabControl1.SuspendLayout()
+        Me.TbcAval.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.PlAval.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.DgvAval, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsAval.SuspendLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PlAval.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TbcAval
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(7, 46)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(709, 542)
-        Me.TabControl1.TabIndex = 30
+        Me.TbcAval.Controls.Add(Me.TabPage1)
+        Me.TbcAval.Controls.Add(Me.TabPage2)
+        Me.TbcAval.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbcAval.Location = New System.Drawing.Point(7, 46)
+        Me.TbcAval.Name = "TbcAval"
+        Me.TbcAval.SelectedIndex = 0
+        Me.TbcAval.Size = New System.Drawing.Size(709, 542)
+        Me.TbcAval.TabIndex = 30
         '
         'TabPage1
         '
@@ -104,6 +108,57 @@ Partial Class FrmAval
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(705, 510)
         Me.Panel1.TabIndex = 26
+        '
+        'PlAval
+        '
+        Me.PlAval.Controls.Add(Me.TxtCodigoPrestamoAval)
+        Me.PlAval.Controls.Add(Me.Panel2)
+        Me.PlAval.Controls.Add(Me.CboAval)
+        Me.PlAval.Controls.Add(Me.CboCodigoPrestamo)
+        Me.PlAval.Location = New System.Drawing.Point(374, 126)
+        Me.PlAval.Name = "PlAval"
+        Me.PlAval.Size = New System.Drawing.Size(315, 145)
+        Me.PlAval.TabIndex = 105
+        '
+        'TxtCodigoPrestamoAval
+        '
+        Me.TxtCodigoPrestamoAval.BackColor = System.Drawing.Color.White
+        Me.TxtCodigoPrestamoAval.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoPrestamoAval.Enabled = False
+        Me.TxtCodigoPrestamoAval.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoPrestamoAval.Location = New System.Drawing.Point(10, 29)
+        Me.TxtCodigoPrestamoAval.Name = "TxtCodigoPrestamoAval"
+        Me.TxtCodigoPrestamoAval.ReadOnly = True
+        Me.TxtCodigoPrestamoAval.Size = New System.Drawing.Size(192, 18)
+        Me.TxtCodigoPrestamoAval.TabIndex = 48
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Enabled = False
+        Me.Panel2.Location = New System.Drawing.Point(6, 24)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.TabIndex = 49
+        '
+        'CboAval
+        '
+        Me.CboAval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboAval.FormattingEnabled = True
+        Me.CboAval.Location = New System.Drawing.Point(6, 97)
+        Me.CboAval.Name = "CboAval"
+        Me.CboAval.Size = New System.Drawing.Size(268, 24)
+        Me.CboAval.TabIndex = 32
+        '
+        'CboCodigoPrestamo
+        '
+        Me.CboCodigoPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboCodigoPrestamo.FormattingEnabled = True
+        Me.CboCodigoPrestamo.Location = New System.Drawing.Point(6, 64)
+        Me.CboCodigoPrestamo.Name = "CboCodigoPrestamo"
+        Me.CboCodigoPrestamo.Size = New System.Drawing.Size(127, 24)
+        Me.CboCodigoPrestamo.TabIndex = 31
         '
         'BtnCancelar
         '
@@ -253,44 +308,6 @@ Partial Class FrmAval
         Me.Label3.TabIndex = 50
         Me.Label3.Text = "Código Préstamo Aval"
         '
-        'TxtCodigoCargo
-        '
-        Me.TxtCodigoCargo.BackColor = System.Drawing.Color.White
-        Me.TxtCodigoCargo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoCargo.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoCargo.Location = New System.Drawing.Point(10, 29)
-        Me.TxtCodigoCargo.Name = "TxtCodigoCargo"
-        Me.TxtCodigoCargo.ReadOnly = True
-        Me.TxtCodigoCargo.Size = New System.Drawing.Size(192, 18)
-        Me.TxtCodigoCargo.TabIndex = 48
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(6, 24)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
-        Me.Panel2.TabIndex = 49
-        '
-        'CboAval
-        '
-        Me.CboAval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboAval.FormattingEnabled = True
-        Me.CboAval.Location = New System.Drawing.Point(6, 97)
-        Me.CboAval.Name = "CboAval"
-        Me.CboAval.Size = New System.Drawing.Size(268, 24)
-        Me.CboAval.TabIndex = 32
-        '
-        'CboCodigoPrestamo
-        '
-        Me.CboCodigoPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboCodigoPrestamo.FormattingEnabled = True
-        Me.CboCodigoPrestamo.Location = New System.Drawing.Point(6, 64)
-        Me.CboCodigoPrestamo.Name = "CboCodigoPrestamo"
-        Me.CboCodigoPrestamo.Size = New System.Drawing.Size(268, 24)
-        Me.CboCodigoPrestamo.TabIndex = 31
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -345,15 +362,31 @@ Partial Class FrmAval
         '
         'DgvAval
         '
+        Me.DgvAval.AllowUserToAddRows = False
         Me.DgvAval.AllowUserToDeleteRows = False
         Me.DgvAval.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvAval.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DgvAval.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvAval.ContextMenuStrip = Me.CmsAval
         Me.DgvAval.GridColor = System.Drawing.Color.White
         Me.DgvAval.Location = New System.Drawing.Point(16, 129)
         Me.DgvAval.Name = "DgvAval"
+        Me.DgvAval.ReadOnly = True
+        Me.DgvAval.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvAval.Size = New System.Drawing.Size(665, 355)
         Me.DgvAval.TabIndex = 27
+        '
+        'CmsAval
+        '
+        Me.CmsAval.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem})
+        Me.CmsAval.Name = "CmsAval"
+        Me.CmsAval.Size = New System.Drawing.Size(105, 26)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'PbLupa
         '
@@ -387,17 +420,6 @@ Partial Class FrmAval
         Me.PbSalir.TabIndex = 32
         Me.PbSalir.TabStop = False
         '
-        'PlAval
-        '
-        Me.PlAval.Controls.Add(Me.TxtCodigoCargo)
-        Me.PlAval.Controls.Add(Me.Panel2)
-        Me.PlAval.Controls.Add(Me.CboAval)
-        Me.PlAval.Controls.Add(Me.CboCodigoPrestamo)
-        Me.PlAval.Location = New System.Drawing.Point(374, 126)
-        Me.PlAval.Name = "PlAval"
-        Me.PlAval.Size = New System.Drawing.Size(315, 145)
-        Me.PlAval.TabIndex = 105
-        '
         'FrmAval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -407,29 +429,30 @@ Partial Class FrmAval
         Me.ClientSize = New System.Drawing.Size(724, 598)
         Me.Controls.Add(Me.PbSalir)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TbcAval)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmAval"
         Me.Text = "Aval"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TbcAval.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PlAval.ResumeLayout(False)
+        Me.PlAval.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.DgvAval, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsAval.ResumeLayout(False)
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PlAval.ResumeLayout(False)
-        Me.PlAval.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TbcAval As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents PbIcono As PictureBox
     Friend WithEvents Panel1 As Panel
@@ -444,7 +467,7 @@ Partial Class FrmAval
     Friend WithEvents DgvAval As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TxtCodigoCargo As TextBox
+    Friend WithEvents TxtCodigoPrestamoAval As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents BtnCancelar As Button
@@ -456,4 +479,6 @@ Partial Class FrmAval
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PlAval As Panel
+    Friend WithEvents CmsAval As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
 End Class

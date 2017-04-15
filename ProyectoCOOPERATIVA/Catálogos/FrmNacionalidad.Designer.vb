@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmNacionalidad
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmNacionalidad
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -93,8 +93,8 @@ Partial Class FrmNacionalidad
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.PlNacionalidad)
         Me.Panel1.Controls.Add(Me.BtnCancelar)
+        Me.Panel1.Controls.Add(Me.PlNacionalidad)
         Me.Panel1.Controls.Add(Me.BtnGuardar)
         Me.Panel1.Controls.Add(Me.BtnNuevo)
         Me.Panel1.Controls.Add(Me.LblCancelar)
@@ -184,7 +184,7 @@ Partial Class FrmNacionalidad
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(657, 307)
+        Me.BtnCancelar.Location = New System.Drawing.Point(655, 306)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
         Me.BtnCancelar.TabIndex = 104
@@ -385,6 +385,7 @@ Partial Class FrmNacionalidad
         '
         'DgvNacionalidad
         '
+        Me.DgvNacionalidad.AllowUserToAddRows = False
         Me.DgvNacionalidad.AllowUserToDeleteRows = False
         Me.DgvNacionalidad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvNacionalidad.BackgroundColor = System.Drawing.SystemColors.Control
@@ -392,6 +393,7 @@ Partial Class FrmNacionalidad
         Me.DgvNacionalidad.ContextMenuStrip = Me.CMSNacionalidad
         Me.DgvNacionalidad.Location = New System.Drawing.Point(16, 137)
         Me.DgvNacionalidad.Name = "DgvNacionalidad"
+        Me.DgvNacionalidad.ReadOnly = True
         Me.DgvNacionalidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvNacionalidad.Size = New System.Drawing.Size(665, 355)
         Me.DgvNacionalidad.TabIndex = 15

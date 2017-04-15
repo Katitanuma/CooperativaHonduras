@@ -22,9 +22,16 @@ Partial Class FrmCiudad
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.components = New System.ComponentModel.Container()
+        Me.TbcCiudad = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PlCiudad = New System.Windows.Forms.Panel()
+        Me.TxtCiudad = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.CboDepartamento = New System.Windows.Forms.ComboBox()
+        Me.TxtCodigoCiudad = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -34,43 +41,41 @@ Partial Class FrmCiudad
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
-        Me.TxtCiudad = New System.Windows.Forms.TextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.CboDepartamento = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtCodigoCiudad = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DgvCiudad = New System.Windows.Forms.DataGridView()
+        Me.CmsCiudad = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.DgvCiudad = New System.Windows.Forms.DataGridView()
+        Me.TxtBusquedaCiudad = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.PlCiudad = New System.Windows.Forms.Panel()
-        Me.TabControl1.SuspendLayout()
+        Me.TbcCiudad.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.PlCiudad.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvCiudad, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsCiudad.SuspendLayout()
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PlCiudad.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TbcCiudad
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(8, 45)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(709, 542)
-        Me.TabControl1.TabIndex = 21
+        Me.TbcCiudad.Controls.Add(Me.TabPage1)
+        Me.TbcCiudad.Controls.Add(Me.TabPage2)
+        Me.TbcCiudad.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbcCiudad.Location = New System.Drawing.Point(8, 45)
+        Me.TbcCiudad.Name = "TbcCiudad"
+        Me.TbcCiudad.SelectedIndex = 0
+        Me.TbcCiudad.Size = New System.Drawing.Size(709, 542)
+        Me.TbcCiudad.TabIndex = 21
         '
         'TabPage1
         '
@@ -105,6 +110,66 @@ Partial Class FrmCiudad
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(797, 500)
         Me.Panel1.TabIndex = 17
+        '
+        'PlCiudad
+        '
+        Me.PlCiudad.Controls.Add(Me.TxtCiudad)
+        Me.PlCiudad.Controls.Add(Me.Panel3)
+        Me.PlCiudad.Controls.Add(Me.CboDepartamento)
+        Me.PlCiudad.Controls.Add(Me.TxtCodigoCiudad)
+        Me.PlCiudad.Controls.Add(Me.Panel2)
+        Me.PlCiudad.Location = New System.Drawing.Point(457, 104)
+        Me.PlCiudad.Name = "PlCiudad"
+        Me.PlCiudad.Size = New System.Drawing.Size(294, 156)
+        Me.PlCiudad.TabIndex = 105
+        '
+        'TxtCiudad
+        '
+        Me.TxtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCiudad.Location = New System.Drawing.Point(6, 73)
+        Me.TxtCiudad.Name = "TxtCiudad"
+        Me.TxtCiudad.Size = New System.Drawing.Size(265, 18)
+        Me.TxtCiudad.TabIndex = 29
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Location = New System.Drawing.Point(2, 68)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(273, 29)
+        Me.Panel3.TabIndex = 30
+        '
+        'CboDepartamento
+        '
+        Me.CboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboDepartamento.FormattingEnabled = True
+        Me.CboDepartamento.Location = New System.Drawing.Point(2, 112)
+        Me.CboDepartamento.Name = "CboDepartamento"
+        Me.CboDepartamento.Size = New System.Drawing.Size(273, 24)
+        Me.CboDepartamento.TabIndex = 10
+        '
+        'TxtCodigoCiudad
+        '
+        Me.TxtCodigoCiudad.BackColor = System.Drawing.Color.White
+        Me.TxtCodigoCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoCiudad.Location = New System.Drawing.Point(6, 38)
+        Me.TxtCodigoCiudad.Name = "TxtCodigoCiudad"
+        Me.TxtCodigoCiudad.ReadOnly = True
+        Me.TxtCodigoCiudad.Size = New System.Drawing.Size(193, 18)
+        Me.TxtCodigoCiudad.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(2, 33)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.TabIndex = 2
         '
         'BtnCancelar
         '
@@ -244,34 +309,6 @@ Partial Class FrmCiudad
         Me.PbIcono.TabIndex = 0
         Me.PbIcono.TabStop = False
         '
-        'TxtCiudad
-        '
-        Me.TxtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCiudad.Location = New System.Drawing.Point(6, 73)
-        Me.TxtCiudad.Name = "TxtCiudad"
-        Me.TxtCiudad.Size = New System.Drawing.Size(265, 18)
-        Me.TxtCiudad.TabIndex = 29
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(2, 68)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(273, 29)
-        Me.Panel3.TabIndex = 30
-        '
-        'CboDepartamento
-        '
-        Me.CboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.CboDepartamento.FormattingEnabled = True
-        Me.CboDepartamento.Location = New System.Drawing.Point(2, 112)
-        Me.CboDepartamento.Name = "CboDepartamento"
-        Me.CboDepartamento.Size = New System.Drawing.Size(273, 24)
-        Me.CboDepartamento.TabIndex = 10
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -293,26 +330,6 @@ Partial Class FrmCiudad
         Me.Label2.Text = "Ciudad"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TxtCodigoCiudad
-        '
-        Me.TxtCodigoCiudad.BackColor = System.Drawing.Color.White
-        Me.TxtCodigoCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoCiudad.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoCiudad.Location = New System.Drawing.Point(6, 38)
-        Me.TxtCodigoCiudad.Name = "TxtCodigoCiudad"
-        Me.TxtCodigoCiudad.ReadOnly = True
-        Me.TxtCodigoCiudad.Size = New System.Drawing.Size(193, 18)
-        Me.TxtCodigoCiudad.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(2, 33)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
-        Me.Panel2.TabIndex = 2
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -326,16 +343,49 @@ Partial Class FrmCiudad
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
+        Me.TabPage2.Controls.Add(Me.DgvCiudad)
         Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.DgvCiudad)
+        Me.TabPage2.Controls.Add(Me.TxtBusquedaCiudad)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(701, 510)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Ver Datos"
+        '
+        'DgvCiudad
+        '
+        Me.DgvCiudad.AllowUserToAddRows = False
+        Me.DgvCiudad.AllowUserToDeleteRows = False
+        Me.DgvCiudad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvCiudad.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DgvCiudad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCiudad.ContextMenuStrip = Me.CmsCiudad
+        Me.DgvCiudad.Location = New System.Drawing.Point(16, 135)
+        Me.DgvCiudad.Name = "DgvCiudad"
+        Me.DgvCiudad.ReadOnly = True
+        Me.DgvCiudad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvCiudad.Size = New System.Drawing.Size(665, 355)
+        Me.DgvCiudad.TabIndex = 88
+        '
+        'CmsCiudad
+        '
+        Me.CmsCiudad.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsCiudad.Name = "CmsCiudad"
+        Me.CmsCiudad.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'PbLupa
         '
@@ -358,30 +408,19 @@ Partial Class FrmCiudad
         Me.Label4.TabIndex = 83
         Me.Label4.Text = "Datos"
         '
-        'TxtBusqueda
+        'TxtBusquedaCiudad
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 94)
-        Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
-        Me.TxtBusqueda.TabIndex = 80
-        '
-        'DgvCiudad
-        '
-        Me.DgvCiudad.AllowUserToDeleteRows = False
-        Me.DgvCiudad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvCiudad.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
-        Me.DgvCiudad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCiudad.Location = New System.Drawing.Point(16, 137)
-        Me.DgvCiudad.Name = "DgvCiudad"
-        Me.DgvCiudad.Size = New System.Drawing.Size(665, 355)
-        Me.DgvCiudad.TabIndex = 18
+        Me.TxtBusquedaCiudad.Location = New System.Drawing.Point(44, 94)
+        Me.TxtBusquedaCiudad.Name = "TxtBusquedaCiudad"
+        Me.TxtBusquedaCiudad.Size = New System.Drawing.Size(637, 26)
+        Me.TxtBusquedaCiudad.TabIndex = 80
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(331, 19)
+        Me.Label14.Location = New System.Drawing.Point(283, 18)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(154, 43)
         Me.Label14.TabIndex = 32
@@ -397,18 +436,6 @@ Partial Class FrmCiudad
         Me.PbSalir.TabIndex = 33
         Me.PbSalir.TabStop = False
         '
-        'PlCiudad
-        '
-        Me.PlCiudad.Controls.Add(Me.TxtCiudad)
-        Me.PlCiudad.Controls.Add(Me.Panel3)
-        Me.PlCiudad.Controls.Add(Me.CboDepartamento)
-        Me.PlCiudad.Controls.Add(Me.TxtCodigoCiudad)
-        Me.PlCiudad.Controls.Add(Me.Panel2)
-        Me.PlCiudad.Location = New System.Drawing.Point(457, 104)
-        Me.PlCiudad.Name = "PlCiudad"
-        Me.PlCiudad.Size = New System.Drawing.Size(294, 156)
-        Me.PlCiudad.TabIndex = 105
-        '
         'FrmCiudad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -418,29 +445,30 @@ Partial Class FrmCiudad
         Me.ClientSize = New System.Drawing.Size(724, 598)
         Me.Controls.Add(Me.PbSalir)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TbcCiudad)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmCiudad"
         Me.Text = "Gestión de Ciudad"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TbcCiudad.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PlCiudad.ResumeLayout(False)
+        Me.PlCiudad.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvCiudad, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsCiudad.ResumeLayout(False)
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PlCiudad.ResumeLayout(False)
-        Me.PlCiudad.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TbcCiudad As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents PbIcono As PictureBox
     Friend WithEvents Panel1 As Panel
@@ -453,11 +481,10 @@ Partial Class FrmCiudad
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DgvCiudad As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TxtBusqueda As TextBox
+    Friend WithEvents TxtBusquedaCiudad As TextBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
@@ -468,4 +495,8 @@ Partial Class FrmCiudad
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents PlCiudad As Panel
+    Friend WithEvents DgvCiudad As DataGridView
+    Friend WithEvents CmsCiudad As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

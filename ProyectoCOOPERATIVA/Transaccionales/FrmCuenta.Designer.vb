@@ -22,9 +22,17 @@ Partial Class FrmCuenta
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.components = New System.ComponentModel.Container()
+        Me.TbcCuenta = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PlCuenta = New System.Windows.Forms.Panel()
+        Me.CboSocio = New System.Windows.Forms.ComboBox()
+        Me.CboTipoCuenta = New System.Windows.Forms.ComboBox()
+        Me.TxtSaldoActual = New System.Windows.Forms.TextBox()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.TxtCodigoCuenta = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -34,45 +42,42 @@ Partial Class FrmCuenta
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
-        Me.CboSocio = New System.Windows.Forms.ComboBox()
-        Me.CboTipoCuenta = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TxtSaldoActual = New System.Windows.Forms.TextBox()
-        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtCodigoCuenta = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvCuenta = New System.Windows.Forms.DataGridView()
+        Me.CmsCuenta = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TxtBusquedaCuenta = New System.Windows.Forms.TextBox()
+        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.PlCuenta = New System.Windows.Forms.Panel()
-        Me.TabControl1.SuspendLayout()
+        Me.TbcCuenta.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.PlCuenta.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvCuenta, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsCuenta.SuspendLayout()
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PlCuenta.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TbcCuenta
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(7, 44)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(709, 542)
-        Me.TabControl1.TabIndex = 15
+        Me.TbcCuenta.Controls.Add(Me.TabPage1)
+        Me.TbcCuenta.Controls.Add(Me.TabPage2)
+        Me.TbcCuenta.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbcCuenta.Location = New System.Drawing.Point(7, 44)
+        Me.TbcCuenta.Name = "TbcCuenta"
+        Me.TbcCuenta.SelectedIndex = 0
+        Me.TbcCuenta.Size = New System.Drawing.Size(709, 542)
+        Me.TbcCuenta.TabIndex = 15
         '
         'TabPage1
         '
@@ -108,6 +113,76 @@ Partial Class FrmCuenta
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(744, 515)
         Me.Panel1.TabIndex = 11
+        '
+        'PlCuenta
+        '
+        Me.PlCuenta.Controls.Add(Me.CboSocio)
+        Me.PlCuenta.Controls.Add(Me.CboTipoCuenta)
+        Me.PlCuenta.Controls.Add(Me.TxtSaldoActual)
+        Me.PlCuenta.Controls.Add(Me.Panel10)
+        Me.PlCuenta.Controls.Add(Me.TxtCodigoCuenta)
+        Me.PlCuenta.Controls.Add(Me.Panel2)
+        Me.PlCuenta.Location = New System.Drawing.Point(394, 111)
+        Me.PlCuenta.Name = "PlCuenta"
+        Me.PlCuenta.Size = New System.Drawing.Size(307, 182)
+        Me.PlCuenta.TabIndex = 89
+        '
+        'CboSocio
+        '
+        Me.CboSocio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboSocio.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboSocio.FormattingEnabled = True
+        Me.CboSocio.Location = New System.Drawing.Point(6, 59)
+        Me.CboSocio.Name = "CboSocio"
+        Me.CboSocio.Size = New System.Drawing.Size(283, 24)
+        Me.CboSocio.TabIndex = 40
+        '
+        'CboTipoCuenta
+        '
+        Me.CboTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CboTipoCuenta.FormattingEnabled = True
+        Me.CboTipoCuenta.Location = New System.Drawing.Point(6, 95)
+        Me.CboTipoCuenta.Name = "CboTipoCuenta"
+        Me.CboTipoCuenta.Size = New System.Drawing.Size(283, 24)
+        Me.CboTipoCuenta.TabIndex = 10
+        '
+        'TxtSaldoActual
+        '
+        Me.TxtSaldoActual.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtSaldoActual.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSaldoActual.Location = New System.Drawing.Point(10, 136)
+        Me.TxtSaldoActual.Name = "TxtSaldoActual"
+        Me.TxtSaldoActual.Size = New System.Drawing.Size(242, 18)
+        Me.TxtSaldoActual.TabIndex = 8
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel10.Location = New System.Drawing.Point(6, 131)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(250, 29)
+        Me.Panel10.TabIndex = 20
+        '
+        'TxtCodigoCuenta
+        '
+        Me.TxtCodigoCuenta.BackColor = System.Drawing.Color.White
+        Me.TxtCodigoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoCuenta.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoCuenta.Location = New System.Drawing.Point(10, 24)
+        Me.TxtCodigoCuenta.Name = "TxtCodigoCuenta"
+        Me.TxtCodigoCuenta.Size = New System.Drawing.Size(193, 18)
+        Me.TxtCodigoCuenta.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(6, 19)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.TabIndex = 2
         '
         'BtnCancelar
         '
@@ -247,26 +322,6 @@ Partial Class FrmCuenta
         Me.PbIcono.TabIndex = 0
         Me.PbIcono.TabStop = False
         '
-        'CboSocio
-        '
-        Me.CboSocio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboSocio.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.CboSocio.FormattingEnabled = True
-        Me.CboSocio.Location = New System.Drawing.Point(6, 59)
-        Me.CboSocio.Name = "CboSocio"
-        Me.CboSocio.Size = New System.Drawing.Size(283, 24)
-        Me.CboSocio.TabIndex = 40
-        '
-        'CboTipoCuenta
-        '
-        Me.CboTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboTipoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.CboTipoCuenta.FormattingEnabled = True
-        Me.CboTipoCuenta.Location = New System.Drawing.Point(6, 95)
-        Me.CboTipoCuenta.Name = "CboTipoCuenta"
-        Me.CboTipoCuenta.Size = New System.Drawing.Size(283, 24)
-        Me.CboTipoCuenta.TabIndex = 10
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -276,24 +331,6 @@ Partial Class FrmCuenta
         Me.Label7.Size = New System.Drawing.Size(84, 16)
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "Saldo Actual"
-        '
-        'TxtSaldoActual
-        '
-        Me.TxtSaldoActual.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtSaldoActual.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSaldoActual.Location = New System.Drawing.Point(10, 136)
-        Me.TxtSaldoActual.Name = "TxtSaldoActual"
-        Me.TxtSaldoActual.Size = New System.Drawing.Size(242, 18)
-        Me.TxtSaldoActual.TabIndex = 8
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel10.Location = New System.Drawing.Point(6, 131)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(250, 29)
-        Me.Panel10.TabIndex = 20
         '
         'Label6
         '
@@ -316,26 +353,6 @@ Partial Class FrmCuenta
         Me.Label2.Text = "Socio"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TxtCodigoCuenta
-        '
-        Me.TxtCodigoCuenta.BackColor = System.Drawing.Color.White
-        Me.TxtCodigoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoCuenta.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoCuenta.Location = New System.Drawing.Point(10, 24)
-        Me.TxtCodigoCuenta.Name = "TxtCodigoCuenta"
-        Me.TxtCodigoCuenta.ReadOnly = True
-        Me.TxtCodigoCuenta.Size = New System.Drawing.Size(193, 18)
-        Me.TxtCodigoCuenta.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(6, 19)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
-        Me.Panel2.TabIndex = 2
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -349,16 +366,47 @@ Partial Class FrmCuenta
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.DgvCuenta)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.TxtBusquedaCuenta)
+        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(701, 510)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Ver Datos"
+        '
+        'DgvCuenta
+        '
+        Me.DgvCuenta.AllowUserToDeleteRows = False
+        Me.DgvCuenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvCuenta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgvCuenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCuenta.ContextMenuStrip = Me.CmsCuenta
+        Me.DgvCuenta.Location = New System.Drawing.Point(16, 130)
+        Me.DgvCuenta.Name = "DgvCuenta"
+        Me.DgvCuenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvCuenta.Size = New System.Drawing.Size(665, 355)
+        Me.DgvCuenta.TabIndex = 89
+        '
+        'CmsCuenta
+        '
+        Me.CmsCuenta.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsCuenta.Name = "CmsCuenta"
+        Me.CmsCuenta.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'Label4
         '
@@ -370,12 +418,12 @@ Partial Class FrmCuenta
         Me.Label4.TabIndex = 88
         Me.Label4.Text = "Datos"
         '
-        'TxtBusqueda
+        'TxtBusquedaCuenta
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 84)
-        Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
-        Me.TxtBusqueda.TabIndex = 85
+        Me.TxtBusquedaCuenta.Location = New System.Drawing.Point(44, 84)
+        Me.TxtBusquedaCuenta.Name = "TxtBusquedaCuenta"
+        Me.TxtBusquedaCuenta.Size = New System.Drawing.Size(637, 26)
+        Me.TxtBusquedaCuenta.TabIndex = 85
         '
         'PbLupa
         '
@@ -388,23 +436,12 @@ Partial Class FrmCuenta
         Me.PbLupa.TabIndex = 86
         Me.PbLupa.TabStop = False
         '
-        'DgvCuenta
-        '
-        Me.DgvCuenta.AllowUserToDeleteRows = False
-        Me.DgvCuenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvCuenta.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgvCuenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCuenta.Location = New System.Drawing.Point(16, 126)
-        Me.DgvCuenta.Name = "DgvCuenta"
-        Me.DgvCuenta.Size = New System.Drawing.Size(665, 355)
-        Me.DgvCuenta.TabIndex = 12
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(288, 6)
+        Me.Label14.Location = New System.Drawing.Point(282, 9)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(156, 43)
         Me.Label14.TabIndex = 16
@@ -420,19 +457,6 @@ Partial Class FrmCuenta
         Me.PbSalir.TabIndex = 17
         Me.PbSalir.TabStop = False
         '
-        'PlCuenta
-        '
-        Me.PlCuenta.Controls.Add(Me.CboSocio)
-        Me.PlCuenta.Controls.Add(Me.CboTipoCuenta)
-        Me.PlCuenta.Controls.Add(Me.TxtSaldoActual)
-        Me.PlCuenta.Controls.Add(Me.Panel10)
-        Me.PlCuenta.Controls.Add(Me.TxtCodigoCuenta)
-        Me.PlCuenta.Controls.Add(Me.Panel2)
-        Me.PlCuenta.Location = New System.Drawing.Point(394, 111)
-        Me.PlCuenta.Name = "PlCuenta"
-        Me.PlCuenta.Size = New System.Drawing.Size(307, 182)
-        Me.PlCuenta.TabIndex = 89
-        '
         'FrmCuenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -442,29 +466,30 @@ Partial Class FrmCuenta
         Me.ClientSize = New System.Drawing.Size(724, 598)
         Me.Controls.Add(Me.PbSalir)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TbcCuenta)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmCuenta"
         Me.Text = "Cuenta"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TbcCuenta.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PlCuenta.ResumeLayout(False)
+        Me.PlCuenta.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvCuenta, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsCuenta.ResumeLayout(False)
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PlCuenta.ResumeLayout(False)
-        Me.PlCuenta.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TbcCuenta As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents PbIcono As PictureBox
     Friend WithEvents Panel1 As Panel
@@ -479,11 +504,10 @@ Partial Class FrmCuenta
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DgvCuenta As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TxtBusqueda As TextBox
+    Friend WithEvents TxtBusquedaCuenta As TextBox
     Friend WithEvents PbLupa As PictureBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
@@ -494,4 +518,8 @@ Partial Class FrmCuenta
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PlCuenta As Panel
+    Friend WithEvents DgvCuenta As DataGridView
+    Friend WithEvents CmsCuenta As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

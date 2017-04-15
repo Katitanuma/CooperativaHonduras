@@ -23,7 +23,7 @@ Partial Class FrmSocio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TbcSocio = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PlSocio = New System.Windows.Forms.Panel()
@@ -44,8 +44,8 @@ Partial Class FrmSocio
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TxtCodigoSocio = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.MtbCodigoSocio = New System.Windows.Forms.MaskedTextBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -71,33 +71,34 @@ Partial Class FrmSocio
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvSocio = New System.Windows.Forms.DataGridView()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.PbSalir = New System.Windows.Forms.PictureBox()
         Me.CMSSocio = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabControl1.SuspendLayout()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.PbSalir = New System.Windows.Forms.PictureBox()
+        Me.TbcSocio.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PlSocio.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvSocio, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CMSSocio.SuspendLayout()
+        CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TbcSocio
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(7, 44)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(709, 563)
-        Me.TabControl1.TabIndex = 6
+        Me.TbcSocio.Controls.Add(Me.TabPage1)
+        Me.TbcSocio.Controls.Add(Me.TabPage2)
+        Me.TbcSocio.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbcSocio.Location = New System.Drawing.Point(7, 44)
+        Me.TbcSocio.Name = "TbcSocio"
+        Me.TbcSocio.SelectedIndex = 0
+        Me.TbcSocio.Size = New System.Drawing.Size(709, 542)
+        Me.TbcSocio.TabIndex = 6
         '
         'TabPage1
         '
@@ -105,7 +106,7 @@ Partial Class FrmSocio
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(701, 531)
+        Me.TabPage1.Size = New System.Drawing.Size(701, 510)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Ingresar Datos"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -160,7 +161,6 @@ Partial Class FrmSocio
         Me.PlSocio.Controls.Add(Me.Panel4)
         Me.PlSocio.Controls.Add(Me.TxtNombre)
         Me.PlSocio.Controls.Add(Me.Panel3)
-        Me.PlSocio.Controls.Add(Me.TxtCodigoSocio)
         Me.PlSocio.Controls.Add(Me.Panel2)
         Me.PlSocio.Location = New System.Drawing.Point(374, 11)
         Me.PlSocio.Name = "PlSocio"
@@ -324,25 +324,25 @@ Partial Class FrmSocio
         Me.Panel3.Size = New System.Drawing.Size(286, 29)
         Me.Panel3.TabIndex = 5
         '
-        'TxtCodigoSocio
-        '
-        Me.TxtCodigoSocio.BackColor = System.Drawing.Color.White
-        Me.TxtCodigoSocio.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtCodigoSocio.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCodigoSocio.Location = New System.Drawing.Point(13, 15)
-        Me.TxtCodigoSocio.Name = "TxtCodigoSocio"
-        Me.TxtCodigoSocio.ReadOnly = True
-        Me.TxtCodigoSocio.Size = New System.Drawing.Size(192, 18)
-        Me.TxtCodigoSocio.TabIndex = 1
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.MtbCodigoSocio)
         Me.Panel2.Location = New System.Drawing.Point(9, 10)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
+        '
+        'MtbCodigoSocio
+        '
+        Me.MtbCodigoSocio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.MtbCodigoSocio.Location = New System.Drawing.Point(3, 7)
+        Me.MtbCodigoSocio.Mask = "0000-0000-00000"
+        Me.MtbCodigoSocio.Name = "MtbCodigoSocio"
+        Me.MtbCodigoSocio.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.MtbCodigoSocio.Size = New System.Drawing.Size(191, 15)
+        Me.MtbCodigoSocio.TabIndex = 0
         '
         'BtnCancelar
         '
@@ -356,7 +356,7 @@ Partial Class FrmSocio
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(568, 447)
+        Me.BtnCancelar.Location = New System.Drawing.Point(568, 437)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
         Me.BtnCancelar.TabIndex = 112
@@ -376,7 +376,7 @@ Partial Class FrmSocio
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnGuardar.Location = New System.Drawing.Point(395, 447)
+        Me.BtnGuardar.Location = New System.Drawing.Point(395, 437)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(73, 53)
         Me.BtnGuardar.TabIndex = 111
@@ -396,7 +396,7 @@ Partial Class FrmSocio
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(308, 447)
+        Me.BtnNuevo.Location = New System.Drawing.Point(308, 437)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
         Me.BtnNuevo.TabIndex = 110
@@ -407,7 +407,7 @@ Partial Class FrmSocio
         Me.LblCancelar.AutoSize = True
         Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
         Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(566, 505)
+        Me.LblCancelar.Location = New System.Drawing.Point(566, 495)
         Me.LblCancelar.Name = "LblCancelar"
         Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
         Me.LblCancelar.TabIndex = 109
@@ -419,7 +419,7 @@ Partial Class FrmSocio
         Me.LblModificar.AutoSize = True
         Me.LblModificar.BackColor = System.Drawing.Color.Transparent
         Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificar.Location = New System.Drawing.Point(478, 505)
+        Me.LblModificar.Location = New System.Drawing.Point(478, 495)
         Me.LblModificar.Name = "LblModificar"
         Me.LblModificar.Size = New System.Drawing.Size(75, 13)
         Me.LblModificar.TabIndex = 108
@@ -431,7 +431,7 @@ Partial Class FrmSocio
         Me.LblGuardar.AutoSize = True
         Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
         Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(397, 505)
+        Me.LblGuardar.Location = New System.Drawing.Point(397, 495)
         Me.LblGuardar.Name = "LblGuardar"
         Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
         Me.LblGuardar.TabIndex = 107
@@ -443,7 +443,7 @@ Partial Class FrmSocio
         Me.LblNuevo.AutoSize = True
         Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
         Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(320, 505)
+        Me.LblNuevo.Location = New System.Drawing.Point(320, 495)
         Me.LblNuevo.Name = "LblNuevo"
         Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
         Me.LblNuevo.TabIndex = 106
@@ -462,7 +462,7 @@ Partial Class FrmSocio
         Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnModificar.Location = New System.Drawing.Point(481, 447)
+        Me.BtnModificar.Location = New System.Drawing.Point(481, 437)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(73, 53)
         Me.BtnModificar.TabIndex = 105
@@ -602,7 +602,7 @@ Partial Class FrmSocio
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(701, 531)
+        Me.TabPage2.Size = New System.Drawing.Size(701, 510)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Ver Datos"
         '
@@ -649,6 +649,24 @@ Partial Class FrmSocio
         Me.DgvSocio.Size = New System.Drawing.Size(665, 373)
         Me.DgvSocio.TabIndex = 1
         '
+        'CMSSocio
+        '
+        Me.CMSSocio.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CMSSocio.Name = "CMSSocio"
+        Me.CMSSocio.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
         'Label14
         '
         Me.Label14.AutoSize = True
@@ -670,55 +688,39 @@ Partial Class FrmSocio
         Me.PbSalir.TabIndex = 30
         Me.PbSalir.TabStop = False
         '
-        'CMSSocio
-        '
-        Me.CMSSocio.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
-        Me.CMSSocio.Name = "CMSSocio"
-        Me.CMSSocio.Size = New System.Drawing.Size(118, 48)
-        '
-        'EditarToolStripMenuItem
-        '
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.EditarToolStripMenuItem.Text = "Editar"
-        '
-        'EliminarToolStripMenuItem
-        '
-        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.EliminarToolStripMenuItem.Text = "Eliminar"
-        '
         'FrmSocio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(724, 619)
+        Me.ClientSize = New System.Drawing.Size(724, 598)
         Me.Controls.Add(Me.PbSalir)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TbcSocio)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmSocio"
         Me.Text = "Socio"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TbcSocio.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.PlSocio.ResumeLayout(False)
         Me.PlSocio.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvSocio, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CMSSocio.ResumeLayout(False)
+        CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TbcSocio As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents PbIcono As PictureBox
     Friend WithEvents Panel1 As Panel
@@ -749,7 +751,6 @@ Partial Class FrmSocio
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents TxtCodigoSocio As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
@@ -771,4 +772,5 @@ Partial Class FrmSocio
     Friend WithEvents CMSSocio As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MtbCodigoSocio As MaskedTextBox
 End Class

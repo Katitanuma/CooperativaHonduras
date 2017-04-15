@@ -22,9 +22,15 @@ Partial Class FrmProfesion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PlProfesion = New System.Windows.Forms.Panel()
+        Me.TxtProfesion = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TxtCodigoProfesion = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -34,29 +40,25 @@ Partial Class FrmProfesion
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvProfesion = New System.Windows.Forms.DataGridView()
+        Me.CmsProfesion = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.PlProfesion = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.PlProfesion.SuspendLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvProfesion, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsProfesion.SuspendLayout()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PlProfesion.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -102,6 +104,55 @@ Partial Class FrmProfesion
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(758, 501)
         Me.Panel1.TabIndex = 23
+        '
+        'PlProfesion
+        '
+        Me.PlProfesion.Controls.Add(Me.TxtProfesion)
+        Me.PlProfesion.Controls.Add(Me.Panel3)
+        Me.PlProfesion.Controls.Add(Me.TxtCodigoProfesion)
+        Me.PlProfesion.Controls.Add(Me.Panel2)
+        Me.PlProfesion.Location = New System.Drawing.Point(405, 135)
+        Me.PlProfesion.Name = "PlProfesion"
+        Me.PlProfesion.Size = New System.Drawing.Size(328, 114)
+        Me.PlProfesion.TabIndex = 105
+        '
+        'TxtProfesion
+        '
+        Me.TxtProfesion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtProfesion.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtProfesion.Location = New System.Drawing.Point(9, 58)
+        Me.TxtProfesion.Name = "TxtProfesion"
+        Me.TxtProfesion.Size = New System.Drawing.Size(294, 18)
+        Me.TxtProfesion.TabIndex = 29
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Location = New System.Drawing.Point(5, 53)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(302, 29)
+        Me.Panel3.TabIndex = 30
+        '
+        'TxtCodigoProfesion
+        '
+        Me.TxtCodigoProfesion.BackColor = System.Drawing.Color.White
+        Me.TxtCodigoProfesion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCodigoProfesion.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCodigoProfesion.Location = New System.Drawing.Point(9, 23)
+        Me.TxtCodigoProfesion.Name = "TxtCodigoProfesion"
+        Me.TxtCodigoProfesion.ReadOnly = True
+        Me.TxtCodigoProfesion.Size = New System.Drawing.Size(192, 18)
+        Me.TxtCodigoProfesion.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(5, 18)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 29)
+        Me.Panel2.TabIndex = 2
         '
         'BtnCancelar
         '
@@ -241,24 +292,6 @@ Partial Class FrmProfesion
         Me.PbIcono.TabIndex = 0
         Me.PbIcono.TabStop = False
         '
-        'TextBox2
-        '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(9, 58)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(294, 18)
-        Me.TextBox2.TabIndex = 29
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Location = New System.Drawing.Point(5, 53)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(302, 29)
-        Me.Panel3.TabIndex = 30
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -269,26 +302,6 @@ Partial Class FrmProfesion
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Profesión"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Monotype Corsiva", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(9, 23)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(192, 18)
-        Me.TextBox1.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(5, 18)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 29)
-        Me.Panel2.TabIndex = 2
         '
         'Label1
         '
@@ -303,16 +316,46 @@ Partial Class FrmProfesion
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.LightBlue
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.TxtBusqueda)
-        Me.TabPage2.Controls.Add(Me.PbLupa)
         Me.TabPage2.Controls.Add(Me.DgvProfesion)
+        Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(701, 510)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Ver Datos"
+        '
+        'DgvProfesion
+        '
+        Me.DgvProfesion.AllowUserToAddRows = False
+        Me.DgvProfesion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvProfesion.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DgvProfesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvProfesion.ContextMenuStrip = Me.CmsProfesion
+        Me.DgvProfesion.Location = New System.Drawing.Point(16, 82)
+        Me.DgvProfesion.Name = "DgvProfesion"
+        Me.DgvProfesion.ReadOnly = True
+        Me.DgvProfesion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvProfesion.Size = New System.Drawing.Size(665, 409)
+        Me.DgvProfesion.TabIndex = 90
+        '
+        'CmsProfesion
+        '
+        Me.CmsProfesion.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsProfesion.Name = "CmsProfesion"
+        Me.CmsProfesion.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'Label4
         '
@@ -323,35 +366,6 @@ Partial Class FrmProfesion
         Me.Label4.Size = New System.Drawing.Size(101, 45)
         Me.Label4.TabIndex = 88
         Me.Label4.Text = "Datos"
-        '
-        'TxtBusqueda
-        '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(44, 89)
-        Me.TxtBusqueda.Name = "TxtBusqueda"
-        Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
-        Me.TxtBusqueda.TabIndex = 85
-        '
-        'PbLupa
-        '
-        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
-        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
-        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(16, 89)
-        Me.PbLupa.Name = "PbLupa"
-        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
-        Me.PbLupa.TabIndex = 86
-        Me.PbLupa.TabStop = False
-        '
-        'DgvProfesion
-        '
-        Me.DgvProfesion.AllowUserToDeleteRows = False
-        Me.DgvProfesion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvProfesion.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgvProfesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvProfesion.Location = New System.Drawing.Point(16, 132)
-        Me.DgvProfesion.Name = "DgvProfesion"
-        Me.DgvProfesion.Size = New System.Drawing.Size(665, 355)
-        Me.DgvProfesion.TabIndex = 24
         '
         'Label14
         '
@@ -374,17 +388,6 @@ Partial Class FrmProfesion
         Me.PbSalir.TabIndex = 29
         Me.PbSalir.TabStop = False
         '
-        'PlProfesion
-        '
-        Me.PlProfesion.Controls.Add(Me.TextBox2)
-        Me.PlProfesion.Controls.Add(Me.Panel3)
-        Me.PlProfesion.Controls.Add(Me.TextBox1)
-        Me.PlProfesion.Controls.Add(Me.Panel2)
-        Me.PlProfesion.Location = New System.Drawing.Point(405, 135)
-        Me.PlProfesion.Name = "PlProfesion"
-        Me.PlProfesion.Size = New System.Drawing.Size(328, 114)
-        Me.PlProfesion.TabIndex = 105
-        '
         'FrmProfesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -403,14 +406,14 @@ Partial Class FrmProfesion
         Me.TabPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.PlProfesion.ResumeLayout(False)
+        Me.PlProfesion.PerformLayout()
         CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvProfesion, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsProfesion.ResumeLayout(False)
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PlProfesion.ResumeLayout(False)
-        Me.PlProfesion.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -420,19 +423,16 @@ Partial Class FrmProfesion
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PbIcono As PictureBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtProfesion As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtCodigoProfesion As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DgvProfesion As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TxtBusqueda As TextBox
-    Friend WithEvents PbLupa As PictureBox
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
@@ -442,4 +442,8 @@ Partial Class FrmProfesion
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
     Friend WithEvents PlProfesion As Panel
+    Friend WithEvents DgvProfesion As DataGridView
+    Friend WithEvents CmsProfesion As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class
