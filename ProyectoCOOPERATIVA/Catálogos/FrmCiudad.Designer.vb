@@ -26,12 +26,6 @@ Partial Class FrmCiudad
         Me.TbcCiudad = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PlCiudad = New System.Windows.Forms.Panel()
-        Me.TxtCiudad = New System.Windows.Forms.TextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.CboDepartamento = New System.Windows.Forms.ComboBox()
-        Me.TxtCodigoCiudad = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -40,6 +34,12 @@ Partial Class FrmCiudad
         Me.LblGuardar = New System.Windows.Forms.Label()
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.PlCiudad = New System.Windows.Forms.Panel()
+        Me.TxtCiudad = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.CboDepartamento = New System.Windows.Forms.ComboBox()
+        Me.TxtCodigoCiudad = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PbIcono = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -92,7 +92,6 @@ Partial Class FrmCiudad
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.PlCiudad)
         Me.Panel1.Controls.Add(Me.BtnCancelar)
         Me.Panel1.Controls.Add(Me.BtnGuardar)
         Me.Panel1.Controls.Add(Me.BtnNuevo)
@@ -101,6 +100,7 @@ Partial Class FrmCiudad
         Me.Panel1.Controls.Add(Me.LblGuardar)
         Me.Panel1.Controls.Add(Me.LblNuevo)
         Me.Panel1.Controls.Add(Me.BtnModificar)
+        Me.Panel1.Controls.Add(Me.PlCiudad)
         Me.Panel1.Controls.Add(Me.PbIcono)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -110,6 +110,131 @@ Partial Class FrmCiudad
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(797, 500)
         Me.Panel1.TabIndex = 17
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCancelar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.boton_cancear_listo
+        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnCancelar.Location = New System.Drawing.Point(679, 286)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(73, 58)
+        Me.BtnCancelar.TabIndex = 113
+        Me.BtnCancelar.Text = " "
+        Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnGuardar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Guardar_listo
+        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnGuardar.Location = New System.Drawing.Point(509, 284)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(73, 63)
+        Me.BtnGuardar.TabIndex = 112
+        Me.BtnGuardar.Text = " "
+        Me.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnNuevo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnNuevo.FlatAppearance.BorderSize = 0
+        Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnNuevo.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Agregar_listo
+        Me.BtnNuevo.Location = New System.Drawing.Point(422, 289)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
+        Me.BtnNuevo.TabIndex = 111
+        Me.BtnNuevo.UseVisualStyleBackColor = False
+        '
+        'LblCancelar
+        '
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(679, 347)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
+        Me.LblCancelar.TabIndex = 110
+        Me.LblCancelar.Text = "CANCELAR"
+        Me.LblCancelar.Visible = False
+        '
+        'LblModificar
+        '
+        Me.LblModificar.AutoSize = True
+        Me.LblModificar.BackColor = System.Drawing.Color.Transparent
+        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblModificar.Location = New System.Drawing.Point(591, 347)
+        Me.LblModificar.Name = "LblModificar"
+        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
+        Me.LblModificar.TabIndex = 109
+        Me.LblModificar.Text = "MODIFICAR"
+        Me.LblModificar.Visible = False
+        '
+        'LblGuardar
+        '
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(510, 347)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
+        Me.LblGuardar.TabIndex = 108
+        Me.LblGuardar.Text = "GUARDAR"
+        Me.LblGuardar.Visible = False
+        '
+        'LblNuevo
+        '
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(433, 347)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
+        Me.LblNuevo.TabIndex = 107
+        Me.LblNuevo.Text = "NUEVO"
+        Me.LblNuevo.Visible = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnModificar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Editar_listo
+        Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnModificar.Location = New System.Drawing.Point(595, 284)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(73, 58)
+        Me.BtnModificar.TabIndex = 106
+        Me.BtnModificar.Text = " "
+        Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnModificar.UseVisualStyleBackColor = False
         '
         'PlCiudad
         '
@@ -170,132 +295,6 @@ Partial Class FrmCiudad
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba52
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnCancelar.FlatAppearance.BorderSize = 0
-        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(636, 289)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(73, 53)
-        Me.BtnCancelar.TabIndex = 104
-        Me.BtnCancelar.Text = " "
-        Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnCancelar.UseVisualStyleBackColor = False
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba11
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue
-        Me.BtnGuardar.FlatAppearance.BorderSize = 0
-        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnGuardar.Location = New System.Drawing.Point(463, 289)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(73, 53)
-        Me.BtnGuardar.TabIndex = 103
-        Me.BtnGuardar.Text = " "
-        Me.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnGuardar.UseVisualStyleBackColor = False
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba21
-        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnNuevo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnNuevo.FlatAppearance.BorderSize = 0
-        Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(376, 289)
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
-        Me.BtnNuevo.TabIndex = 102
-        Me.BtnNuevo.UseVisualStyleBackColor = False
-        '
-        'LblCancelar
-        '
-        Me.LblCancelar.AutoSize = True
-        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(637, 347)
-        Me.LblCancelar.Name = "LblCancelar"
-        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
-        Me.LblCancelar.TabIndex = 101
-        Me.LblCancelar.Text = "CANCELAR"
-        Me.LblCancelar.Visible = False
-        '
-        'LblModificar
-        '
-        Me.LblModificar.AutoSize = True
-        Me.LblModificar.BackColor = System.Drawing.Color.Transparent
-        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificar.Location = New System.Drawing.Point(545, 347)
-        Me.LblModificar.Name = "LblModificar"
-        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
-        Me.LblModificar.TabIndex = 100
-        Me.LblModificar.Text = "MODIFICAR"
-        Me.LblModificar.Visible = False
-        '
-        'LblGuardar
-        '
-        Me.LblGuardar.AutoSize = True
-        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(464, 347)
-        Me.LblGuardar.Name = "LblGuardar"
-        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
-        Me.LblGuardar.TabIndex = 99
-        Me.LblGuardar.Text = "GUARDAR"
-        Me.LblGuardar.Visible = False
-        '
-        'LblNuevo
-        '
-        Me.LblNuevo.AutoSize = True
-        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(387, 347)
-        Me.LblNuevo.Name = "LblNuevo"
-        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
-        Me.LblNuevo.TabIndex = 98
-        Me.LblNuevo.Text = "NUEVO"
-        Me.LblNuevo.Visible = False
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.ba31
-        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnModificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnModificar.FlatAppearance.BorderSize = 0
-        Me.BtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnModificar.Location = New System.Drawing.Point(549, 289)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(73, 53)
-        Me.BtnModificar.TabIndex = 97
-        Me.BtnModificar.Text = " "
-        Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnModificar.UseVisualStyleBackColor = False
         '
         'PbIcono
         '
@@ -365,6 +364,7 @@ Partial Class FrmCiudad
         Me.DgvCiudad.Location = New System.Drawing.Point(16, 135)
         Me.DgvCiudad.Name = "DgvCiudad"
         Me.DgvCiudad.ReadOnly = True
+        Me.DgvCiudad.RowHeadersVisible = False
         Me.DgvCiudad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvCiudad.Size = New System.Drawing.Size(665, 355)
         Me.DgvCiudad.TabIndex = 88
@@ -485,6 +485,12 @@ Partial Class FrmCiudad
     Friend WithEvents PbSalir As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtBusquedaCiudad As TextBox
+    Friend WithEvents PbLupa As PictureBox
+    Friend WithEvents PlCiudad As Panel
+    Friend WithEvents DgvCiudad As DataGridView
+    Friend WithEvents CmsCiudad As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
@@ -493,10 +499,4 @@ Partial Class FrmCiudad
     Friend WithEvents LblGuardar As Label
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
-    Friend WithEvents PbLupa As PictureBox
-    Friend WithEvents PlCiudad As Panel
-    Friend WithEvents DgvCiudad As DataGridView
-    Friend WithEvents CmsCiudad As ContextMenuStrip
-    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

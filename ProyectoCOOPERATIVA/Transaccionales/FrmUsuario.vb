@@ -11,35 +11,35 @@ Public Class FrmUsuario
                        FrmOficial, FrmPrestamo, FrmSocio, FrmAval)
     End Sub
 
-    Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) Handles BtnNuevo.MouseHover
+    Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) 
         LblNuevo.Visible = True
     End Sub
 
-    Private Sub BtnNuevo_MouseLeave(sender As Object, e As EventArgs) Handles BtnNuevo.MouseLeave
+    Private Sub BtnNuevo_MouseLeave(sender As Object, e As EventArgs) 
         LblNuevo.Visible = False
     End Sub
 
-    Private Sub BtnGuardar_MouseHover(sender As Object, e As EventArgs) Handles BtnGuardar.MouseHover
+    Private Sub BtnGuardar_MouseHover(sender As Object, e As EventArgs) 
         LblGuardar.Visible = True
     End Sub
 
-    Private Sub BtnGuardar_MouseLeave(sender As Object, e As EventArgs) Handles BtnGuardar.MouseLeave
+    Private Sub BtnGuardar_MouseLeave(sender As Object, e As EventArgs) 
         LblGuardar.Visible = False
     End Sub
 
-    Private Sub BtnModificar_MouseHover(sender As Object, e As EventArgs) Handles BtnModificar.MouseHover
+    Private Sub BtnModificar_MouseHover(sender As Object, e As EventArgs) 
         LblModificar.Visible = True
     End Sub
 
-    Private Sub BtnModificar_MouseLeave(sender As Object, e As EventArgs) Handles BtnModificar.MouseLeave
+    Private Sub BtnModificar_MouseLeave(sender As Object, e As EventArgs) 
         LblModificar.Visible = False
     End Sub
 
-    Private Sub BtnCancelar_MouseHover(sender As Object, e As EventArgs) Handles BtnCancelar.MouseHover
+    Private Sub BtnCancelar_MouseHover(sender As Object, e As EventArgs) 
         LblCancelar.Visible = True
     End Sub
 
-    Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) Handles BtnCancelar.MouseLeave
+    Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) 
         LblCancelar.Visible = False
     End Sub
 
@@ -50,7 +50,11 @@ Public Class FrmUsuario
             TxtUsuario.Focus()
             Estado = False
         ElseIf TxtContrasena.Text = Nothing Then
-            MsgBox("ingrese la contraseña", MsgBoxStyle.Critical, "Control Keeper")
+            MsgBox("Ingrese la contraseña", MsgBoxStyle.Critical, "Control Keeper")
+            txtContrasena.Focus()
+            Estado = False
+        ElseIf TxtContrasena.Text.Length > 0 And TxtContrasena.Text.Length < 8 Then
+            MsgBox("La contraseña debe tenere mas de 8 caracteres", MsgBoxStyle.Critical, "Control Keeper")
             txtContrasena.Focus()
             Estado = False
         ElseIf CboTipoAcceso.Text = Nothing Then
@@ -427,11 +431,4 @@ Public Class FrmUsuario
         End If
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub PbLupa_Click(sender As Object, e As EventArgs) Handles PbLupa.Click
-
-    End Sub
 End Class

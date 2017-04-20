@@ -11,64 +11,64 @@ Public Class FrmPrestamo
                        FrmOficial, FrmAval, FrmSocio, FrmUsuario)
     End Sub
 
-    Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) Handles BtnNuevo.MouseHover
+    Private Sub BtnNuevo_MouseHover_1(sender As Object, e As EventArgs) 
         LblNuevo.Visible = True
     End Sub
 
-    Private Sub BtnNuevo_MouseLeave(sender As Object, e As EventArgs) Handles BtnNuevo.MouseLeave
+    Private Sub BtnNuevo_MouseLeave(sender As Object, e As EventArgs) 
         LblNuevo.Visible = False
     End Sub
 
-    Private Sub BtnGuardar_MouseHover(sender As Object, e As EventArgs) Handles BtnGuardar.MouseHover
+    Private Sub BtnGuardar_MouseHover(sender As Object, e As EventArgs) 
         LblGuardar.Visible = True
     End Sub
 
-    Private Sub BtnGuardar_MouseLeave(sender As Object, e As EventArgs) Handles BtnGuardar.MouseLeave
+    Private Sub BtnGuardar_MouseLeave(sender As Object, e As EventArgs) 
         LblGuardar.Visible = False
     End Sub
 
-    Private Sub BtnModificar_MouseHover(sender As Object, e As EventArgs) Handles BtnModificar.MouseHover
+    Private Sub BtnModificar_MouseHover(sender As Object, e As EventArgs) 
         LblModificar.Visible = True
     End Sub
 
-    Private Sub BtnModificar_MouseLeave(sender As Object, e As EventArgs) Handles BtnModificar.MouseLeave
+    Private Sub BtnModificar_MouseLeave(sender As Object, e As EventArgs) 
         LblModificar.Visible = False
     End Sub
 
-    Private Sub BtnCancelar_MouseHover(sender As Object, e As EventArgs) Handles BtnCancelar.MouseHover
+    Private Sub BtnCancelar_MouseHover(sender As Object, e As EventArgs) 
         LblCancelar.Visible = True
     End Sub
 
-    Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) Handles BtnCancelar.MouseLeave
+    Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) 
         LblCancelar.Visible = False
     End Sub
 
     Private Function ValidarPrestamo() As Boolean
         Dim Estado As Boolean
         If TxtCodigoPrestamo.Text = Nothing Then
-            MsgBox("Ingrese el código del prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MsgBox("Ingrese el código del préstamo", MsgBoxStyle.Critical, "Control Keeper")
             TxtCodigoPrestamo.Focus()
             Estado = False
         ElseIf CboTipoPrestamo.Text = Nothing Then
-            MsgBox("Seleccione el tipo de prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MsgBox("Seleccione el tipo de préstamo", MsgBoxStyle.Critical, "Control Keeper")
             Estado = False
         ElseIf CboSocio.Text = Nothing Then
-            MsgBox("Seleccione el socio del prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MsgBox("Seleccione el socio del préstamo", MsgBoxStyle.Critical, "Control Keeper")
             Estado = False
         ElseIf TxtCapital.Text = Nothing Then
             MsgBox("Ingrese el capital del socio", MsgBoxStyle.Critical, "Control Keeper")
             TxtCapital.Focus()
             Estado = False
         ElseIf TxtPlazo.Text = Nothing Then
-            MsgBox("Ingrese el plazo del prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MsgBox("Ingrese el plazo del préstamo", MsgBoxStyle.Critical, "Control Keeper")
             TxtPlazo.Focus()
             Estado = False
         ElseIf TxtTasa.Text = Nothing Then
-            MsgBox("Ingrese la tasa de interes del prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MsgBox("Ingrese la tasa de interes del préstamo", MsgBoxStyle.Critical, "Control Keeper")
             TxtTasa.Focus()
             Estado = False
         ElseIf TxtFinalidad.Text = Nothing Then
-            MsgBox("Ingrese la finalidad del prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MsgBox("Ingrese la finalidad del préstamo", MsgBoxStyle.Critical, "Control Keeper")
             TxtFinalidad.Focus()
             Estado = False
         Else
@@ -89,6 +89,8 @@ Public Class FrmPrestamo
         BtnModificar.Enabled = Modificar
         BtnCancelar.Enabled = Cancelar
         PlPrestamo.Enabled = Panel
+        PlPrestamo2.Enabled = Panel
+        PlPrestamo3.Enabled = Panel
     End Sub
     Private Sub MostrarTodosPrestamos()
         If Con.State = ConnectionState.Open Then
@@ -118,7 +120,35 @@ Public Class FrmPrestamo
 
         End Using
     End Sub
+    Private Sub MostrarTodosCuenta()
+        If Con.State = ConnectionState.Open Then
+            Con.Close()
+        End If
 
+        Using cmd As New SqlCommand
+            Try
+                Con.Open()
+                With cmd
+                    .CommandText = "Sp_MostrarTodoCuentaSocio"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.Add("@IdSocio", SqlDbType.NVarChar, 15).Value = CboSocio.SelectedValue.ToString
+                    .Connection = Con
+                End With
+
+                Dim AdaptadorCuentas As New SqlDataAdapter(cmd)
+                Dim dt As New DataTable
+                AdaptadorCuentas.Fill(dt)
+                DgvCuentas.DataSource = dt
+
+
+            Catch ex As Exception
+
+            Finally
+                Con.Close()
+            End Try
+
+        End Using
+    End Sub
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         Call HabilitarControles(False, True, False, True, True)
         Call Limpiar()
@@ -156,7 +186,7 @@ Public Class FrmPrestamo
 
         End Using
     End Sub
-    Private Sub LlenarComboBoxSocio()
+    Public Sub LlenarComboBoxSocio()
         If Con.State = ConnectionState.Open Then
             Con.Close()
         End If
@@ -238,9 +268,9 @@ Public Class FrmPrestamo
                     .Parameters.Add("@Estado", SqlDbType.NVarChar, 20).Value = IdentificarEstado()
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Prestamo registrado con éxito", "Control Keeper")
+                MessageBox.Show("Préstamo registrado con éxito", "Control Keeper")
             Catch ex As Exception
-                MessageBox.Show("Error al guardar el prestamo " + ex.Message)
+                MessageBox.Show("Error al guardar el préstamo " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -258,7 +288,7 @@ Public Class FrmPrestamo
                     Call MostrarTodosPrestamos()
                     Call HabilitarControles(True, False, False, False, False)
                     Call Limpiar()
-                    Me.Close()
+
                     Dim MiAval As New FrmAval
                     MiAval.MdiParent = PantallaPrincipal
                     MiAval.Show()
@@ -269,12 +299,12 @@ Public Class FrmPrestamo
                     MessageBox.Show("El capital sobrepasa del limite establecido", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
-                    MessageBox.Show("El socio no tiene cuentas registradas", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-                End If
-
+                MessageBox.Show("El socio no tiene cuentas registradas", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             End If
+
+
+        End If
     End Sub
     Private Function ExisteCuenta() As Boolean
         If Con.State = ConnectionState.Open Then
@@ -357,21 +387,15 @@ Public Class FrmPrestamo
                 End If
 
             Catch ex As Exception
-                MessageBox.Show("Error al buscar cuenta de socio " + ex.Message)
+
             Finally
                 Con.Close()
             End Try
         End Using
         Return Total
     End Function
-    Private Sub ChkEstado_CheckedChanged(sender As Object, e As EventArgs) Handles ChkEstado.CheckedChanged
-        If ChkEstado.CheckState = CheckState.Checked Then
+    Private Sub ChkEstado_CheckedChanged(sender As Object, e As EventArgs)
 
-            ChkEstado.Text = "Aprobado"
-
-        Else
-            ChkEstado.Text = "No aprobado"
-        End If
     End Sub
     Private Function IdentificarEstado() As String
         Dim var As String
@@ -392,6 +416,8 @@ Public Class FrmPrestamo
         TxtTasa.Clear()
         TxtFinalidad.Clear()
         ChkEstado.Checked = False
+        LblSaldo.Text = "L0.00"
+        DgvCuentas.DataSource = Nothing
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
@@ -403,7 +429,7 @@ Public Class FrmPrestamo
         TxtCodigoPrestamo.Text = DgvPrestamo.CurrentRow.Cells(0).Value.ToString
         CboTipoPrestamo.Text = DgvPrestamo.CurrentRow.Cells(1).Value.ToString
         DtpFecha.Text = DgvPrestamo.CurrentRow.Cells(2).Value.ToString
-        CboSocio.Text = DgvPrestamo.CurrentRow.Cells(3).Value.ToString
+        CboSocio.Text = DgvPrestamo.CurrentRow.Cells(3).Value.ToString + " / " + DgvPrestamo.CurrentRow.Cells(10).Value.ToString
         TxtCapital.Text = DgvPrestamo.CurrentRow.Cells(4).Value.ToString
         TxtPlazo.Text = DgvPrestamo.CurrentRow.Cells(5).Value.ToString
         TxtTasa.Text = DgvPrestamo.CurrentRow.Cells(6).Value.ToString
@@ -468,7 +494,7 @@ Public Class FrmPrestamo
                             Call MostrarTodosPrestamos()
                         Else
 
-                            MessageBox.Show("El prestamo no tiene el número de avales requeridos", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            MessageBox.Show("El préstamo no tiene el número de avales requeridos", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         End If
                     Else
                         ChkEstado.Checked = False
@@ -546,12 +572,27 @@ Public Class FrmPrestamo
         End If
     End Sub
 
-    Private Sub TxtTasa_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTasa.KeyPress
+    Private Sub TxtTasa_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Asc(e.KeyChar) = Keys.Back Then
 
         ElseIf Not IsNumeric(e.KeyChar) Then
             e.Handled = True
 
+        End If
+    End Sub
+
+    Private Sub CboSocio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboSocio.SelectedIndexChanged
+        MostrarTodosCuenta()
+        LblSaldo.Text = FormatCurrency(SaldoTotalCuenta(), 2)
+    End Sub
+
+    Private Sub ChkEstado_CheckedChanged_1(sender As Object, e As EventArgs) Handles ChkEstado.CheckedChanged
+        If ChkEstado.CheckState = CheckState.Checked Then
+
+            ChkEstado.Text = "Aprobado"
+
+        Else
+            ChkEstado.Text = "No aprobado"
         End If
     End Sub
 End Class

@@ -321,7 +321,7 @@ Partial Class PantallaPrincipal
         Me.LblPais.Name = "LblPais"
         Me.LblPais.Size = New System.Drawing.Size(35, 13)
         Me.LblPais.TabIndex = 14
-        Me.LblPais.Text = "PAIS"
+        Me.LblPais.Text = "PAÍS"
         Me.LblPais.Visible = False
         '
         'PnlDepartamento
@@ -437,7 +437,7 @@ Partial Class PantallaPrincipal
         Me.LblProfesion.Name = "LblProfesion"
         Me.LblProfesion.Size = New System.Drawing.Size(78, 13)
         Me.LblProfesion.TabIndex = 14
-        Me.LblProfesion.Text = "PROFESION"
+        Me.LblProfesion.Text = "PROFESIÓN"
         Me.LblProfesion.Visible = False
         '
         'Pnlcargo
@@ -617,7 +617,7 @@ Partial Class PantallaPrincipal
         Me.LblPrestamo.Name = "LblPrestamo"
         Me.LblPrestamo.Size = New System.Drawing.Size(75, 13)
         Me.LblPrestamo.TabIndex = 14
-        Me.LblPrestamo.Text = "PRESTAMO"
+        Me.LblPrestamo.Text = "PRÉSTAMO"
         Me.LblPrestamo.Visible = False
         '
         'PnlTipoCuenta
