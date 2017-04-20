@@ -26,6 +26,10 @@ Partial Class FrmPrestamo
         Me.TbcPrestamo = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LblCancelar = New System.Windows.Forms.Label()
+        Me.LblModificar = New System.Windows.Forms.Label()
+        Me.LblGuardar = New System.Windows.Forms.Label()
+        Me.LblNuevo = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PlPrestamo3 = New System.Windows.Forms.Panel()
         Me.LblSaldo = New System.Windows.Forms.Label()
@@ -34,7 +38,6 @@ Partial Class FrmPrestamo
         Me.Label12 = New System.Windows.Forms.Label()
         Me.DgvCuentas = New System.Windows.Forms.DataGridView()
         Me.CmsPrestamo = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChkEstado = New System.Windows.Forms.CheckBox()
         Me.PlPrestamo2 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,7 +45,6 @@ Partial Class FrmPrestamo
         Me.TxtTasa = New System.Windows.Forms.TextBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.TxtFinalidad = New System.Windows.Forms.TextBox()
-        Me.PbIcono = New System.Windows.Forms.PictureBox()
         Me.PlPrestamo = New System.Windows.Forms.Panel()
         Me.DtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -63,18 +65,17 @@ Partial Class FrmPrestamo
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.DgvPrestamo = New System.Windows.Forms.DataGridView()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.VisualizarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
-        Me.LblCancelar = New System.Windows.Forms.Label()
-        Me.LblModificar = New System.Windows.Forms.Label()
-        Me.LblGuardar = New System.Windows.Forms.Label()
-        Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PbIcono = New System.Windows.Forms.PictureBox()
+        Me.PbLupa = New System.Windows.Forms.PictureBox()
         Me.TbcPrestamo.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -84,15 +85,15 @@ Partial Class FrmPrestamo
         Me.PlPrestamo2.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel10.SuspendLayout()
-        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PlPrestamo.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvPrestamo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TbcPrestamo
@@ -147,6 +148,54 @@ Partial Class FrmPrestamo
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(950, 507)
         Me.Panel1.TabIndex = 5
+        '
+        'LblCancelar
+        '
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(472, 487)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
+        Me.LblCancelar.TabIndex = 116
+        Me.LblCancelar.Text = "CANCELAR"
+        Me.LblCancelar.Visible = False
+        '
+        'LblModificar
+        '
+        Me.LblModificar.AutoSize = True
+        Me.LblModificar.BackColor = System.Drawing.Color.Transparent
+        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblModificar.Location = New System.Drawing.Point(384, 487)
+        Me.LblModificar.Name = "LblModificar"
+        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
+        Me.LblModificar.TabIndex = 115
+        Me.LblModificar.Text = "MODIFICAR"
+        Me.LblModificar.Visible = False
+        '
+        'LblGuardar
+        '
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(303, 487)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
+        Me.LblGuardar.TabIndex = 114
+        Me.LblGuardar.Text = "GUARDAR"
+        Me.LblGuardar.Visible = False
+        '
+        'LblNuevo
+        '
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(226, 487)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
+        Me.LblNuevo.TabIndex = 113
+        Me.LblNuevo.Text = "NUEVO"
+        Me.LblNuevo.Visible = False
         '
         'Label11
         '
@@ -231,15 +280,9 @@ Partial Class FrmPrestamo
         '
         'CmsPrestamo
         '
-        Me.CmsPrestamo.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem})
+        Me.CmsPrestamo.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VisualizarReporteToolStripMenuItem})
         Me.CmsPrestamo.Name = "CmsPrestamo"
-        Me.CmsPrestamo.Size = New System.Drawing.Size(105, 26)
-        '
-        'EditarToolStripMenuItem
-        '
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
-        Me.EditarToolStripMenuItem.Text = "Editar"
+        Me.CmsPrestamo.Size = New System.Drawing.Size(165, 48)
         '
         'ChkEstado
         '
@@ -311,18 +354,6 @@ Partial Class FrmPrestamo
         Me.TxtFinalidad.Name = "TxtFinalidad"
         Me.TxtFinalidad.Size = New System.Drawing.Size(557, 40)
         Me.TxtFinalidad.TabIndex = 8
-        '
-        'PbIcono
-        '
-        Me.PbIcono.BackColor = System.Drawing.Color.Transparent
-        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.prestamo1
-        Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbIcono.Location = New System.Drawing.Point(25, 2)
-        Me.PbIcono.Name = "PbIcono"
-        Me.PbIcono.Size = New System.Drawing.Size(74, 63)
-        Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PbIcono.TabIndex = 0
-        Me.PbIcono.TabStop = False
         '
         'PlPrestamo
         '
@@ -528,17 +559,6 @@ Partial Class FrmPrestamo
         Me.TxtBusqueda.Size = New System.Drawing.Size(637, 26)
         Me.TxtBusqueda.TabIndex = 85
         '
-        'PbLupa
-        '
-        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
-        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
-        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbLupa.Location = New System.Drawing.Point(16, 85)
-        Me.PbLupa.Name = "PbLupa"
-        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
-        Me.PbLupa.TabIndex = 86
-        Me.PbLupa.TabStop = False
-        '
         'DgvPrestamo
         '
         Me.DgvPrestamo.AllowUserToAddRows = False
@@ -565,6 +585,13 @@ Partial Class FrmPrestamo
         Me.Label14.Size = New System.Drawing.Size(195, 43)
         Me.Label14.TabIndex = 32
         Me.Label14.Text = "PRÉSTAMO"
+        '
+        'VisualizarReporteToolStripMenuItem
+        '
+        Me.VisualizarReporteToolStripMenuItem.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.documento
+        Me.VisualizarReporteToolStripMenuItem.Name = "VisualizarReporteToolStripMenuItem"
+        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.VisualizarReporteToolStripMenuItem.Text = "Visualizar reporte"
         '
         'PbSalir
         '
@@ -633,54 +660,6 @@ Partial Class FrmPrestamo
         Me.BtnNuevo.TabIndex = 117
         Me.BtnNuevo.UseVisualStyleBackColor = False
         '
-        'LblCancelar
-        '
-        Me.LblCancelar.AutoSize = True
-        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(472, 487)
-        Me.LblCancelar.Name = "LblCancelar"
-        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
-        Me.LblCancelar.TabIndex = 116
-        Me.LblCancelar.Text = "CANCELAR"
-        Me.LblCancelar.Visible = False
-        '
-        'LblModificar
-        '
-        Me.LblModificar.AutoSize = True
-        Me.LblModificar.BackColor = System.Drawing.Color.Transparent
-        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificar.Location = New System.Drawing.Point(384, 487)
-        Me.LblModificar.Name = "LblModificar"
-        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
-        Me.LblModificar.TabIndex = 115
-        Me.LblModificar.Text = "MODIFICAR"
-        Me.LblModificar.Visible = False
-        '
-        'LblGuardar
-        '
-        Me.LblGuardar.AutoSize = True
-        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(303, 487)
-        Me.LblGuardar.Name = "LblGuardar"
-        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
-        Me.LblGuardar.TabIndex = 114
-        Me.LblGuardar.Text = "GUARDAR"
-        Me.LblGuardar.Visible = False
-        '
-        'LblNuevo
-        '
-        Me.LblNuevo.AutoSize = True
-        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(226, 487)
-        Me.LblNuevo.Name = "LblNuevo"
-        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
-        Me.LblNuevo.TabIndex = 113
-        Me.LblNuevo.Text = "NUEVO"
-        Me.LblNuevo.Visible = False
-        '
         'BtnModificar
         '
         Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
@@ -700,6 +679,36 @@ Partial Class FrmPrestamo
         Me.BtnModificar.Text = " "
         Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnModificar.UseVisualStyleBackColor = False
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.edit_icon_icons_com_52382
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'PbIcono
+        '
+        Me.PbIcono.BackColor = System.Drawing.Color.Transparent
+        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.prestamo1
+        Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbIcono.Location = New System.Drawing.Point(25, 2)
+        Me.PbIcono.Name = "PbIcono"
+        Me.PbIcono.Size = New System.Drawing.Size(74, 63)
+        Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PbIcono.TabIndex = 0
+        Me.PbIcono.TabStop = False
+        '
+        'PbLupa
+        '
+        Me.PbLupa.BackColor = System.Drawing.Color.Transparent
+        Me.PbLupa.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.lupa
+        Me.PbLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbLupa.Location = New System.Drawing.Point(16, 85)
+        Me.PbLupa.Name = "PbLupa"
+        Me.PbLupa.Size = New System.Drawing.Size(22, 27)
+        Me.PbLupa.TabIndex = 86
+        Me.PbLupa.TabStop = False
         '
         'FrmPrestamo
         '
@@ -729,7 +738,6 @@ Partial Class FrmPrestamo
         Me.Panel8.PerformLayout()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
-        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PlPrestamo.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
@@ -739,9 +747,10 @@ Partial Class FrmPrestamo
         Me.Panel2.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvPrestamo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbIcono, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbLupa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -799,4 +808,5 @@ Partial Class FrmPrestamo
     Friend WithEvents LblGuardar As Label
     Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnModificar As Button
+    Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
 End Class

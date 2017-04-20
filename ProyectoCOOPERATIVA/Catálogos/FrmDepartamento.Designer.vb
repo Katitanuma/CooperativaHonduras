@@ -35,25 +35,25 @@ Partial Class frmDepartamento
         Me.DgvDepartamento = New System.Windows.Forms.DataGridView()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.PlDepartamento = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TxtDepartamento = New System.Windows.Forms.TextBox()
         Me.CboPais = New System.Windows.Forms.ComboBox()
         Me.TxtCodigoDepartamento = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PbIcono = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Tab1 = New System.Windows.Forms.TabControl()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.PbIcono = New System.Windows.Forms.PictureBox()
         Me.LblCancelar = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.LblModificar = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.LblGuardar = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.Tab1 = New System.Windows.Forms.TabControl()
         Me.CMSDepartamento.SuspendLayout()
         CType(Me.PbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
@@ -71,18 +71,20 @@ Partial Class frmDepartamento
         '
         Me.CMSDepartamento.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
         Me.CMSDepartamento.Name = "CMSDepartamento"
-        Me.CMSDepartamento.Size = New System.Drawing.Size(118, 48)
+        Me.CMSDepartamento.Size = New System.Drawing.Size(153, 70)
         '
         'EditarToolStripMenuItem
         '
+        Me.EditarToolStripMenuItem.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.edit_icon_icons_com_52382
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'EliminarToolStripMenuItem
         '
+        Me.EliminarToolStripMenuItem.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.x_mark_3_xxl
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'Label14
@@ -199,6 +201,26 @@ Partial Class frmDepartamento
         Me.Panel1.Size = New System.Drawing.Size(757, 508)
         Me.Panel1.TabIndex = 17
         '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCancelar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.boton_cancear_listo
+        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnCancelar.Location = New System.Drawing.Point(652, 287)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(73, 58)
+        Me.BtnCancelar.TabIndex = 112
+        Me.BtnCancelar.Text = " "
+        Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
         'PlDepartamento
         '
         Me.PlDepartamento.Controls.Add(Me.Panel3)
@@ -259,80 +281,6 @@ Partial Class frmDepartamento
         Me.Panel2.Size = New System.Drawing.Size(200, 29)
         Me.Panel2.TabIndex = 2
         '
-        'PbIcono
-        '
-        Me.PbIcono.BackColor = System.Drawing.Color.Transparent
-        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.departamento
-        Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbIcono.Location = New System.Drawing.Point(91, 82)
-        Me.PbIcono.Name = "PbIcono"
-        Me.PbIcono.Size = New System.Drawing.Size(184, 193)
-        Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PbIcono.TabIndex = 0
-        Me.PbIcono.TabStop = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(383, 221)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(35, 16)
-        Me.Label6.TabIndex = 9
-        Me.Label6.Text = "País"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(322, 178)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 16)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Departamento"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(276, 138)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(141, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Código Departamento"
-        '
-        'Tab1
-        '
-        Me.Tab1.Controls.Add(Me.TabPage1)
-        Me.Tab1.Controls.Add(Me.TabPage2)
-        Me.Tab1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tab1.Location = New System.Drawing.Point(3, 46)
-        Me.Tab1.Name = "Tab1"
-        Me.Tab1.SelectedIndex = 0
-        Me.Tab1.Size = New System.Drawing.Size(709, 542)
-        Me.Tab1.TabIndex = 21
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnCancelar.FlatAppearance.BorderSize = 0
-        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnCancelar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.boton_cancear_listo
-        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(652, 287)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(73, 58)
-        Me.BtnCancelar.TabIndex = 112
-        Me.BtnCancelar.Text = " "
-        Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnCancelar.UseVisualStyleBackColor = False
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
@@ -370,6 +318,18 @@ Partial Class frmDepartamento
         Me.BtnNuevo.TabIndex = 110
         Me.BtnNuevo.UseVisualStyleBackColor = False
         '
+        'PbIcono
+        '
+        Me.PbIcono.BackColor = System.Drawing.Color.Transparent
+        Me.PbIcono.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.departamento
+        Me.PbIcono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbIcono.Location = New System.Drawing.Point(91, 82)
+        Me.PbIcono.Name = "PbIcono"
+        Me.PbIcono.Size = New System.Drawing.Size(184, 193)
+        Me.PbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PbIcono.TabIndex = 0
+        Me.PbIcono.TabStop = False
+        '
         'LblCancelar
         '
         Me.LblCancelar.AutoSize = True
@@ -381,6 +341,16 @@ Partial Class frmDepartamento
         Me.LblCancelar.TabIndex = 109
         Me.LblCancelar.Text = "CANCELAR"
         Me.LblCancelar.Visible = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(383, 221)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(35, 16)
+        Me.Label6.TabIndex = 9
+        Me.Label6.Text = "País"
         '
         'LblModificar
         '
@@ -394,6 +364,17 @@ Partial Class frmDepartamento
         Me.LblModificar.Text = "MODIFICAR"
         Me.LblModificar.Visible = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(322, 178)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(94, 16)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Departamento"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'LblGuardar
         '
         Me.LblGuardar.AutoSize = True
@@ -405,6 +386,16 @@ Partial Class frmDepartamento
         Me.LblGuardar.TabIndex = 107
         Me.LblGuardar.Text = "GUARDAR"
         Me.LblGuardar.Visible = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(276, 138)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(141, 16)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Código Departamento"
         '
         'LblNuevo
         '
@@ -437,6 +428,17 @@ Partial Class frmDepartamento
         Me.BtnModificar.Text = " "
         Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnModificar.UseVisualStyleBackColor = False
+        '
+        'Tab1
+        '
+        Me.Tab1.Controls.Add(Me.TabPage1)
+        Me.Tab1.Controls.Add(Me.TabPage2)
+        Me.Tab1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tab1.Location = New System.Drawing.Point(3, 46)
+        Me.Tab1.Name = "Tab1"
+        Me.Tab1.SelectedIndex = 0
+        Me.Tab1.Size = New System.Drawing.Size(709, 542)
+        Me.Tab1.TabIndex = 21
         '
         'frmDepartamento
         '

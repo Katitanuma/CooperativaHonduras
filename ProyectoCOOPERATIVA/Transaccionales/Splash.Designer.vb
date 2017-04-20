@@ -28,7 +28,7 @@ Partial Class Splash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.splashCientifica
+        Me.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.SplashCientifica1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(608, 349)
         Me.ControlBox = False

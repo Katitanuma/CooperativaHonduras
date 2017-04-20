@@ -33,25 +33,25 @@ Partial Class FrmLogin
         '
         'PnLogin
         '
-        Me.PnLogin.BackColor = System.Drawing.SystemColors.Control
-        Me.PnLogin.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.LoginCooperativa
+        Me.PnLogin.BackColor = System.Drawing.Color.Transparent
+        Me.PnLogin.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.logincooperativacorrecto
         Me.PnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PnLogin.Controls.Add(Me.TxtUsuario)
         Me.PnLogin.Controls.Add(Me.Cancel)
         Me.PnLogin.Controls.Add(Me.TxtContrasena)
         Me.PnLogin.Controls.Add(Me.OK)
-        Me.PnLogin.Location = New System.Drawing.Point(2, 3)
+        Me.PnLogin.Location = New System.Drawing.Point(90, 3)
         Me.PnLogin.Name = "PnLogin"
-        Me.PnLogin.Size = New System.Drawing.Size(935, 337)
+        Me.PnLogin.Size = New System.Drawing.Size(732, 337)
         Me.PnLogin.TabIndex = 6
         '
         'TxtUsuario
         '
         Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUsuario.Location = New System.Drawing.Point(452, 171)
+        Me.TxtUsuario.Location = New System.Drawing.Point(429, 171)
         Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(143, 17)
+        Me.TxtUsuario.Size = New System.Drawing.Size(166, 17)
         Me.TxtUsuario.TabIndex = 1
         '
         'Cancel
@@ -68,9 +68,9 @@ Partial Class FrmLogin
         '
         Me.TxtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtContrasena.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtContrasena.Location = New System.Drawing.Point(452, 224)
+        Me.TxtContrasena.Location = New System.Drawing.Point(429, 224)
         Me.TxtContrasena.Name = "TxtContrasena"
-        Me.TxtContrasena.Size = New System.Drawing.Size(143, 17)
+        Me.TxtContrasena.Size = New System.Drawing.Size(166, 17)
         Me.TxtContrasena.TabIndex = 3
         Me.TxtContrasena.UseSystemPasswordChar = True
         '
@@ -91,7 +91,7 @@ Partial Class FrmLogin
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CancelButton = Me.Cancel
-        Me.ClientSize = New System.Drawing.Size(687, 352)
+        Me.ClientSize = New System.Drawing.Size(848, 352)
         Me.Controls.Add(Me.PnLogin)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -101,6 +101,7 @@ Partial Class FrmLogin
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmLogin"
+        Me.TransparencyKey = System.Drawing.SystemColors.Control
         Me.PnLogin.ResumeLayout(False)
         Me.PnLogin.PerformLayout()
         Me.ResumeLayout(False)
