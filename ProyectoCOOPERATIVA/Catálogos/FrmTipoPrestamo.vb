@@ -49,7 +49,7 @@ Public Class FrmTipoPrestamo
     Private Function ValidarTipoPrestamo() As Boolean
         Dim Estado As Boolean
         If TxtTipoPrestamo.Text = Nothing Then
-            MsgBox("Ingrese el Tipo de prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el tipo de préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtTipoPrestamo.Focus()
             Estado = False
         Else
@@ -73,9 +73,9 @@ Public Class FrmTipoPrestamo
                     .Parameters.Add("@TipoPrestamo", SqlDbType.NVarChar, 50).Value = TxtTipoPrestamo.Text.Trim
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Prestamo Registrado con éxito", "Control Keeper")
+                MessageBox.Show("Tipo de préstamo almacenado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al guardar el prestamo " + ex.Message)
+                MessageBox.Show("Error al almacenar el tipo de préstamo " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -99,9 +99,9 @@ Public Class FrmTipoPrestamo
 
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Prestamo editado con éxito", "Control Keeper")
+                MessageBox.Show("Tipo de préstamo modificado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al editar el prestamo " + ex.Message)
+                MessageBox.Show("Error al modificar el tipo de préstamo " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -124,9 +124,9 @@ Public Class FrmTipoPrestamo
                     .Parameters.Add("@IdTipoPrestamo", SqlDbType.Int).Value = CInt(DgvTipoPrestamo.CurrentRow.Cells(0).Value)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Prestao eliminado con éxito", "Control Keeper")
+                MessageBox.Show("Tipo de préstamo eliminado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al eliminar el prestamo " + ex.Message)
+                MessageBox.Show("Error al eliminar el tipo de préstamo " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -154,7 +154,7 @@ Public Class FrmTipoPrestamo
 
 
             Catch ex As Exception
-                MessageBox.Show("Error al mostrar los datos del prestamo " + ex.Message)
+                MessageBox.Show("Error al mostrar los datos del tipo de préstamo " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -228,7 +228,7 @@ Public Class FrmTipoPrestamo
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
+        If MessageBox.Show("¿Está seguro de eliminar el registro?", "SYS CAP",
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Call EliminarTipoPrestamo()
             Call MostrarTodoTipoPrestamo()
@@ -260,7 +260,7 @@ Public Class FrmTipoPrestamo
                 Call HabilitarControles(True, False, False, False, False)
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrado este prestamo", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+                MessageBox.Show("Ya se encuentra registrado ese tipo de préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
         End If
     End Sub

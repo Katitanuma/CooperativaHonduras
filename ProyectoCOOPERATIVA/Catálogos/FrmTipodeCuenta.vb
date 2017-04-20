@@ -47,11 +47,11 @@ Public Class FrmTipodeCuenta
     Private Function ValidarTipoCuenta() As Boolean
         Dim Estado As Boolean
         If TxtTipoCuenta.Text = Nothing Then
-            MsgBox("Ingrese el Tipo de Cuenta", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el Tipo de Cuenta", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtTipoCuenta.Focus()
             Estado = False
         ElseIf TxtDescripcion.Text = Nothing Then
-            MsgBox("Ingrese la descripcion de Cuenta", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese la descripcion de Cuenta", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtDescripcion.Focus()
             Estado = False
 
@@ -77,9 +77,9 @@ Public Class FrmTipodeCuenta
                     .Parameters.Add("@Descripcion", SqlDbType.NVarChar, 150).Value = TxtDescripcion.Text.Trim
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cuenta Registrada con éxito", "Control Keeper")
+                MessageBox.Show("Cuenta almacenada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al guardar la cuenta " + ex.Message)
+                MessageBox.Show("Error al almacenar la cuenta " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -103,9 +103,9 @@ Public Class FrmTipodeCuenta
                     .Parameters.Add("@Descripcion", SqlDbType.NVarChar, 50).Value = TxtDescripcion.Text.Trim
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cuenta editada con éxito", "Control Keeper")
+                MessageBox.Show("Cuenta modificada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al editar la cuenta " + ex.Message)
+                MessageBox.Show("Error al modificar la cuenta " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -128,7 +128,7 @@ Public Class FrmTipodeCuenta
                     .Parameters.Add("@IdTipoCuenta", SqlDbType.Int).Value = CInt(DgvTipoCuenta.CurrentRow.Cells(0).Value)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cuenta eliminada con éxito", "Control Keeper")
+                MessageBox.Show("Cuenta eliminada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al eliminar la cuenta " + ex.Message)
             Finally
@@ -167,7 +167,7 @@ Public Class FrmTipodeCuenta
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
+        If MessageBox.Show("¿Está seguro de eliminar el registro?", "SYS CAP",
                           MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Call EliminarTipoCuenta()
             Call MostrarTodoTipoCuenta()
@@ -267,7 +267,7 @@ Public Class FrmTipodeCuenta
                 Call HabilitarControles(True, False, False, False, False)
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrado esta cuenta", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+                MessageBox.Show("Ya se encuentra registrado esa cuenta", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
         End If
 

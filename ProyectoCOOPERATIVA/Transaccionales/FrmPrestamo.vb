@@ -46,29 +46,29 @@ Public Class FrmPrestamo
     Private Function ValidarPrestamo() As Boolean
         Dim Estado As Boolean
         If TxtCodigoPrestamo.Text = Nothing Then
-            MsgBox("Ingrese el código del préstamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el código del préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtCodigoPrestamo.Focus()
             Estado = False
         ElseIf CboTipoPrestamo.Text = Nothing Then
-            MsgBox("Seleccione el tipo de préstamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el tipo de préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         ElseIf CboSocio.Text = Nothing Then
-            MsgBox("Seleccione el socio del préstamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el socio del préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         ElseIf TxtCapital.Text = Nothing Then
-            MsgBox("Ingrese el capital del socio", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el capital del socio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtCapital.Focus()
             Estado = False
         ElseIf TxtPlazo.Text = Nothing Then
-            MsgBox("Ingrese el plazo del préstamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el plazo del préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtPlazo.Focus()
             Estado = False
         ElseIf TxtTasa.Text = Nothing Then
-            MsgBox("Ingrese la tasa de interes del préstamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese la tasa de interés del préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtTasa.Focus()
             Estado = False
         ElseIf TxtFinalidad.Text = Nothing Then
-            MsgBox("Ingrese la finalidad del préstamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese la finalidad del préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtFinalidad.Focus()
             Estado = False
         Else
@@ -268,9 +268,9 @@ Public Class FrmPrestamo
                     .Parameters.Add("@Estado", SqlDbType.NVarChar, 20).Value = IdentificarEstado()
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Préstamo registrado con éxito", "Control Keeper")
+                MessageBox.Show("Préstamo almacenado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al guardar el préstamo " + ex.Message)
+                MessageBox.Show("Error al almacenar el préstamo " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -296,7 +296,7 @@ Public Class FrmPrestamo
                     MiAval.BringToFront()
                     PantallaPrincipal.PnlLogo.SendToBack()
                 Else
-                    MessageBox.Show("El capital sobrepasa del limite establecido", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("El capital sobrepasa el límite establecido", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
                 MessageBox.Show("El socio no tiene cuentas registradas", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -472,9 +472,9 @@ Public Class FrmPrestamo
                     .Parameters.Add("@Estado", SqlDbType.NVarChar, 20).Value = IdentificarEstado()
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Prestamo editado con éxito", "Control Keeper")
+                MessageBox.Show("Préstamo modificado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al editar el prestamo " + ex.Message)
+                MessageBox.Show("Error al modificar el préstamo " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -505,7 +505,7 @@ Public Class FrmPrestamo
                     End If
 
                 Else
-                    MessageBox.Show("El capital sobrepasa del limite establecido", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("El capital sobrepasa el límite establecido", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
                 MessageBox.Show("El socio no tiene cuentas registradas", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)

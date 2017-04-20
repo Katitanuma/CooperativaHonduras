@@ -209,7 +209,7 @@ Public Class FrmSocio
                     .Parameters.Add("@IdSexo", SqlDbType.Int).Value = CboSexo.SelectedValue.ToString
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Socio registrado con éxito", "SYS CAP")
+                MessageBox.Show("Socio registrado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al guardar el socio " + ex.Message)
             Finally
@@ -247,7 +247,7 @@ Public Class FrmSocio
                     .Parameters.Add("@IdSexo", SqlDbType.Int).Value = CboSexo.SelectedValue.ToString
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Socio modificado con éxito", "SYS CAP")
+                MessageBox.Show("Socio modificado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al modificar el socio " + ex.Message)
             Finally
@@ -273,7 +273,7 @@ Public Class FrmSocio
                     .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = DgvSocio.CurrentRow.Cells(0).Value.ToString
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Socio eliminado con éxito", "SYS CAP")
+                MessageBox.Show("Socio eliminado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al eliminar el socio " + ex.Message)
             Finally

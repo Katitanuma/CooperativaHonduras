@@ -17,18 +17,18 @@ Public Class FrmLogin
 
     Private Function Validar() As Boolean
         Dim Estado As Boolean
-        If UsernameTextBox.Text = Nothing And PasswordTextBox.Text = Nothing Then
-            MsgBox("Ingrese el nombre de usuario y contraseña", MsgBoxStyle.Critical, "Control Keeper")
+        If TxtUsuario.Text = Nothing And TxtContrasena.Text = Nothing Then
+            MessageBox.Show("Ingrese el nombre de usuario y contraseña", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
-            UsernameTextBox.Focus()
-        ElseIf UsernameTextBox.Text = Nothing Then
-            MsgBox("Ingrese el nombre de usuario", MsgBoxStyle.Critical, "Control Keeper")
+            TxtUsuario.Focus()
+        ElseIf TxtUsuario.Text = Nothing Then
+            MessageBox.Show("Ingrese el nombre de usuario", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
-            UsernameTextBox.Focus()
-        ElseIf PasswordTextBox.Text = Nothing Then
-            MsgBox("Ingrese la contraseña del usuario", MsgBoxStyle.Critical, "Control Keeper")
+            TxtUsuario.Focus()
+        ElseIf TxtContrasena.Text = Nothing Then
+            MessageBox.Show("Ingrese la contraseña del usuario", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
-            PasswordTextBox.Focus()
+            TxtContrasena.Focus()
         Else
             Estado = True
         End If
@@ -47,8 +47,8 @@ Public Class FrmLogin
                     .CommandText = "Sp_Login"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Con
-                    .Parameters.Add("@Usuario", SqlDbType.NVarChar, 50).Value = UsernameTextBox.Text.Trim
-                    .Parameters.Add("@Contrasena", SqlDbType.NVarChar, 100).Value = PasswordTextBox.Text.Trim
+                    .Parameters.Add("@Usuario", SqlDbType.NVarChar, 50).Value = TxtUsuario.Text.Trim
+                    .Parameters.Add("@Contrasena", SqlDbType.NVarChar, 100).Value = TxtContrasena.Text.Trim
                 End With
                 Dim LectorUsuario As SqlDataReader = cmd.ExecuteReader
                 If LectorUsuario.Read Then
@@ -57,15 +57,15 @@ Public Class FrmLogin
                         Me.Hide()
                         PantallaPrincipal.LblOficialNombre.Text = "Oficial: " + LectorUsuario("Oficial").ToString
                         PantallaPrincipal.LblIdOficial.Text = LectorUsuario("IdOficial").ToString
-                        PasswordTextBox.Clear()
-                        UsernameTextBox.Clear()
+                        TxtContrasena.Clear()
+                        TxtUsuario.Clear()
                         PantallaPrincipal.Show()
                     Else
-                        MsgBox("Usuario Inactivo", MsgBoxStyle.Critical, "Control Keeper")
+                        MessageBox.Show("Usuario Inactivo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
 
                 Else
-                    MsgBox("Nombre de usuario o contraseña incorrecta", MsgBoxStyle.Critical, "Control Keeper")
+                    MessageBox.Show("Nombre de usuario o contraseña incorrecta", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
             Catch ex As Exception
                 MsgBox(ex.ToString)
@@ -74,7 +74,7 @@ Public Class FrmLogin
     End Sub
 
 
-    Private Sub PasswordTextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles PasswordTextBox.KeyDown
+    Private Sub PasswordTextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtContrasena.KeyDown
         If e.KeyCode = Keys.Enter Then
             OK.PerformClick()
         End If

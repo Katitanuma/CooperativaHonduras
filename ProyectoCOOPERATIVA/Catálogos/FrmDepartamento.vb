@@ -262,11 +262,11 @@ Public Class frmDepartamento
 
                 End With
 
-                MessageBox.Show("Departamento actualizado con éxtio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Departamento modificado con éxtio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Catch ex As Exception
 
-                MsgBox("Error al actualizar el departamento" + ex.Message)
+                MsgBox("Error al modificar el departamento" + ex.Message)
 
             Finally
 

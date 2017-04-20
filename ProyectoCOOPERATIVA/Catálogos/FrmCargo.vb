@@ -150,7 +150,7 @@ Public Class FrmCargo
     Private Function ValidarCargo()
         Dim Estado As Boolean
         If TxtCodigoCargo.Text = "" Then
-            MessageBox.Show("Ingrese el nombre del cargo", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Ingrese el nombre del cargo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtCodigoCargo.Focus()
             Estado = False
         Else
@@ -174,7 +174,7 @@ Public Class FrmCargo
                     .Parameters.Add("@Cargo", SqlDbType.NVarChar, 50).Value = TxtCargo.Text.Trim
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cargo almacenado con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cargo almacenado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al almacenar el cargo " + ex.Message)
             Finally
@@ -191,7 +191,7 @@ Public Class FrmCargo
                 Call MostrarTodoCargo()
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrado este cargo", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ya se encuentra registrado ese cargo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 TxtCargo.Text = ""
                 TxtCargo.Focus()
             End If
@@ -214,7 +214,7 @@ Public Class FrmCargo
                     .Parameters.Add("@Cargo", SqlDbType.NVarChar, 50).Value = TxtCargo.Text.Trim
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cargo modificado con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cargo modificado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al modificar el cargo " + ex.Message)
             Finally
@@ -231,7 +231,7 @@ Public Class FrmCargo
                 Call MostrarTodoCargo()
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrado este cargo", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ya se encuentra registrado ese cargo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 TxtCargo.Text = ""
                 TxtCargo.Focus()
             End If
@@ -253,7 +253,7 @@ Public Class FrmCargo
                     .Parameters.Add("@IdCargo", SqlDbType.Int).Value = CInt(DgvCargo.CurrentRow.Cells(0).Value)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cargo eliminado con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cargo eliminado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al eliminar el cargo " + ex.Message)
             Finally
@@ -263,7 +263,7 @@ Public Class FrmCargo
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
+        If MessageBox.Show("¿Está seguro de eliminar el registro?", "SYS CAP",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Call EliminarCargo()
             Call MostrarTodoCargo()

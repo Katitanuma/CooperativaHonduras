@@ -258,7 +258,7 @@ Public Class FrmNacionalidad
 
                 End With
 
-                MessageBox.Show("Nacionalidad actualizada con éxtio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Nacionalidad modificada con éxtio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Catch ex As Exception
 

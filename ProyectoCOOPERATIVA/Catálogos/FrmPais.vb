@@ -115,7 +115,7 @@ Public Class FrmPais
                 Call LimpiarPais()
 
             Else
-                MessageBox.Show("Ya Existe ese país", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Ya existe ese país", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
             End If
         End If
@@ -184,7 +184,7 @@ Public Class FrmPais
                     .ExecuteNonQuery()
                 End With
 
-                MessageBox.Show("Pais almacenado con éxtio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("País almacenado con éxtio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Catch ex As Exception
 
@@ -255,11 +255,11 @@ Public Class FrmPais
 
                 End With
 
-                MessageBox.Show("País actualizado con éxtio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("País modificado con éxtio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Catch ex As Exception
 
-                MsgBox("Error al actualizar el País" + ex.Message)
+                MsgBox("Error al modificar el País" + ex.Message)
 
             Finally
 

@@ -24,10 +24,10 @@ Partial Class FrmLogin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PnLogin = New System.Windows.Forms.Panel()
-        Me.OK = New System.Windows.Forms.Button()
-        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
+        Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.Cancel = New System.Windows.Forms.Button()
-        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.TxtContrasena = New System.Windows.Forms.TextBox()
+        Me.OK = New System.Windows.Forms.Button()
         Me.PnLogin.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -36,33 +36,23 @@ Partial Class FrmLogin
         Me.PnLogin.BackColor = System.Drawing.SystemColors.Control
         Me.PnLogin.BackgroundImage = Global.ProyectoCOOPERATIVA.My.Resources.Resources.LoginCooperativa
         Me.PnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PnLogin.Controls.Add(Me.UsernameTextBox)
+        Me.PnLogin.Controls.Add(Me.TxtUsuario)
         Me.PnLogin.Controls.Add(Me.Cancel)
-        Me.PnLogin.Controls.Add(Me.PasswordTextBox)
+        Me.PnLogin.Controls.Add(Me.TxtContrasena)
         Me.PnLogin.Controls.Add(Me.OK)
         Me.PnLogin.Location = New System.Drawing.Point(2, 3)
         Me.PnLogin.Name = "PnLogin"
         Me.PnLogin.Size = New System.Drawing.Size(935, 337)
         Me.PnLogin.TabIndex = 6
         '
-        'OK
+        'TxtUsuario
         '
-        Me.OK.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OK.Location = New System.Drawing.Point(416, 280)
-        Me.OK.Name = "OK"
-        Me.OK.Size = New System.Drawing.Size(94, 23)
-        Me.OK.TabIndex = 4
-        Me.OK.Text = "&Iniciar"
-        '
-        'PasswordTextBox
-        '
-        Me.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.PasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(452, 224)
-        Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(143, 17)
-        Me.PasswordTextBox.TabIndex = 3
-        Me.PasswordTextBox.UseSystemPasswordChar = True
+        Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsuario.Location = New System.Drawing.Point(452, 171)
+        Me.TxtUsuario.Name = "TxtUsuario"
+        Me.TxtUsuario.Size = New System.Drawing.Size(143, 17)
+        Me.TxtUsuario.TabIndex = 1
         '
         'Cancel
         '
@@ -74,14 +64,24 @@ Partial Class FrmLogin
         Me.Cancel.TabIndex = 5
         Me.Cancel.Text = "&Cancelar"
         '
-        'UsernameTextBox
+        'TxtContrasena
         '
-        Me.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.UsernameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UsernameTextBox.Location = New System.Drawing.Point(452, 171)
-        Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(143, 17)
-        Me.UsernameTextBox.TabIndex = 1
+        Me.TxtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtContrasena.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtContrasena.Location = New System.Drawing.Point(452, 224)
+        Me.TxtContrasena.Name = "TxtContrasena"
+        Me.TxtContrasena.Size = New System.Drawing.Size(143, 17)
+        Me.TxtContrasena.TabIndex = 3
+        Me.TxtContrasena.UseSystemPasswordChar = True
+        '
+        'OK
+        '
+        Me.OK.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OK.Location = New System.Drawing.Point(416, 280)
+        Me.OK.Name = "OK"
+        Me.OK.Size = New System.Drawing.Size(94, 23)
+        Me.OK.TabIndex = 4
+        Me.OK.Text = "&Iniciar"
         '
         'FrmLogin
         '
@@ -108,8 +108,8 @@ Partial Class FrmLogin
     End Sub
 
     Friend WithEvents PnLogin As Panel
-    Friend WithEvents UsernameTextBox As TextBox
+    Friend WithEvents TxtUsuario As TextBox
     Friend WithEvents Cancel As Button
-    Friend WithEvents PasswordTextBox As TextBox
+    Friend WithEvents TxtContrasena As TextBox
     Friend WithEvents OK As Button
 End Class

@@ -46,31 +46,31 @@ Public Class FrmOficial
     Private Function ValidarOficial() As Boolean
         Dim Estado As Boolean
         If MtbCodigoOficial.MaskFull = False Then
-            MsgBox("Ingrese el código del oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el código del oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             MtbCodigoOficial.Focus()
             Estado = False
         ElseIf TxtNombre.Text = Nothing Then
-            MsgBox("Ingrese el nombre del oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el nombre del oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtNombre.Focus()
             Estado = False
         ElseIf TxtApellido.Text = Nothing Then
-            MsgBox("Ingrese el apellido del oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el apellido del oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtApellido.Focus()
             Estado = False
         ElseIf CboCargo.Text = Nothing Then
-            MsgBox("Seleccione el cargo del oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el cargo del oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         ElseIf CboProfesion.Text = Nothing Then
-            MsgBox("Seleccione la profesión del oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione la profesión del oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         ElseIf CboCiudad.Text = Nothing Then
-            MsgBox("Seleccione la ciudad del oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione la ciudad del oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         ElseIf CboSexo.Text = Nothing Then
-            MsgBox("Seleccione el sexo del oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el sexo del oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         ElseIf CboEstadoCivil.Text = Nothing Then
-            MsgBox("Seleccione el estado civil del oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el estado civil del oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         Else
             Estado = True
@@ -179,7 +179,7 @@ Public Class FrmOficial
                 CboProfesion.ValueMember = ds.Tables(0).Columns("IdProfesion").ToString
 
             Catch ex As Exception
-                MessageBox.Show("Error al mostrar profesion " + ex.Message)
+                MessageBox.Show("Error al mostrar profesión " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -297,9 +297,9 @@ Public Class FrmOficial
                     .Parameters.Add("@IdEstadoCivil", SqlDbType.Int).Value = CInt(CboEstadoCivil.SelectedValue)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Oficial Registrado con éxito", "Control Keeper")
+                MessageBox.Show("Oficial almacenado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al guardar el oficial " + ex.Message)
+                MessageBox.Show("Error al almacenar el oficial " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -366,9 +366,9 @@ Public Class FrmOficial
                     .Parameters.Add("@IdEstadoCivil", SqlDbType.Int).Value = CInt(CboEstadoCivil.SelectedValue)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Oficial editado con éxito", "Control Keeper")
+                MessageBox.Show("Oficial modificado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al editar el oficial " + ex.Message)
+                MessageBox.Show("Error al modificar el oficial " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -391,7 +391,7 @@ Public Class FrmOficial
                     .Parameters.Add("@IdOficial", SqlDbType.VarChar, 15).Value = DgvOficial.CurrentRow.Cells(0).Value.ToString
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Oficial eliminado con éxito", "Control Keeper")
+                MessageBox.Show("Oficial eliminado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al eliminar el Oficial " + ex.Message)
             Finally
@@ -411,7 +411,7 @@ Public Class FrmOficial
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
+        If MessageBox.Show("¿Está seguro de eliminar el registro?", "SYS CAP",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Call EliminarOficial()
             Call MostrarTodosOficial()

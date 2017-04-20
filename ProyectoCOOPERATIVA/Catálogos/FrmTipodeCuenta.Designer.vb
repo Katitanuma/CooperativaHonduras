@@ -26,6 +26,14 @@ Partial Class FrmTipodeCuenta
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.LblCancelar = New System.Windows.Forms.Label()
+        Me.LblModificar = New System.Windows.Forms.Label()
+        Me.LblGuardar = New System.Windows.Forms.Label()
+        Me.LblNuevo = New System.Windows.Forms.Label()
+        Me.BtnModificar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PlTipoCuenta = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -47,14 +55,6 @@ Partial Class FrmTipodeCuenta
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PbSalir = New System.Windows.Forms.PictureBox()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.BtnNuevo = New System.Windows.Forms.Button()
-        Me.LblCancelar = New System.Windows.Forms.Label()
-        Me.LblModificar = New System.Windows.Forms.Label()
-        Me.LblGuardar = New System.Windows.Forms.Label()
-        Me.LblNuevo = New System.Windows.Forms.Label()
-        Me.BtnModificar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -116,6 +116,131 @@ Partial Class FrmTipodeCuenta
         Me.Panel1.Size = New System.Drawing.Size(816, 513)
         Me.Panel1.TabIndex = 32
         '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCancelar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.boton_cancear_listo
+        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnCancelar.Location = New System.Drawing.Point(679, 309)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(73, 58)
+        Me.BtnCancelar.TabIndex = 122
+        Me.BtnCancelar.Text = " "
+        Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnGuardar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Guardar_listo
+        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnGuardar.Location = New System.Drawing.Point(509, 307)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(73, 63)
+        Me.BtnGuardar.TabIndex = 121
+        Me.BtnGuardar.Text = " "
+        Me.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnNuevo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnNuevo.FlatAppearance.BorderSize = 0
+        Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnNuevo.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Agregar_listo
+        Me.BtnNuevo.Location = New System.Drawing.Point(422, 312)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
+        Me.BtnNuevo.TabIndex = 120
+        Me.BtnNuevo.UseVisualStyleBackColor = False
+        '
+        'LblCancelar
+        '
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(679, 370)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
+        Me.LblCancelar.TabIndex = 119
+        Me.LblCancelar.Text = "CANCELAR"
+        Me.LblCancelar.Visible = False
+        '
+        'LblModificar
+        '
+        Me.LblModificar.AutoSize = True
+        Me.LblModificar.BackColor = System.Drawing.Color.Transparent
+        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblModificar.Location = New System.Drawing.Point(591, 370)
+        Me.LblModificar.Name = "LblModificar"
+        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
+        Me.LblModificar.TabIndex = 118
+        Me.LblModificar.Text = "MODIFICAR"
+        Me.LblModificar.Visible = False
+        '
+        'LblGuardar
+        '
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(510, 370)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
+        Me.LblGuardar.TabIndex = 117
+        Me.LblGuardar.Text = "GUARDAR"
+        Me.LblGuardar.Visible = False
+        '
+        'LblNuevo
+        '
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(433, 370)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
+        Me.LblNuevo.TabIndex = 116
+        Me.LblNuevo.Text = "NUEVO"
+        Me.LblNuevo.Visible = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnModificar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Editar_listo
+        Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnModificar.Location = New System.Drawing.Point(595, 307)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(73, 58)
+        Me.BtnModificar.TabIndex = 115
+        Me.BtnModificar.Text = " "
+        Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnModificar.UseVisualStyleBackColor = False
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -124,7 +249,7 @@ Partial Class FrmTipodeCuenta
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 16)
         Me.Label3.TabIndex = 114
-        Me.Label3.Text = "Descripcion"
+        Me.Label3.Text = "Descripción"
         '
         'PlTipoCuenta
         '
@@ -323,131 +448,6 @@ Partial Class FrmTipodeCuenta
         Me.PbSalir.Size = New System.Drawing.Size(33, 32)
         Me.PbSalir.TabIndex = 49
         Me.PbSalir.TabStop = False
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnCancelar.FlatAppearance.BorderSize = 0
-        Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnCancelar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.boton_cancear_listo
-        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(679, 309)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(73, 58)
-        Me.BtnCancelar.TabIndex = 122
-        Me.BtnCancelar.Text = " "
-        Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnCancelar.UseVisualStyleBackColor = False
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue
-        Me.BtnGuardar.FlatAppearance.BorderSize = 0
-        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnGuardar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Guardar_listo
-        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnGuardar.Location = New System.Drawing.Point(509, 307)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(73, 63)
-        Me.BtnGuardar.TabIndex = 121
-        Me.BtnGuardar.Text = " "
-        Me.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnGuardar.UseVisualStyleBackColor = False
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnNuevo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnNuevo.FlatAppearance.BorderSize = 0
-        Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnNuevo.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Agregar_listo
-        Me.BtnNuevo.Location = New System.Drawing.Point(422, 312)
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(73, 53)
-        Me.BtnNuevo.TabIndex = 120
-        Me.BtnNuevo.UseVisualStyleBackColor = False
-        '
-        'LblCancelar
-        '
-        Me.LblCancelar.AutoSize = True
-        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(679, 370)
-        Me.LblCancelar.Name = "LblCancelar"
-        Me.LblCancelar.Size = New System.Drawing.Size(72, 13)
-        Me.LblCancelar.TabIndex = 119
-        Me.LblCancelar.Text = "CANCELAR"
-        Me.LblCancelar.Visible = False
-        '
-        'LblModificar
-        '
-        Me.LblModificar.AutoSize = True
-        Me.LblModificar.BackColor = System.Drawing.Color.Transparent
-        Me.LblModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModificar.Location = New System.Drawing.Point(591, 370)
-        Me.LblModificar.Name = "LblModificar"
-        Me.LblModificar.Size = New System.Drawing.Size(75, 13)
-        Me.LblModificar.TabIndex = 118
-        Me.LblModificar.Text = "MODIFICAR"
-        Me.LblModificar.Visible = False
-        '
-        'LblGuardar
-        '
-        Me.LblGuardar.AutoSize = True
-        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(510, 370)
-        Me.LblGuardar.Name = "LblGuardar"
-        Me.LblGuardar.Size = New System.Drawing.Size(68, 13)
-        Me.LblGuardar.TabIndex = 117
-        Me.LblGuardar.Text = "GUARDAR"
-        Me.LblGuardar.Visible = False
-        '
-        'LblNuevo
-        '
-        Me.LblNuevo.AutoSize = True
-        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(433, 370)
-        Me.LblNuevo.Name = "LblNuevo"
-        Me.LblNuevo.Size = New System.Drawing.Size(50, 13)
-        Me.LblNuevo.TabIndex = 116
-        Me.LblNuevo.Text = "NUEVO"
-        Me.LblNuevo.Visible = False
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnModificar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BtnModificar.FlatAppearance.BorderSize = 0
-        Me.BtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnModificar.Image = Global.ProyectoCOOPERATIVA.My.Resources.Resources.Boton_Editar_listo
-        Me.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnModificar.Location = New System.Drawing.Point(595, 307)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(73, 58)
-        Me.BtnModificar.TabIndex = 115
-        Me.BtnModificar.Text = " "
-        Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnModificar.UseVisualStyleBackColor = False
         '
         'FrmTipodeCuenta
         '

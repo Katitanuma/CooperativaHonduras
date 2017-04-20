@@ -186,19 +186,19 @@ Public Class FrmCuenta
     Private Function ValidarCuenta()
         Dim Estado As Boolean
         If TxtCodigoCuenta.Text = "" Then
-            MessageBox.Show("Ingrese el número de cuenta", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Ingrese el número de cuenta", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtCodigoCuenta.Focus()
             Estado = False
         ElseIf CboSocio.Text = "" Then
-            MessageBox.Show("Seleccione el nombre del socio", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Seleccione el nombre del socio", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             CboSocio.Focus()
             Estado = False
         ElseIf CboTipoCuenta.Text = "" Then
-            MessageBox.Show("Seleccione el tipo de cuenta", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Seleccione el tipo de cuenta", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             CboTipoCuenta.Focus()
             Estado = False
         ElseIf TxtSaldoActual.Text = "" Then
-            MessageBox.Show("Ingrese el saldo actual", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Ingrese el saldo actual", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtSaldoActual.Focus()
             Estado = False
         Else
@@ -225,7 +225,7 @@ Public Class FrmCuenta
                     .Parameters.Add("@SaldoActual", SqlDbType.Decimal, 11, 2).Value = CDbl(TxtSaldoActual.Text)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cuenta almacenada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cuenta almacenada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al almacenar la cuenta " + ex.Message)
             Finally
@@ -242,7 +242,7 @@ Public Class FrmCuenta
                 Call MostrarTodoCuenta()
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrado este número de cuenta", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ya se encuentra registrado ese número de cuenta", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 TxtCodigoCuenta.Text = ""
                 TxtCodigoCuenta.Focus()
             End If
@@ -267,7 +267,7 @@ Public Class FrmCuenta
                     .Parameters.Add("@SaldoActual", SqlDbType.Decimal, 11, 2).Value = CDec(TxtSaldoActual.Text)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cuenta modificada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cuenta modificada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al modificar la cuenta " + ex.Message)
             Finally
@@ -301,7 +301,7 @@ Public Class FrmCuenta
                     .Parameters.Add("@NumCuenta", SqlDbType.Decimal, 11, 0).Value = CDec(DgvCuenta.CurrentRow.Cells(0).Value)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Cuenta eliminada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Cuenta eliminada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al eliminar la cuenta " + ex.Message)
             Finally
@@ -311,7 +311,7 @@ Public Class FrmCuenta
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
+        If MessageBox.Show("¿Está seguro de eliminar el registro?", "SYS CAP",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Call EliminarCuenta()
             Call MostrarTodoCuenta()

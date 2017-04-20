@@ -447,7 +447,7 @@ Public Class PantallaPrincipal
     Private Sub PbCambioSesion_Click(sender As Object, e As EventArgs) Handles PbCambioSesion.Click
         Me.Hide()
         FrmLogin.Show()
-        FrmLogin.UsernameTextBox.Focus()
+        FrmLogin.TxtUsuario.Focus()
     End Sub
 
 

@@ -50,7 +50,7 @@ Public Class FrmProfesion
     Private Function ValidarProfesion() As Boolean
         Dim Estado As Boolean
         If TxtProfesion.Text = Nothing Then
-            MsgBox("Ingrese el Tipo de prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese la profesión", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtProfesion.Focus()
             Estado = False
         Else
@@ -74,9 +74,9 @@ Public Class FrmProfesion
                     .Parameters.Add("@Profesion", SqlDbType.NVarChar, 50).Value = TxtProfesion.Text.Trim
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Profesion Registrada con éxito", "Control Keeper")
+                MessageBox.Show("Profesión almacenada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al guardar la profesion " + ex.Message)
+                MessageBox.Show("Error al almacenar la profesión " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -100,9 +100,9 @@ Public Class FrmProfesion
 
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Profesion editada con éxito", "Control Keeper")
+                MessageBox.Show("Profesión modificada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al editar la profesion " + ex.Message)
+                MessageBox.Show("Error al modificar la profesión " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -125,9 +125,9 @@ Public Class FrmProfesion
                     .Parameters.Add("@IdProfesion", SqlDbType.Int).Value = CInt(DgvProfesion.CurrentRow.Cells(0).Value)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Profesion eliminada con éxito", "Control Keeper")
+                MessageBox.Show("Profesión eliminada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al eliminar la profesion " + ex.Message)
+                MessageBox.Show("Error al eliminar la profesión " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -229,7 +229,7 @@ Public Class FrmProfesion
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
+        If MessageBox.Show("¿Está seguro de eliminar el registro?", "SYS CAP",
                        MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Call EliminarProfesion()
             Call MostrarTodoProfesion()
@@ -260,7 +260,7 @@ Public Class FrmProfesion
                 Call HabilitarControles(True, False, False, False, False)
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrado esta profesion", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+                MessageBox.Show("Ya se encuentra registrada esa profesión", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
         End If
     End Sub

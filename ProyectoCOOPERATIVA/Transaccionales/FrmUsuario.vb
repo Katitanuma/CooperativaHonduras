@@ -46,22 +46,22 @@ Public Class FrmUsuario
     Private Function ValidarUsuario() As Boolean
         Dim Estado As Boolean
         If TxtUsuario.Text = Nothing Then
-            MsgBox("Ingrese el nombre de usuario", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese el nombre de usuario", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtUsuario.Focus()
             Estado = False
         ElseIf TxtContrasena.Text = Nothing Then
-            MsgBox("Ingrese la contraseña", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Ingrese la contraseña", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtContrasena.Focus()
             Estado = False
         ElseIf TxtContrasena.Text.Length > 0 And TxtContrasena.Text.Length < 8 Then
-            MsgBox("La contraseña debe tenere mas de 8 caracteres", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("La contraseña debe tenere más de 8 caracteres", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtContrasena.Focus()
             Estado = False
         ElseIf CboTipoAcceso.Text = Nothing Then
-            MsgBox("Seleccione el tipo de acceso", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el tipo de acceso", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         ElseIf CboOficial.Text = Nothing Then
-            MsgBox("Seleccione el oficial", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el oficial", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         Else
             Estado = True
@@ -194,7 +194,7 @@ Public Class FrmUsuario
                     .Parameters.Add("@Estado", SqlDbType.Bit).Value = IdentificarEstado()
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Usuario Registrado con éxito", "Control Keeper")
+                MessageBox.Show("Usuario almacenado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al guardar el usuario " + ex.Message)
             Finally
@@ -212,7 +212,7 @@ Public Class FrmUsuario
                 Call HabilitarControles(True, False, False, False, False)
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrado ese usuario", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1)
+                MessageBox.Show("Ya se encuentra registrado ese usuario", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
         End If
 
@@ -282,9 +282,9 @@ Public Class FrmUsuario
                     .Parameters.Add("@Estado", SqlDbType.Bit).Value = IdentificarEstado()
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Usuario editado con éxito", "Control Keeper")
+                MessageBox.Show("Usuario modificado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al editar el usuario " + ex.Message)
+                MessageBox.Show("Error al modificar el usuario " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -307,7 +307,7 @@ Public Class FrmUsuario
                     .Parameters.Add("@IdUsuario", SqlDbType.Int).Value = CInt(DgvUsuario.CurrentRow.Cells(0).Value)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Usuario eliminado con éxito", "Control Keeper")
+                MessageBox.Show("Usuario eliminado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al eliminar el usuario " + ex.Message)
             Finally
@@ -327,7 +327,7 @@ Public Class FrmUsuario
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
+        If MessageBox.Show("¿Está seguro de eliminar el registro?", "SYS CAP",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Call EliminarUsuario()
             Call MostrarTodosUsuarios()

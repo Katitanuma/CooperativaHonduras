@@ -183,7 +183,7 @@ Public Class FrmCiudad
     Private Function ValidarCiudad()
         Dim Estado As Boolean
         If TxtCodigoCiudad.Text = "" Then
-            MessageBox.Show("Ingrese el nombre de la ciudad", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Ingrese el nombre de la ciudad", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TxtCodigoCiudad.Focus()
             Estado = False
         Else
@@ -208,7 +208,7 @@ Public Class FrmCiudad
                     .Parameters.Add("@IdDepartamento", SqlDbType.Int).Value = CInt(CboDepartamento.SelectedValue)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Ciudad almacenada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Ciudad almacenada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al almacenar la ciudad " + ex.Message)
             Finally
@@ -225,7 +225,7 @@ Public Class FrmCiudad
                 Call MostrarTodoCiudad()
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrada esta ciudad", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ya se encuentra registrada esa ciudad", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 TxtCiudad.Text = ""
                 TxtCiudad.Focus()
             End If
@@ -249,7 +249,7 @@ Public Class FrmCiudad
                     .Parameters.Add("@IdDepartamento", SqlDbType.Int).Value = CInt(CboDepartamento.SelectedValue)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Ciudad modificada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Ciudad modificada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al modificar la ciudad " + ex.Message)
             Finally
@@ -266,7 +266,7 @@ Public Class FrmCiudad
                 Call MostrarTodoCiudad()
                 Call Limpiar()
             Else
-                MessageBox.Show("Ya se encuentra registrada esta ciudad", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Ya se encuentra registrada esa ciudad", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 TxtCiudad.Text = ""
                 TxtCiudad.Focus()
             End If
@@ -288,7 +288,7 @@ Public Class FrmCiudad
                     .Parameters.Add("@IdCiudad", SqlDbType.Int).Value = CInt(DgvCiudad.CurrentRow.Cells(0).Value.ToString)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Ciudad eliminada con éxito", "Control Keeper", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Ciudad eliminada con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Error al eliminar la ciudad " + ex.Message)
             Finally
@@ -298,7 +298,7 @@ Public Class FrmCiudad
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        If MessageBox.Show("¿Está seguro de eliminar el registro?", "Control Keeper",
+        If MessageBox.Show("¿Está seguro de eliminar el registro?", "SYS CAP",
                            MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
             Call EliminarCiudad()
             Call MostrarTodoCiudad()

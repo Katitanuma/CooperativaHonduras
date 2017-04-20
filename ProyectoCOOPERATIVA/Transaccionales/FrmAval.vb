@@ -47,10 +47,10 @@ Public Class FrmAval
         Dim Estado As Boolean
 
         If CboCodigoPrestamo.Text = Nothing Then
-            MsgBox("Seleccione el código del prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el código del préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         ElseIf CboAval.Text = Nothing Then
-            MsgBox("Seleccione el aval para el prestamo", MsgBoxStyle.Critical, "Control Keeper")
+            MessageBox.Show("Seleccione el aval para el préstamo", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Estado = False
         Else
             Estado = True
@@ -92,7 +92,7 @@ Public Class FrmAval
 
 
             Catch ex As Exception
-                MessageBox.Show("Error al mostrar los datos de prestamo aval " + ex.Message)
+                MessageBox.Show("Error al mostrar los datos de préstamo aval " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -127,7 +127,7 @@ Public Class FrmAval
                 CboCodigoPrestamo.ValueMember = ds.Tables(0).Columns("NumPrestamo").ToString
 
             Catch ex As Exception
-                MessageBox.Show("Error al mostrar prestamo " + ex.Message)
+                MessageBox.Show("Error al mostrar préstamo " + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -207,9 +207,9 @@ Public Class FrmAval
                     .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = CboAval.SelectedValue.ToString
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Aval registrado con éxito", "Control Keeper")
+                MessageBox.Show("Aval almacenado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al guardar el ava" + ex.Message)
+                MessageBox.Show("Error al almacenar el aval" + ex.Message)
             Finally
                 Con.Close()
             End Try
@@ -262,9 +262,9 @@ Public Class FrmAval
                     .Parameters.Add("@CodigoSocio", SqlDbType.NVarChar, 15).Value = CboAval.SelectedValue.ToString
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Aval editado con éxito", "Control Keeper")
+                MessageBox.Show("Aval modificado con éxito", "SYS CAP", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
-                MessageBox.Show("Error al editar el aval " + ex.Message)
+                MessageBox.Show("Error al modificar el aval " + ex.Message)
             Finally
                 Con.Close()
             End Try
